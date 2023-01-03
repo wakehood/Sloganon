@@ -1,0 +1,18 @@
+
+    git add    project.pbxproj -m "Slogan pages has 3 sections. All slogans and acronoyms have been added"
+    git rm    ../Sloganon/Assets.xcassets/Sloganon Background.imageset/Contents.json
+    deleted:    ../Sloganon/Assets.xcassets/Sloganon Background.imageset/Sloganon Background.png
+    deleted:    ../Sloganon/Assets.xcassets/Sloganon Background.imageset/Sloganon Background@2x.png
+    deleted:    ../Sloganon/Assets.xcassets/Sloganon Background.imageset/Sloganon Background@3x.png
+    deleted:    ../Sloganon/Assets.xcassets/Sloganon lily with Text.imageset/Contents.json
+    deleted:    ../Sloganon/Assets.xcassets/Sloganon lily with Text.imageset/Sloganon lily.png
+    deleted:    ../Sloganon/Assets.xcassets/Sloganon lily with Text.imageset/Sloganon lily@2x.png
+    deleted:    ../Sloganon/Assets.xcassets/Sloganon lily with Text.imageset/Sloganon lily@3x.png
+        git add     ../Sloganon/Base.lproj/LaunchScreen.storyboard
+        git add     ../Sloganon/Controller/SloganTableViewController.swift
+    deleted:    ../Sloganon/Controller/ViewController.swift
+       git add     ../Sloganon/K.swift
+      git add     ../Sloganon/View/Base.lproj/Main.storyboard
+       git add     ../Sloganon/View/SloganOfTheDayTableViewCell.xib
+    
+    git commit  -m "Slogan pages has 3 sections. All slogans and acronoyms have been added"

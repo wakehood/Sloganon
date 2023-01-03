@@ -7,29 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB14DA162963C56F002FD7B2 /* AcronymTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14DA142963C56F002FD7B2 /* AcronymTableViewCell.swift */; };
+		CB14DA172963C56F002FD7B2 /* AcronymTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB14DA152963C56F002FD7B2 /* AcronymTableViewCell.xib */; };
 		CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */; };
 		CB6FF50428D5249C00DBB3AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50328D5249C00DBB3AD /* SceneDelegate.swift */; };
-		CB6FF50628D5249C00DBB3AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50528D5249C00DBB3AD /* ViewController.swift */; };
+		CB6FF50628D5249C00DBB3AD /* OldSloganViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50528D5249C00DBB3AD /* OldSloganViewController.swift */; };
 		CB6FF50928D5249C00DBB3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50728D5249C00DBB3AD /* Main.storyboard */; };
 		CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50A28D524A000DBB3AD /* Assets.xcassets */; };
 		CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */; };
 		CB6FF52F28DCC82800DBB3AD /* Slogan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF52E28DCC82800DBB3AD /* Slogan.swift */; };
 		CB6FF53228DCC91600DBB3AD /* Slogans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF53128DCC91600DBB3AD /* Slogans.swift */; };
+		CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB229556249006C38EE /* StepsTableViewController.swift */; };
+		CBB48CB7295562FD006C38EE /* SerenityPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */; };
+		CBCDE36529624F760080B182 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36429624F760080B182 /* K.swift */; };
+		CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE366296271CB0080B182 /* SloganTableViewController.swift */; };
+		CBCDE369296272360080B182 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE368296272350080B182 /* InfoViewController.swift */; };
+		CBCDE36C296278AB0080B182 /* SloganOfTheDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36A296278AB0080B182 /* SloganOfTheDayTableViewCell.swift */; };
+		CBCDE36D296278AB0080B182 /* SloganOfTheDayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCDE36B296278AB0080B182 /* SloganOfTheDayTableViewCell.xib */; };
+		CBCDE36F2962833B0080B182 /* SloganTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36E2962833B0080B182 /* SloganTableViewCell.swift */; };
 		CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF764BD28DD60870072D01D /* StringExtensions.swift */; };
+		CBF87FBD2964CDAB00B36A23 /* Git Files in Resources */ = {isa = PBXBuildFile; fileRef = CBF87FBC2964CDAB00B36A23 /* Git Files */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB14DA142963C56F002FD7B2 /* AcronymTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymTableViewCell.swift; sourceTree = "<group>"; };
+		CB14DA152963C56F002FD7B2 /* AcronymTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AcronymTableViewCell.xib; sourceTree = "<group>"; };
 		CB6FF4FE28D5249C00DBB3AD /* Sloganon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sloganon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB6FF50328D5249C00DBB3AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB6FF50528D5249C00DBB3AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB6FF50528D5249C00DBB3AD /* OldSloganViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldSloganViewController.swift; sourceTree = "<group>"; };
 		CB6FF50828D5249C00DBB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB6FF50A28D524A000DBB3AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB6FF50D28D524A000DBB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB6FF50F28D524A000DBB3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6FF52E28DCC82800DBB3AD /* Slogan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slogan.swift; sourceTree = "<group>"; };
 		CB6FF53128DCC91600DBB3AD /* Slogans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slogans.swift; sourceTree = "<group>"; };
+		CBB48CB229556249006C38EE /* StepsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewController.swift; sourceTree = "<group>"; };
+		CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerenityPrayerViewController.swift; sourceTree = "<group>"; };
+		CBCDE36429624F760080B182 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		CBCDE366296271CB0080B182 /* SloganTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganTableViewController.swift; sourceTree = "<group>"; };
+		CBCDE368296272350080B182 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		CBCDE36A296278AB0080B182 /* SloganOfTheDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganOfTheDayTableViewCell.swift; sourceTree = "<group>"; };
+		CBCDE36B296278AB0080B182 /* SloganOfTheDayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SloganOfTheDayTableViewCell.xib; sourceTree = "<group>"; };
+		CBCDE36E2962833B0080B182 /* SloganTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganTableViewCell.swift; sourceTree = "<group>"; };
 		CBF764BD28DD60870072D01D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		CBF87FBC2964CDAB00B36A23 /* Git Files */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Git Files"; path = "Sloganon/Git Files"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +92,7 @@
 				CB6FF50A28D524A000DBB3AD /* Assets.xcassets */,
 				CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */,
 				CB6FF50F28D524A000DBB3AD /* Info.plist */,
+				CBCDE36429624F760080B182 /* K.swift */,
 			);
 			path = Sloganon;
 			sourceTree = "<group>";
@@ -78,6 +101,12 @@
 			isa = PBXGroup;
 			children = (
 				CB6FF50728D5249C00DBB3AD /* Main.storyboard */,
+				CBF87FBC2964CDAB00B36A23 /* Git Files */,
+				CBCDE36A296278AB0080B182 /* SloganOfTheDayTableViewCell.swift */,
+				CBCDE36B296278AB0080B182 /* SloganOfTheDayTableViewCell.xib */,
+				CBCDE36E2962833B0080B182 /* SloganTableViewCell.swift */,
+				CB14DA142963C56F002FD7B2 /* AcronymTableViewCell.swift */,
+				CB14DA152963C56F002FD7B2 /* AcronymTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -85,7 +114,11 @@
 		CB6FF51628D524E300DBB3AD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CB6FF50528D5249C00DBB3AD /* ViewController.swift */,
+				CBCDE366296271CB0080B182 /* SloganTableViewController.swift */,
+				CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */,
+				CBB48CB229556249006C38EE /* StepsTableViewController.swift */,
+				CBCDE368296272350080B182 /* InfoViewController.swift */,
+				CB6FF50528D5249C00DBB3AD /* OldSloganViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,7 +193,10 @@
 			files = (
 				CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */,
 				CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */,
+				CBF87FBD2964CDAB00B36A23 /* Git Files in Resources */,
 				CB6FF50928D5249C00DBB3AD /* Main.storyboard in Resources */,
+				CBCDE36D296278AB0080B182 /* SloganOfTheDayTableViewCell.xib in Resources */,
+				CB14DA172963C56F002FD7B2 /* AcronymTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,12 +207,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB48CB7295562FD006C38EE /* SerenityPrayerViewController.swift in Sources */,
+				CB14DA162963C56F002FD7B2 /* AcronymTableViewCell.swift in Sources */,
+				CBCDE369296272360080B182 /* InfoViewController.swift in Sources */,
+				CBCDE36529624F760080B182 /* K.swift in Sources */,
 				CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */,
-				CB6FF50628D5249C00DBB3AD /* ViewController.swift in Sources */,
+				CB6FF50628D5249C00DBB3AD /* OldSloganViewController.swift in Sources */,
+				CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */,
 				CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */,
 				CB6FF50428D5249C00DBB3AD /* SceneDelegate.swift in Sources */,
 				CB6FF52F28DCC82800DBB3AD /* Slogan.swift in Sources */,
+				CBCDE36C296278AB0080B182 /* SloganOfTheDayTableViewCell.swift in Sources */,
+				CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */,
 				CB6FF53228DCC91600DBB3AD /* Slogans.swift in Sources */,
+				CBCDE36F2962833B0080B182 /* SloganTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,8 +373,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,8 +401,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

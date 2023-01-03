@@ -54,22 +54,25 @@ class Slogans {
         " Live and Let Live ",
         " One Day at a Time ",
         " Think ",
-        " THREE A'S\n  Awareness\n Acceptance\n Action",
-        " THREE C’s\n  I didn’t cause it\n I can’t control it\n I can’t cure it",
-        " THREE UNWANTED P’s\n  Perfectionism\n Procrastination\n Paralysis",
-        " THREE G’s\n  Get off their back\n Get out of their way\n Get on with your life",
-        " FOUR UNWANTED M’s\n  Martyrdom\n Managing\n Manipulating\n Mothering",
-        " THE STEPS, CONDENSED\n  1-3 Peace with God\n 4-7 Peace with Ourself\n 8-10 Peace with Others\n1 1-12 Keeping the Peace",
-        " HALT IF YOU’RE\n Hungry\n Angry\n Lonely\n Tired",
-        " THINK - Is it.....?\n Thoughtful\n Honest\n Intelligent\n Necessary\n Kind",
-        " FEAR\n False\n Evidence\n Appearing\n Real",
-        " HOPE\n Happy\n Our\n Program\n Exists",
-        " NUTS\n Not\n Using\n The\n Steps",
-        " DETACH\n Don’t\n Even\n Think\n  About\n Changing\n Him/Her",
-        " HOW\n Honest\n Open\n Willing",
-        " STEPS\n Solutions\n To\n Every\n Problem",
-        " QTIP\n Quit\n Taking\n It\n Personally",
-        " DENIAL\n Don’t\n Even\n Notice\n I\n Am\n Lying"
+    ]
+    
+    let acronymList = [
+        " THREE A'S\n\tAwareness\n\tAcceptance\n\tAction",
+        " THREE C’s\n\tI didn’t cause it\n\tI can’t control it\n\tI can’t cure it",
+        " THREE UNWANTED P’s\n\tPerfectionism\n\tProcrastination\n\tParalysis",
+        " THREE G’s\n\tGet off their back\n\tGet out of their way\n\tGet on with your life",
+        " FOUR UNWANTED M’s\n\tMartyrdom\n\tManaging\n\tManipulating\n\tMothering",
+        " THE STEPS, CONDENSED\n\t1-3 Peace with God\n\t4-7 Peace with Ourself\n\t8-10 Peace with Others\n\t1 1-12\tKeeping the Peace",
+        " HALT IF YOU’RE\n\tHungry\n\tAngry\n\tLonely\n\tTired",
+        " THINK - Is it.....?\n\tThoughtful\n\tHonest\n\tIntelligent\n\tNecessary\n\tKind",
+        " FEAR\n\tFalse\n\tEvidence\n\tAppearing\n\tReal",
+        " HOPE\n\tHappy\n\tOur\n\tProgram\n\tExists",
+        " NUTS\n\tNot\n\tUsing\n\tThe\n\tSteps",
+        " DETACH\n\tDon’t\n\tEven \n\tThink\n\tAbout\n\tChanging\n\tHim/Her",
+        " HOW\n\tHonest\n\tOpen\n\tWilling",
+        " STEPS\n\tSolutions\n\tTo\n Every\n\tProblem",
+        " QTIP\n\tQuit\n\tTaking\n\tIt\n\tPersonally",
+        " DENIAL\n\tDon’t\n\tEven\n\tNotice\n\tI\n\tAm \n\tLying"
     ]
 
     //return a random number from 0 to size of list - 1
