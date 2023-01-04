@@ -19,8 +19,9 @@ struct K {
     struct CellReuseIdentifiers{
         static let sloganOfTheDayCellIdentifier = "SloganOfTheDayCell"
         static let sloganCellIdentifier = "SloganCell"
-        static let stepCellIdentifier = "StepCell"
         static let acronymCellIdentifier = "AcronymCell"
+        static let stepCellIdentifier = "StepCell"
+
     }
 
     struct ViewControllers{
@@ -30,7 +31,7 @@ struct K {
         static let infoViewControllerTitle = "Info"
     }
     
-    struct HeaderHeight{
+    struct RowHeight{
         static let sloganOfTheDay = 100.0
         static let slogans = 50.0
         static let acronyms = 128.0

@@ -9,7 +9,9 @@ import UIKit
 
 class SloganOfTheDayTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var sloganOfTheDayLabel: UILabel!
+  //  @IBOutlet weak var sloganOfTheDayLabel: UILabel!
+    @IBOutlet weak var sloganOfTheDayTextView: UITextView!
+    @IBOutlet weak var searchTextField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()

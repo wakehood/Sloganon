@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SloganTableViewController: UITableViewController {
+class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
     
     var slogans = Slogans()
     
@@ -17,6 +17,7 @@ class SloganTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         tableView.register(UINib(nibName: K.CellNibNames.sloganOfTheDayCellNibName, bundle: nil), forCellReuseIdentifier: K.CellReuseIdentifiers.sloganOfTheDayCellIdentifier)
         
@@ -48,18 +49,22 @@ class SloganTableViewController: UITableViewController {
                 
         if section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.sloganOfTheDayCellIdentifier, for: indexPath) as! SloganOfTheDayTableViewCell
-            cell.sloganOfTheDayLabel.text = slogans.getSloganOfTheDay()
+            cell.sloganOfTheDayTextView.text = slogans.getSloganOfTheDay()
+            cell.sloganOfTheDayTextView.centerVertically()
 
             return cell
         } else if section == 1 {
             let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.sloganCellIdentifier, for: indexPath)
             cell.textLabel?.text = slogans.sloganList[indexPath.row]
+            cell.textLabel?.numberOfLines = 0
+            cell.textLabel?.minimumScaleFactor = 0.5
             return cell
         } else  {
             let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.acronymCellIdentifier, for: indexPath) as! AcronymTableViewCell
             
             cell.acronymTextView.text = slogans.acronymList[indexPath.row]
-           // cell.textLabel?.text = slogans.acronymList[indexPath.row]
+            cell.acronymTextView.centerVertically()
+
             return cell
         }
     }
@@ -68,11 +73,11 @@ class SloganTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let section = indexPath.section
         if section == 0 {
-            return K.HeaderHeight.sloganOfTheDay
+            return K.RowHeight.sloganOfTheDay
         } else if section == 1 {
-            return K.HeaderHeight.slogans
+            return K.RowHeight.slogans
         } else {
-            return K.HeaderHeight.acronyms
+            return K.RowHeight.acronyms
         }
     }
     
@@ -94,6 +99,15 @@ class SloganTableViewController: UITableViewController {
 
         let headerView = UIView()
         headerView.addSubview(myLabel)
+        
+        if section == 0 {
+            headerView.backgroundColor = UIColor(red: 0.87, green: 0.98, blue: 0.98, alpha: 1.00)
+        } else if section == 1 {
+            headerView.backgroundColor = UIColor(red: 0.96, green: 0.90, blue: 0.55, alpha: 1.00)
+        } else {
+            headerView.backgroundColor = UIColor(red: 0.60, green: 0.93, blue: 0.86, alpha: 1.00)
+        }
+        
         
         return headerView
     }
@@ -143,4 +157,14 @@ class SloganTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension UITextView {
+    func centerVertically() {
+        let fittingSize = CGSize(width: bounds.width, height: CGFloat.greatestFiniteMagnitude)
+        let size = sizeThatFits(fittingSize)
+        let topOffset = (bounds.size.height - size.height * zoomScale) / 2
+        let positiveTopOffset = max(1, topOffset)
+        contentOffset.y = -positiveTopOffset
+    }
 }
