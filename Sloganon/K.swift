@@ -42,4 +42,8 @@ struct K {
         static let slogans = "Slogans"
         static let acronyms = "Acronyms"
     }
+    
+    static let serenityPrayer =
+    "God grant me the serenity\nTo accept the things I cannot change,\nCourage to change the things I can\nAnd wisdom to know the difference."
+
 }

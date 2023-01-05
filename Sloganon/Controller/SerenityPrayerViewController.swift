@@ -9,10 +9,12 @@ import UIKit
 
 class SerenityPrayerViewController: UIViewController {
 
+    @IBOutlet weak var serenityPrayerLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        serenityPrayerLabel.text = K.serenityPrayer
     }
     
 
