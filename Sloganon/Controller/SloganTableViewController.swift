@@ -56,14 +56,14 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
             return cell
         } else if section == K.SectionNumber.slogans {
             let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.sloganCellIdentifier, for: indexPath)
-            cell.textLabel?.text = slogans.sloganList[indexPath.row]
+            cell.textLabel?.text = slogans.sortedSloganList()[indexPath.row]
             cell.textLabel?.numberOfLines = 0
             cell.textLabel?.minimumScaleFactor = 0.5
             return cell
         } else  {
             let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.acronymCellIdentifier, for: indexPath) as! AcronymTableViewCell
             
-            cell.acronymTextView.text = slogans.acronymList[indexPath.row]
+            cell.acronymTextView.text = slogans.sortedAcronymList()[indexPath.row]
             cell.acronymTextView.centerVertically()
 
             return cell

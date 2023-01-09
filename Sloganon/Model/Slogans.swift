@@ -112,7 +112,19 @@ class Slogans {
             combinedSlogan = "No slogan was found with keyword \"\(keyword)\""
         }
         return combinedSlogan
-    }    
+    }
+    
+    func sortedSloganList() -> Array<String> {
+        let sortedList = sloganList.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+        
+        return sortedList
+    }
+    
+    func sortedAcronymList() -> Array<String> {
+        let sortedList = acronymList.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+        
+        return sortedList
+    }
 }
 
 
