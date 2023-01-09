@@ -43,7 +43,7 @@ class StepsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return K.HeaderHeight
+        return K.RowHeight.steps
     }
    
     // MARK: - Configure TableView Headers with delegate methods
@@ -53,16 +53,8 @@ class StepsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let myLabel = UILabel()
-//        myLabel.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
-//        myLabel.font = UIFont.boldSystemFont(ofSize: 18)
-//        myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
-        
-//
-//
+
         let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "", color: UIColor.systemPink)
-//        headerView.addSubview(myLabel)
-//        headerView.backgroundColor = UIColor.systemPink
         
         return headerView
     }

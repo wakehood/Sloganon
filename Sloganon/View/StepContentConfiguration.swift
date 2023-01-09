@@ -26,41 +26,25 @@ class StepContentView : UIView, UIContentView {
         self.addSubview(labelsView)
         
         labelsView.backgroundColor = UIColor.systemGreen
-        labelsView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            labelsView.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
-            labelsView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
-            labelsView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            labelsView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-        ])
+               
+        labelsView.layout(top:self.topAnchor, leading:self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 5, left: 10, bottom: 5, right: 10))
 
         stepNumberLabel.backgroundColor = UIColor.systemPurple
         stepNumberLabel.textAlignment = .center
-        stepNumberLabel.translatesAutoresizingMaskIntoConstraints   = false
+        stepNumberLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         
         labelsView.addSubview(stepNumberLabel)
+        stepNumberLabel.layout(top: labelsView.topAnchor, leading:labelsView.leadingAnchor, bottom: labelsView.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 40, height: 0))
+        
         
         stepLabel.backgroundColor = UIColor.systemGreen
         stepLabel.numberOfLines = 0
         stepLabel.minimumScaleFactor = 0.5
+        stepLabel.font = UIFont.systemFont(ofSize: 20.0)
         
-        stepLabel.translatesAutoresizingMaskIntoConstraints   = false
-
         labelsView.addSubview(stepLabel)
-        
-        NSLayoutConstraint.activate([
-            stepNumberLabel.topAnchor.constraint(equalTo: labelsView.topAnchor, constant: 0),
-            stepNumberLabel.bottomAnchor.constraint(equalTo: labelsView.bottomAnchor, constant: 0),
-            stepNumberLabel.leadingAnchor.constraint(equalTo: labelsView.leadingAnchor, constant: 0),
-            stepNumberLabel.widthAnchor.constraint(equalToConstant: 40),
-        ])
-        
-        NSLayoutConstraint.activate([
-            stepLabel.topAnchor.constraint(equalTo: labelsView.topAnchor, constant: 0),
-            stepLabel.bottomAnchor.constraint(equalTo: labelsView.bottomAnchor, constant: 0),
-            stepLabel.leadingAnchor.constraint(equalTo: stepNumberLabel.trailingAnchor, constant: 10),
-            stepLabel.trailingAnchor.constraint(equalTo: labelsView.trailingAnchor, constant: 0)
-        ])
+                
+        stepLabel.layout(top: labelsView.topAnchor, leading:stepNumberLabel.trailingAnchor, bottom: labelsView.bottomAnchor, trailing: labelsView.trailingAnchor, padding: .init(top: 0, left: 10, bottom: 0, right: 10), size: .init(width: 0, height: 0))
 
         self.configure(configuration: configuration)
     }

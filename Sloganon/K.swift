@@ -43,6 +43,7 @@ struct K {
         static let sloganOfTheDay = 100.0
         static let slogans = 50.0
         static let acronyms = 128.0
+        static let steps = 175.0
     }
     
     struct HeaderText {
