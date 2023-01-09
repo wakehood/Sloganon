@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CB14DA162963C56F002FD7B2 /* AcronymTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14DA142963C56F002FD7B2 /* AcronymTableViewCell.swift */; };
 		CB14DA172963C56F002FD7B2 /* AcronymTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB14DA152963C56F002FD7B2 /* AcronymTableViewCell.xib */; };
+		CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB437DE2296B847E006C191E /* UITextViewExtension.swift */; };
 		CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */; };
 		CB6FF50428D5249C00DBB3AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50328D5249C00DBB3AD /* SceneDelegate.swift */; };
 		CB6FF50628D5249C00DBB3AD /* OldSloganViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50528D5249C00DBB3AD /* OldSloganViewController.swift */; };
@@ -25,6 +26,9 @@
 		CBCDE36C296278AB0080B182 /* SloganOfTheDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36A296278AB0080B182 /* SloganOfTheDayTableViewCell.swift */; };
 		CBCDE36D296278AB0080B182 /* SloganOfTheDayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCDE36B296278AB0080B182 /* SloganOfTheDayTableViewCell.xib */; };
 		CBCDE36F2962833B0080B182 /* SloganTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36E2962833B0080B182 /* SloganTableViewCell.swift */; };
+		CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6FD629666A020039A2F0 /* Steps.swift */; };
+		CBCF6FD92966706B0039A2F0 /* StepContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6FD82966706B0039A2F0 /* StepContentConfiguration.swift */; };
+		CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */; };
 		CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF764BD28DD60870072D01D /* StringExtensions.swift */; };
 		CBF87FBD2964CDAB00B36A23 /* Git Files in Resources */ = {isa = PBXBuildFile; fileRef = CBF87FBC2964CDAB00B36A23 /* Git Files */; };
 /* End PBXBuildFile section */
@@ -32,6 +36,7 @@
 /* Begin PBXFileReference section */
 		CB14DA142963C56F002FD7B2 /* AcronymTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymTableViewCell.swift; sourceTree = "<group>"; };
 		CB14DA152963C56F002FD7B2 /* AcronymTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AcronymTableViewCell.xib; sourceTree = "<group>"; };
+		CB437DE2296B847E006C191E /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 		CB6FF4FE28D5249C00DBB3AD /* Sloganon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sloganon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB6FF50328D5249C00DBB3AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +55,9 @@
 		CBCDE36A296278AB0080B182 /* SloganOfTheDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganOfTheDayTableViewCell.swift; sourceTree = "<group>"; };
 		CBCDE36B296278AB0080B182 /* SloganOfTheDayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SloganOfTheDayTableViewCell.xib; sourceTree = "<group>"; };
 		CBCDE36E2962833B0080B182 /* SloganTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganTableViewCell.swift; sourceTree = "<group>"; };
+		CBCF6FD629666A020039A2F0 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
+		CBCF6FD82966706B0039A2F0 /* StepContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepContentConfiguration.swift; sourceTree = "<group>"; };
+		CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CBF764BD28DD60870072D01D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		CBF87FBC2964CDAB00B36A23 /* Git Files */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Git Files"; path = "Sloganon/Git Files"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -65,6 +73,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB437DE1296B8402006C191E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CB6FF50A28D524A000DBB3AD /* Assets.xcassets */,
+				CBF764BD28DD60870072D01D /* StringExtensions.swift */,
+				CB437DE2296B847E006C191E /* UITextViewExtension.swift */,
+				CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		CB6FF4F528D5249C00DBB3AD = {
 			isa = PBXGroup;
 			children = (
@@ -89,8 +108,7 @@
 				CB6FF53028DCC83300DBB3AD /* Model */,
 				CB6FF51528D524B900DBB3AD /* View */,
 				CB6FF51628D524E300DBB3AD /* Controller */,
-				CB6FF50A28D524A000DBB3AD /* Assets.xcassets */,
-				CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */,
+				CB437DE1296B8402006C191E /* SupportingFiles */,
 				CB6FF50F28D524A000DBB3AD /* Info.plist */,
 				CBCDE36429624F760080B182 /* K.swift */,
 			);
@@ -100,6 +118,7 @@
 		CB6FF51528D524B900DBB3AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */,
 				CB6FF50728D5249C00DBB3AD /* Main.storyboard */,
 				CBF87FBC2964CDAB00B36A23 /* Git Files */,
 				CBCDE36A296278AB0080B182 /* SloganOfTheDayTableViewCell.swift */,
@@ -107,6 +126,7 @@
 				CBCDE36E2962833B0080B182 /* SloganTableViewCell.swift */,
 				CB14DA142963C56F002FD7B2 /* AcronymTableViewCell.swift */,
 				CB14DA152963C56F002FD7B2 /* AcronymTableViewCell.xib */,
+				CBCF6FD82966706B0039A2F0 /* StepContentConfiguration.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,7 +148,7 @@
 			children = (
 				CB6FF52E28DCC82800DBB3AD /* Slogan.swift */,
 				CB6FF53128DCC91600DBB3AD /* Slogans.swift */,
-				CBF764BD28DD60870072D01D /* StringExtensions.swift */,
+				CBCF6FD629666A020039A2F0 /* Steps.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,10 +230,14 @@
 				CBB48CB7295562FD006C38EE /* SerenityPrayerViewController.swift in Sources */,
 				CB14DA162963C56F002FD7B2 /* AcronymTableViewCell.swift in Sources */,
 				CBCDE369296272360080B182 /* InfoViewController.swift in Sources */,
+				CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */,
 				CBCDE36529624F760080B182 /* K.swift in Sources */,
 				CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */,
+				CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */,
 				CB6FF50628D5249C00DBB3AD /* OldSloganViewController.swift in Sources */,
+				CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */,
 				CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */,
+				CBCF6FD92966706B0039A2F0 /* StepContentConfiguration.swift in Sources */,
 				CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */,
 				CB6FF50428D5249C00DBB3AD /* SceneDelegate.swift in Sources */,
 				CB6FF52F28DCC82800DBB3AD /* Slogan.swift in Sources */,

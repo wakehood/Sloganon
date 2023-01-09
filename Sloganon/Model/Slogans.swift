@@ -68,9 +68,9 @@ class Slogans {
         "FEAR\n\tFalse\n\tEvidence\n\tAppearing\n\tReal",
         "HOPE\n\tHappy\n\tOur\n\tProgram\n\tExists",
         "NUTS\n\tNot\n\tUsing\n\tThe\n\tSteps",
-        "DETACH\n\tDon’t\n\tEven \n\tThink\n\tAbout\n\tChanging\n\tHim/Her",
+        "DETACH\n\tDon’t\n\tEven \n\tThink\n\tAbout\n\tChanging Him/Her",
         "HOW\n\tHonest\n\tOpen\n\tWilling",
-        "STEPS\n\tSolutions\n\tTo\n Every\n\tProblem",
+        "STEPS\n\tSolutions\n\tTo\n\tEvery\n\tProblem",
         "QTIP\n\tQuit\n\tTaking\n\tIt\n\tPersonally",
         "DENIAL\n\tDon’t\n\tEven\n\tNotice\n\tI\n\tAm \n\tLying"
     ]
