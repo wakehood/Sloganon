@@ -13,6 +13,8 @@ class StepsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = K.stepVCBackground
 
     }
 
@@ -32,12 +34,13 @@ class StepsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.stepCellIdentifier, for: indexPath)
+        
+        let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 12)
 
-        var config = StepContentConfiguration()
-        config.stepNum = String(indexPath.row + 1)
-        config.step = steps.stepsList[indexPath.row]
+        let config = StepContentConfiguration(stepNum: String(indexPath.row + 1), step: steps.stepsList[indexPath.row], percentageBy: percentageBy)
 
         cell.contentConfiguration = config
+        cell.backgroundColor = K.CellBackgroundColor.step.darken(byPercentage: percentageBy)
 
         return cell
     }
@@ -54,7 +57,7 @@ class StepsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
-        let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "", color: UIColor.systemPink)
+        let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "", color: K.HeaderBackgroundColor.step)
         
         return headerView
     }

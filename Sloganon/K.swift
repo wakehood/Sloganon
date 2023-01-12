@@ -40,8 +40,8 @@ struct K {
     }
     
     struct RowHeight{
-        static let sloganOfTheDay = 100.0
-        static let slogans = 50.0
+        static let sloganOfTheDay = 130.0
+        static let slogans = 60.0
         static let acronyms = 128.0
         static let steps = 175.0
     }
@@ -58,10 +58,97 @@ struct K {
     static let serenityPrayer =
     "God grant me the serenity\nTo accept the things I cannot change,\nCourage to change the things I can\nAnd wisdom to know the difference."
     
-    struct HeaderBackgroundColors {
-        static let sloganOfTheDay = UIColor(red: 0.87, green: 0.98, blue: 0.98, alpha: 1.00)
-        static let slogan = UIColor(red: 0.96, green: 0.90, blue: 0.55, alpha: 1.00)
-        static let acronym = UIColor(red: 0.60, green: 0.93, blue: 0.86, alpha: 1.00)
+    
+    struct Color {
+        static let sloganOfTheDay = sloganOfTheDayColor()
+        static let slogan =         sloganColor()
+        static let acronym =        acronymColor()
+        
+        static let step =           stepColor()
     }
+    
+    static let sloganVCbackground = UIColor(named: "SloganBackgroundColor")
+    static let stepVCBackground =   UIColor(named:"StepBackgroundColor")
+    
+    struct HeaderBackgroundColor {
+        static let sloganOfTheDay = Color.sloganOfTheDay.darken(byPercentage: 0.25)
+        static let slogan =         Color.slogan.darken(byPercentage: 0.25)
+        static let acronym =        Color.acronym.darken(byPercentage: 0.25)
+        
+        static let step =           Color.step.darken(byPercentage: 0.25)
+    }
+    
+    struct CellBackgroundColor {
+        static let sloganOfTheDay = Color.sloganOfTheDay
+        static let slogan =         Color.slogan
+        static let acronym =        Color.acronym
+        
+        static let step =           Color.step
+    }
+    
+    struct CellContentColor {
+        static let sloganOfTheDay = Color.sloganOfTheDay
+        static let slogan =         Color.slogan
+        static let acronym =        Color.acronym
+        
+        static let step =           Color.step
+    }
+    
 
+
+}
+
+//Helper functions to ensure Color assets are valid
+func sloganOfTheDayColor () -> UIColor {
+    if let color = UIColor(named:"SloganOfTheDayColor") {
+        return color
+    } else {
+        print("No Color found")
+        return UIColor.white
+    }
+}
+
+func sloganColor () -> UIColor {
+    if let color = UIColor(named:"SloganColor") {
+        return color
+    } else {
+        print("No Color found")
+        return UIColor.white
+    }
+}
+
+func acronymColor () -> UIColor {
+    if let color = UIColor(named:"AcronymColor") {
+        return color
+    } else {
+        print("No Color found")
+        return UIColor.white
+    }
+}
+
+func stepColor () -> UIColor {
+    if let color = UIColor(named:"StepColor") {
+        return color
+    } else {
+        print("No Color found")
+        return UIColor.white
+    }
+}
+
+func sloganBackroundColor () -> UIColor {
+    if let color = UIColor(named:"SloganBackgroundColor") {
+        return color
+    } else {
+        print("No Color found")
+        return UIColor.white
+    }
+}
+
+func stepBackroundColor () -> UIColor {
+    if let color = UIColor(named:"StepBackgroundColor") {
+        return color
+    } else {
+        print("No Color found")
+        return UIColor.white
+    }
 }

@@ -11,12 +11,16 @@ import UIKit
 extension UIView {
     func headerViewWithLabel(title: String, color: UIColor = UIColor.clear) -> UIView {
         let label = UILabel()
-        label.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+   //     label.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
+        label.font = UIFont.boldSystemFont(ofSize: 24)
         label.text = title
-        label.textAlignment = .center
+        label.textAlignment = .left
+        label.textColor = color.contrastingColor(isFlat: false)
         
         self.addSubview(label)
+        
+        label.layout(top:self.topAnchor, leading:self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 5, left: 10, bottom: 5, right: 10))
+        
         self.backgroundColor = color
         
         return self
@@ -59,5 +63,33 @@ extension UIView {
              heightAnchor.constraint(equalToConstant: size.height).isActive = true
          }
      }
+    
+//    func addColorGradient(color1: UIColor, color2: UIColor) {
+//
+//        let gradient = CAGradientLayer()
+//        gradient.frame = self.bounds
+//       // gradient.colors = [color1.cgColor, color2.cgColor]
+//        
+//        gradient.colors = [UIColor.red.cgColor,
+//                                UIColor.yellow.cgColor,
+//                                UIColor.green.cgColor,
+//                                UIColor.blue.cgColor]
+//             
+//        //gradient.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 1)
+//        
+//        UIGraphicsBeginImageContextWithOptions(gradient.bounds.size, false, 1.0)
+//        
+//        if let context = UIGraphicsGetCurrentContext() {
+//            gradient.render(in: context)
+//            var gradientImage = UIGraphicsGetImageFromCurrentImageContext()
+//            
+//            var imageView = UIImageView(image: gradientImage)
+//            self.addSubview(imageView)
+//        }
+//  
+//        UIGraphicsEndImageContext()
+//        
+//
+//    }
 }
 

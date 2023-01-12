@@ -24,12 +24,10 @@ class StepContentView : UIView, UIContentView {
         super.init(frame:.zero)
         
         self.addSubview(labelsView)
-        
-        labelsView.backgroundColor = UIColor.systemGreen
                
         labelsView.layout(top:self.topAnchor, leading:self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 5, left: 10, bottom: 5, right: 10))
 
-        stepNumberLabel.backgroundColor = UIColor.systemPurple
+
         stepNumberLabel.textAlignment = .center
         stepNumberLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         
@@ -37,7 +35,7 @@ class StepContentView : UIView, UIContentView {
         stepNumberLabel.layout(top: labelsView.topAnchor, leading:labelsView.leadingAnchor, bottom: labelsView.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 40, height: 0))
         
         
-        stepLabel.backgroundColor = UIColor.systemGreen
+
         stepLabel.numberOfLines = 0
         stepLabel.minimumScaleFactor = 0.5
         stepLabel.font = UIFont.systemFont(ofSize: 20.0)
@@ -55,12 +53,21 @@ class StepContentView : UIView, UIContentView {
         guard let configuration = configuration as? StepContentConfiguration else { return }
         self.stepNumberLabel.text = configuration.stepNum
         self.stepLabel.text = configuration.step
+        
+        let color = K.CellContentColor.step.darken(byPercentage: configuration.percentageBy)
+        self.stepNumberLabel.textColor = color.contrastingColor(isFlat: false)
+        self.stepNumberLabel.backgroundColor = color
+        self.stepLabel.textColor = color.contrastingColor(isFlat: false)
+        self.stepLabel.backgroundColor = color
+        self.labelsView.backgroundColor = color
     }
 }
 
 struct StepContentConfiguration : UIContentConfiguration {
     var stepNum = ""
     var step = ""
+    var percentageBy = 0.0
+    
     func makeContentView() -> UIView & UIContentView {
         return StepContentView(self)
     }

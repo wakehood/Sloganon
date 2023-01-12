@@ -18,10 +18,11 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         tableView.register(UINib(nibName: K.CellNibNames.sloganOfTheDayCellNibName, bundle: nil), forCellReuseIdentifier: K.CellReuseIdentifiers.sloganOfTheDayCellIdentifier)
         
         tableView.register(UINib(nibName: K.CellNibNames.acronymCellNibName, bundle: nil), forCellReuseIdentifier: K.CellReuseIdentifiers.acronymCellIdentifier)
+        
+        self.view.backgroundColor = K.sloganVCbackground
   
     }
 
@@ -48,23 +49,27 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
         
         let section = indexPath.section
                 
+        let percentageBy = UIColor.getPercentBy(row: indexPath.row)
+        
         if section == K.SectionNumber.sloganOfTheDay {
             let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.sloganOfTheDayCellIdentifier, for: indexPath) as! SloganOfTheDayTableViewCell
-            cell.sloganOfTheDayTextView.text = slogans.getSloganOfTheDay()
-            cell.sloganOfTheDayTextView.centerVertically()
+            
+            cell.contentConfiguration = SloganOfTheDayContentConfiguration(text: slogans.getSloganOfTheDay())
+            cell.backgroundColor =  K.CellBackgroundColor.sloganOfTheDay
 
             return cell
         } else if section == K.SectionNumber.slogans {
             let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.sloganCellIdentifier, for: indexPath)
-            cell.textLabel?.text = slogans.sortedSloganList()[indexPath.row]
-            cell.textLabel?.numberOfLines = 0
-            cell.textLabel?.minimumScaleFactor = 0.5
+            
+            cell.contentConfiguration = SloganContentConfiguration(text: slogans.sortedSloganList()[indexPath.row], percentageBy: percentageBy)
+            cell.backgroundColor = K.CellBackgroundColor.slogan.darken(byPercentage: percentageBy)
+            
             return cell
         } else  {
             let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.acronymCellIdentifier, for: indexPath) as! AcronymTableViewCell
             
-            cell.acronymTextView.text = slogans.sortedAcronymList()[indexPath.row]
-            cell.acronymTextView.centerVertically()
+            cell.contentConfiguration = AcronymContentConfiguration(text: slogans.sortedAcronymList()[indexPath.row], percentageBy: percentageBy)
+            cell.backgroundColor = K.CellBackgroundColor.acronym.darken(byPercentage: percentageBy)
 
             return cell
         }
@@ -95,22 +100,18 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let myLabel = UILabel()
-        myLabel.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
-        myLabel.font = UIFont.boldSystemFont(ofSize: 18)
-        myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
-       
-
-        let headerView = UIView()
-        headerView.addSubview(myLabel)
+        
+        var cellColor = UIColor()
         
         if section == K.SectionNumber.sloganOfTheDay {
-            headerView.backgroundColor = K.HeaderBackgroundColors.sloganOfTheDay
+            cellColor = K.HeaderBackgroundColor.sloganOfTheDay
         } else if section == K.SectionNumber.slogans {
-            headerView.backgroundColor = K.HeaderBackgroundColors.slogan
+            cellColor = K.HeaderBackgroundColor.slogan
         } else {
-            headerView.backgroundColor = K.HeaderBackgroundColors.acronym
+            cellColor = K.HeaderBackgroundColor.acronym
         }
+        
+        let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "", color: cellColor)
 
         return headerView
     }
@@ -118,9 +119,6 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return K.HeaderHeight
     }
-
-
-
 }
 
 
