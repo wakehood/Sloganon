@@ -86,4 +86,15 @@ extension UIColor {
         
         return   ((isEvenRepeatGroup) ? percent : (1 - percent)) * 0.50
     }
+    
+    //Function to check if asset named color is valid
+    //returns white if not
+    static func checkColor(named: String) -> UIColor{
+        if let color = UIColor(named:named) {
+            return color
+        } else {
+            print("No Color found")
+            return UIColor.white
+        }
+    }
 }

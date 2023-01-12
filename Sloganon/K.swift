@@ -60,15 +60,15 @@ struct K {
     
     
     struct Color {
-        static let sloganOfTheDay = sloganOfTheDayColor()
-        static let slogan =         sloganColor()
-        static let acronym =        acronymColor()
+        static let sloganOfTheDay = UIColor.checkColor(named: "SloganOfTheDayColor")
+        static let slogan =         UIColor.checkColor(named: "SloganColor")
+        static let acronym =        UIColor.checkColor(named: "AcronymColor")
         
-        static let step =           stepColor()
+        static let step =           UIColor.checkColor(named: "StepColor")
     }
-    
-    static let sloganVCbackground = UIColor(named: "SloganBackgroundColor")
-    static let stepVCBackground =   UIColor(named:"StepBackgroundColor")
+
+    static let sloganVCbackground = UIColor.checkColor(named: "SloganBackgroundColor")
+    static let stepVCBackground =   UIColor.checkColor(named:"StepBackgroundColor")
     
     struct HeaderBackgroundColor {
         static let sloganOfTheDay = Color.sloganOfTheDay.darken(byPercentage: 0.25)
@@ -98,57 +98,15 @@ struct K {
 
 }
 
-//Helper functions to ensure Color assets are valid
-func sloganOfTheDayColor () -> UIColor {
-    if let color = UIColor(named:"SloganOfTheDayColor") {
-        return color
-    } else {
-        print("No Color found")
-        return UIColor.white
-    }
-}
+//func checkColor(named: String) -> UIColor{
+//    if let color = UIColor(named:named) {
+//        return color
+//    } else {
+//        print("No Color found")
+//        return UIColor.white
+//    }
+//}
 
-func sloganColor () -> UIColor {
-    if let color = UIColor(named:"SloganColor") {
-        return color
-    } else {
-        print("No Color found")
-        return UIColor.white
-    }
-}
 
-func acronymColor () -> UIColor {
-    if let color = UIColor(named:"AcronymColor") {
-        return color
-    } else {
-        print("No Color found")
-        return UIColor.white
-    }
-}
 
-func stepColor () -> UIColor {
-    if let color = UIColor(named:"StepColor") {
-        return color
-    } else {
-        print("No Color found")
-        return UIColor.white
-    }
-}
 
-func sloganBackroundColor () -> UIColor {
-    if let color = UIColor(named:"SloganBackgroundColor") {
-        return color
-    } else {
-        print("No Color found")
-        return UIColor.white
-    }
-}
-
-func stepBackroundColor () -> UIColor {
-    if let color = UIColor(named:"StepBackgroundColor") {
-        return color
-    } else {
-        print("No Color found")
-        return UIColor.white
-    }
-}

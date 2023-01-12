@@ -18,6 +18,8 @@
 		CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */; };
 		CB6FF52F28DCC82800DBB3AD /* Slogan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF52E28DCC82800DBB3AD /* Slogan.swift */; };
 		CB6FF53228DCC91600DBB3AD /* Slogans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF53128DCC91600DBB3AD /* Slogans.swift */; };
+		CB980514296DF903005770B8 /* AcronymContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB980513296DF903005770B8 /* AcronymContentConfiguration.swift */; };
+		CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */; };
 		CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB229556249006C38EE /* StepsTableViewController.swift */; };
 		CBB48CB7295562FD006C38EE /* SerenityPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */; };
 		CBCDE36529624F760080B182 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36429624F760080B182 /* K.swift */; };
@@ -29,8 +31,9 @@
 		CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6FD629666A020039A2F0 /* Steps.swift */; };
 		CBCF6FD92966706B0039A2F0 /* StepContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6FD82966706B0039A2F0 /* StepContentConfiguration.swift */; };
 		CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */; };
+		CBD11B47296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD11B46296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift */; };
+		CBD11B49296CD0D800ACC03D /* SloganContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD11B48296CD0D800ACC03D /* SloganContentConfiguration.swift */; };
 		CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF764BD28DD60870072D01D /* StringExtensions.swift */; };
-		CBF87FBD2964CDAB00B36A23 /* Git Files in Resources */ = {isa = PBXBuildFile; fileRef = CBF87FBC2964CDAB00B36A23 /* Git Files */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,8 @@
 		CB6FF50F28D524A000DBB3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6FF52E28DCC82800DBB3AD /* Slogan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slogan.swift; sourceTree = "<group>"; };
 		CB6FF53128DCC91600DBB3AD /* Slogans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slogans.swift; sourceTree = "<group>"; };
+		CB980513296DF903005770B8 /* AcronymContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymContentConfiguration.swift; sourceTree = "<group>"; };
+		CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CBB48CB229556249006C38EE /* StepsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewController.swift; sourceTree = "<group>"; };
 		CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerenityPrayerViewController.swift; sourceTree = "<group>"; };
 		CBCDE36429624F760080B182 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
@@ -58,8 +63,9 @@
 		CBCF6FD629666A020039A2F0 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
 		CBCF6FD82966706B0039A2F0 /* StepContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepContentConfiguration.swift; sourceTree = "<group>"; };
 		CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		CBD11B46296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganOfTheDayContentConfiguration.swift; sourceTree = "<group>"; };
+		CBD11B48296CD0D800ACC03D /* SloganContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganContentConfiguration.swift; sourceTree = "<group>"; };
 		CBF764BD28DD60870072D01D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		CBF87FBC2964CDAB00B36A23 /* Git Files */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Git Files"; path = "Sloganon/Git Files"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 				CBF764BD28DD60870072D01D /* StringExtensions.swift */,
 				CB437DE2296B847E006C191E /* UITextViewExtension.swift */,
 				CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */,
+				CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -120,13 +127,15 @@
 			children = (
 				CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */,
 				CB6FF50728D5249C00DBB3AD /* Main.storyboard */,
-				CBF87FBC2964CDAB00B36A23 /* Git Files */,
 				CBCDE36A296278AB0080B182 /* SloganOfTheDayTableViewCell.swift */,
 				CBCDE36B296278AB0080B182 /* SloganOfTheDayTableViewCell.xib */,
 				CBCDE36E2962833B0080B182 /* SloganTableViewCell.swift */,
 				CB14DA142963C56F002FD7B2 /* AcronymTableViewCell.swift */,
 				CB14DA152963C56F002FD7B2 /* AcronymTableViewCell.xib */,
 				CBCF6FD82966706B0039A2F0 /* StepContentConfiguration.swift */,
+				CBD11B46296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift */,
+				CBD11B48296CD0D800ACC03D /* SloganContentConfiguration.swift */,
+				CB980513296DF903005770B8 /* AcronymContentConfiguration.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,7 +222,6 @@
 			files = (
 				CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */,
 				CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */,
-				CBF87FBD2964CDAB00B36A23 /* Git Files in Resources */,
 				CB6FF50928D5249C00DBB3AD /* Main.storyboard in Resources */,
 				CBCDE36D296278AB0080B182 /* SloganOfTheDayTableViewCell.xib in Resources */,
 				CB14DA172963C56F002FD7B2 /* AcronymTableViewCell.xib in Resources */,
@@ -231,9 +239,12 @@
 				CB14DA162963C56F002FD7B2 /* AcronymTableViewCell.swift in Sources */,
 				CBCDE369296272360080B182 /* InfoViewController.swift in Sources */,
 				CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */,
+				CB980514296DF903005770B8 /* AcronymContentConfiguration.swift in Sources */,
+				CBD11B47296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift in Sources */,
 				CBCDE36529624F760080B182 /* K.swift in Sources */,
 				CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */,
 				CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */,
+				CBD11B49296CD0D800ACC03D /* SloganContentConfiguration.swift in Sources */,
 				CB6FF50628D5249C00DBB3AD /* OldSloganViewController.swift in Sources */,
 				CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */,
 				CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */,
@@ -243,6 +254,7 @@
 				CB6FF52F28DCC82800DBB3AD /* Slogan.swift in Sources */,
 				CBCDE36C296278AB0080B182 /* SloganOfTheDayTableViewCell.swift in Sources */,
 				CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */,
+				CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */,
 				CB6FF53228DCC91600DBB3AD /* Slogans.swift in Sources */,
 				CBCDE36F2962833B0080B182 /* SloganTableViewCell.swift in Sources */,
 			);
