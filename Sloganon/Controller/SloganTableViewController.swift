@@ -18,9 +18,9 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: K.CellNibNames.sloganOfTheDayCellNibName, bundle: nil), forCellReuseIdentifier: K.CellReuseIdentifiers.sloganOfTheDayCellIdentifier)
-        
-        tableView.register(UINib(nibName: K.CellNibNames.acronymCellNibName, bundle: nil), forCellReuseIdentifier: K.CellReuseIdentifiers.acronymCellIdentifier)
+//        tableView.register(UINib(nibName: K.CellNibNames.sloganOfTheDayCellNibName, bundle: nil), forCellReuseIdentifier: K.CellReuseIdentifiers.sloganOfTheDayCellIdentifier)
+//
+//        tableView.register(UINib(nibName: K.CellNibNames.acronymCellNibName, bundle: nil), forCellReuseIdentifier: K.CellReuseIdentifiers.acronymCellIdentifier)
         
         self.view.backgroundColor = K.sloganVCbackground
   
@@ -52,7 +52,7 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
         let percentageBy = UIColor.getPercentBy(row: indexPath.row)
         
         if section == K.SectionNumber.sloganOfTheDay {
-            let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.sloganOfTheDayCellIdentifier, for: indexPath) as! SloganOfTheDayTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.sloganOfTheDayCellIdentifier, for: indexPath)
             
             cell.contentConfiguration = SloganOfTheDayContentConfiguration(text: slogans.getSloganOfTheDay())
             cell.backgroundColor =  K.CellBackgroundColor.sloganOfTheDay
@@ -66,7 +66,7 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
             
             return cell
         } else  {
-            let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.acronymCellIdentifier, for: indexPath) as! AcronymTableViewCell
+            let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.acronymCellIdentifier, for: indexPath) 
             
             cell.contentConfiguration = AcronymContentConfiguration(text: slogans.sortedAcronymList()[indexPath.row], percentageBy: percentageBy)
             cell.backgroundColor = K.CellBackgroundColor.acronym.darken(byPercentage: percentageBy)
