@@ -4,10 +4,19 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ComicNeue-Bold.ttf">
+            <string>ComicNeue-Bold</string>
+        </array>
+        <array key="ComicNeue-Regular.ttf">
+            <string>ComicNeue-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="t2b-cb-B5x">
@@ -87,59 +96,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1340"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b80-gc-7yF">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="b80-gc-7yF" userLabel="serenityPrayerScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1257"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xX4-sc-Glp">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xX4-sc-Glp" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serenity Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oy6-Sl-YjD" userLabel="TitleLabel">
-                                                <rect key="frame" x="149" y="97" width="116" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Serenity Prayer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oy6-Sl-YjD" userLabel="TitleLabel">
+                                                <rect key="frame" x="100.66666666666667" y="100" width="212.66666666666663" height="29"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="ComicNeue-Bold" family="Comic Neue" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="God Grant me the Serenity to accept the things I cannot change, change the things I can and the wisdom to know the difference" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZC-Ot-5cB">
-                                                <rect key="frame" x="52" y="193" width="310" height="125"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God Grant me the Serenity to accept the things I cannot change, change the things I can and the wisdom to know the difference" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZC-Ot-5cB">
+                                                <rect key="frame" x="20" y="149" width="374" height="58.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="ComicNeue-Regular" family="Comic Neue" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serenity 3D Flowchart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0a-S9-y9f">
-                                                <rect key="frame" x="112" y="441" width="168" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serenity 3D Flowchart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0a-S9-y9f" userLabel="Serenity3DLabel">
+                                                <rect key="frame" x="50" y="257.66666666666669" width="314" height="23"/>
+                                                <fontDescription key="fontDescription" name="ComicNeue-Bold" family="Comic Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SerenityFlowchart" translatesAutoresizingMaskIntoConstraints="NO" id="QU5-gM-C1e">
-                                                <rect key="frame" x="0.0" y="559" width="414" height="342"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SerenityFlowchart" translatesAutoresizingMaskIntoConstraints="NO" id="QU5-gM-C1e">
+                                                <rect key="frame" x="20" y="300.66666666666669" width="374" height="309.00000000000006"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="QU5-gM-C1e" secondAttribute="height" multiplier="23:19" id="F8u-2Z-AOT"/>
+                                                </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MindfulColorKey" translatesAutoresizingMaskIntoConstraints="NO" id="ogV-Zg-tJx">
-                                                <rect key="frame" x="0.0" y="1010" width="345" height="190"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MindfulColorKey" translatesAutoresizingMaskIntoConstraints="NO" id="ogV-Zg-tJx">
+                                                <rect key="frame" x="20" y="629.66666666666663" width="374" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="fD1-wn-I3q"/>
+                                                </constraints>
                                             </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SerenityPrayerWithColors" translatesAutoresizingMaskIntoConstraints="NO" id="ygR-gK-hqI">
+                                                <rect key="frame" x="50" y="749.66666666666663" width="314" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="fcI-Yx-d4U"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="AcceptIt" translatesAutoresizingMaskIntoConstraints="NO" id="Zy9-ll-aF9">
+                                                <rect key="frame" x="40" y="892.66666666666663" width="334" height="249.99999999999989"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="lNe-za-xF1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept the Things I Cannot Change" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a3-ym-uYo" userLabel="AcceptThingsLabel">
+                                                <rect key="frame" x="20" y="849.66666666666663" width="374" height="23"/>
+                                                <fontDescription key="fontDescription" name="ComicNeue-Bold" family="Comic Neue" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <color key="backgroundColor" name="SerenityBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Zy9-ll-aF9" secondAttribute="trailing" constant="40" id="00F-8N-tgA"/>
+                                            <constraint firstItem="Zy9-ll-aF9" firstAttribute="top" secondItem="9a3-ym-uYo" secondAttribute="bottom" constant="20" id="3gl-Lz-gxZ"/>
+                                            <constraint firstItem="QU5-gM-C1e" firstAttribute="top" secondItem="O0a-S9-y9f" secondAttribute="bottom" constant="20" id="4eg-L4-p64"/>
+                                            <constraint firstAttribute="trailing" secondItem="ogV-Zg-tJx" secondAttribute="trailing" constant="20" id="5CM-3H-smW"/>
+                                            <constraint firstAttribute="trailing" secondItem="ygR-gK-hqI" secondAttribute="trailing" constant="50" id="AE4-HO-sI6"/>
+                                            <constraint firstItem="O0a-S9-y9f" firstAttribute="top" secondItem="3ZC-Ot-5cB" secondAttribute="bottom" constant="50" id="Cxl-1o-b85"/>
+                                            <constraint firstAttribute="trailing" secondItem="QU5-gM-C1e" secondAttribute="trailing" constant="20" id="GSK-St-deQ"/>
+                                            <constraint firstItem="QU5-gM-C1e" firstAttribute="leading" secondItem="xX4-sc-Glp" secondAttribute="leading" constant="20" id="Lf6-Un-Kfl"/>
+                                            <constraint firstItem="ogV-Zg-tJx" firstAttribute="leading" secondItem="xX4-sc-Glp" secondAttribute="leading" constant="20" id="PHQ-Vh-25J"/>
                                             <constraint firstAttribute="height" constant="1300" id="RgH-kY-hRg"/>
+                                            <constraint firstItem="9a3-ym-uYo" firstAttribute="top" secondItem="ygR-gK-hqI" secondAttribute="bottom" constant="50" id="SYq-r5-Wbo"/>
+                                            <constraint firstItem="oy6-Sl-YjD" firstAttribute="centerX" secondItem="xX4-sc-Glp" secondAttribute="centerX" id="YtJ-fi-YoS"/>
+                                            <constraint firstItem="O0a-S9-y9f" firstAttribute="leading" secondItem="xX4-sc-Glp" secondAttribute="leading" constant="50" id="b3o-2q-ixD"/>
+                                            <constraint firstItem="Zy9-ll-aF9" firstAttribute="leading" secondItem="xX4-sc-Glp" secondAttribute="leading" constant="40" id="fHl-lL-x2d"/>
+                                            <constraint firstItem="9a3-ym-uYo" firstAttribute="leading" secondItem="xX4-sc-Glp" secondAttribute="leading" constant="20" id="fvS-oF-mOe"/>
+                                            <constraint firstItem="ygR-gK-hqI" firstAttribute="top" secondItem="ogV-Zg-tJx" secondAttribute="bottom" constant="20" id="g9M-Ju-k9f"/>
+                                            <constraint firstItem="O0a-S9-y9f" firstAttribute="centerX" secondItem="xX4-sc-Glp" secondAttribute="centerX" id="my0-fQ-1KE"/>
+                                            <constraint firstAttribute="trailing" secondItem="9a3-ym-uYo" secondAttribute="trailing" constant="20" id="n7y-YN-6X0"/>
+                                            <constraint firstItem="3ZC-Ot-5cB" firstAttribute="top" secondItem="oy6-Sl-YjD" secondAttribute="bottom" constant="20" id="pK5-EW-CYR"/>
+                                            <constraint firstItem="3ZC-Ot-5cB" firstAttribute="leading" secondItem="xX4-sc-Glp" secondAttribute="leading" constant="20" id="sW3-Fz-If2"/>
+                                            <constraint firstItem="ogV-Zg-tJx" firstAttribute="top" secondItem="QU5-gM-C1e" secondAttribute="bottom" constant="20" id="v8g-Av-9Xl"/>
+                                            <constraint firstItem="oy6-Sl-YjD" firstAttribute="top" secondItem="xX4-sc-Glp" secondAttribute="top" constant="100" id="wdH-8j-2PB"/>
+                                            <constraint firstItem="ygR-gK-hqI" firstAttribute="leading" secondItem="xX4-sc-Glp" secondAttribute="leading" constant="50" id="x7r-Bg-ef2"/>
+                                            <constraint firstItem="3ZC-Ot-5cB" firstAttribute="centerX" secondItem="xX4-sc-Glp" secondAttribute="centerX" id="xdG-vC-u5Q"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="SerenityBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="xX4-sc-Glp" secondAttribute="trailing" id="Q23-ec-u3D"/>
                                     <constraint firstItem="xX4-sc-Glp" firstAttribute="leading" secondItem="b80-gc-7yF" secondAttribute="leading" id="oiZ-tk-Z3K"/>
                                     <constraint firstAttribute="bottom" secondItem="xX4-sc-Glp" secondAttribute="bottom" id="poC-Tu-n4F"/>
                                     <constraint firstItem="xX4-sc-Glp" firstAttribute="top" secondItem="b80-gc-7yF" secondAttribute="top" id="w8D-HY-SzG"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="qpx-M6-Umy" id="KOL-rR-MCr"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="plC-8p-2nC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="SerenityBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="b80-gc-7yF" firstAttribute="top" secondItem="PSv-gw-Jyl" secondAttribute="top" id="5XU-TT-yF9"/>
                             <constraint firstItem="b80-gc-7yF" firstAttribute="leading" secondItem="plC-8p-2nC" secondAttribute="leading" id="H5G-sM-8Bm"/>
@@ -153,6 +208,10 @@
                         <color key="badgeColor" systemColor="systemMintColor"/>
                     </tabBarItem>
                     <size key="freeformSize" width="414" height="1340"/>
+                    <connections>
+                        <outlet property="contentView" destination="xX4-sc-Glp" id="gb5-Y1-f5h"/>
+                        <outlet property="serenityPrayerScrollView" destination="b80-gc-7yF" id="qra-So-DrM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dt1-24-qcc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,12 +270,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AcceptIt" width="183.66667175292969" height="190.33332824707031"/>
         <image name="MindfulColorKey" width="58" height="77"/>
-        <image name="SerenityFlowchart" width="136" height="188.66667175292969"/>
+        <image name="SerenityFlowchart" width="114.66666412353516" height="164"/>
+        <image name="SerenityPrayerWithColors" width="117" height="32.666667938232422"/>
         <image name="bird" catalog="system" width="126" height="128"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="stairs" catalog="system" width="128" height="115"/>
         <image name="textformat.abc" catalog="system" width="128" height="61"/>
+        <namedColor name="SerenityBackgroundColor">
+            <color red="0.92900002002716064" green="0.89399999380111694" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -228,9 +292,6 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

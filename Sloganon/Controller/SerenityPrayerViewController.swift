@@ -7,15 +7,24 @@
 
 import UIKit
 
-class SerenityPrayerViewController: UIViewController {
+class SerenityPrayerViewController: UIViewController, UIScrollViewDelegate {
 
  
-//    @IBOutlet weak var serenityPrayerScrollView: UIScrollView!
+    @IBOutlet weak var serenityPrayerScrollView: UIScrollView!
+    
+    @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        serenityPrayerScrollView.contentSize = view.intrinsicContentSize
+        serenityPrayerScrollView.minimumZoomScale = 0.5
+        serenityPrayerScrollView.maximumZoomScale = 6.0
+        serenityPrayerScrollView.delegate = self
     }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return contentView
+    }
+    
     
 
     /*
