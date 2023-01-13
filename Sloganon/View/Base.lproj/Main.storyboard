@@ -31,9 +31,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="XD9-w4-8Na" kind="relationship" relationship="viewControllers" id="nh5-KG-j5u"/>
-                        <segue destination="qpx-M6-Umy" kind="relationship" relationship="viewControllers" id="1uB-ls-NjM"/>
-                        <segue destination="jVR-0d-rL6" kind="relationship" relationship="viewControllers" id="CzP-9g-Fdo"/>
-                        <segue destination="h6x-FA-3AC" kind="relationship" relationship="viewControllers" id="hjM-Hy-hSb"/>
+                        <segue destination="jVR-0d-rL6" kind="relationship" relationship="viewControllers" id="sNS-bO-tCb"/>
+                        <segue destination="qpx-M6-Umy" kind="relationship" relationship="viewControllers" id="lIk-LL-sA8"/>
+                        <segue destination="h6x-FA-3AC" kind="relationship" relationship="viewControllers" id="UQy-Wi-Yk0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zse-iG-3Se" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -103,50 +103,50 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Serenity Prayer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oy6-Sl-YjD" userLabel="TitleLabel">
-                                                <rect key="frame" x="100.66666666666667" y="100" width="212.66666666666663" height="29"/>
+                                                <rect key="frame" x="100.66666666666667" y="75" width="212.66666666666663" height="29"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="ComicNeue-Bold" family="Comic Neue" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God Grant me the Serenity to accept the things I cannot change, change the things I can and the wisdom to know the difference" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZC-Ot-5cB">
-                                                <rect key="frame" x="20" y="149" width="374" height="58.666666666666657"/>
+                                                <rect key="frame" x="20" y="124.00000000000001" width="374" height="58.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="ComicNeue-Regular" family="Comic Neue" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serenity 3D Flowchart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0a-S9-y9f" userLabel="Serenity3DLabel">
-                                                <rect key="frame" x="50" y="257.66666666666669" width="314" height="23"/>
+                                                <rect key="frame" x="50" y="232.66666666666666" width="314" height="23"/>
                                                 <fontDescription key="fontDescription" name="ComicNeue-Bold" family="Comic Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SerenityFlowchart" translatesAutoresizingMaskIntoConstraints="NO" id="QU5-gM-C1e">
-                                                <rect key="frame" x="20" y="300.66666666666669" width="374" height="309.00000000000006"/>
+                                                <rect key="frame" x="20" y="275.66666666666669" width="374" height="309.00000000000006"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="QU5-gM-C1e" secondAttribute="height" multiplier="23:19" id="F8u-2Z-AOT"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MindfulColorKey" translatesAutoresizingMaskIntoConstraints="NO" id="ogV-Zg-tJx">
-                                                <rect key="frame" x="20" y="629.66666666666663" width="374" height="100"/>
+                                                <rect key="frame" x="20" y="604.66666666666663" width="374" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="fD1-wn-I3q"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SerenityPrayerWithColors" translatesAutoresizingMaskIntoConstraints="NO" id="ygR-gK-hqI">
-                                                <rect key="frame" x="50" y="749.66666666666663" width="314" height="50"/>
+                                                <rect key="frame" x="50" y="724.66666666666663" width="314" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="fcI-Yx-d4U"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="AcceptIt" translatesAutoresizingMaskIntoConstraints="NO" id="Zy9-ll-aF9">
-                                                <rect key="frame" x="40" y="892.66666666666663" width="334" height="249.99999999999989"/>
+                                                <rect key="frame" x="40" y="867.66666666666663" width="334" height="249.99999999999989"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="lNe-za-xF1"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept the Things I Cannot Change" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a3-ym-uYo" userLabel="AcceptThingsLabel">
-                                                <rect key="frame" x="20" y="849.66666666666663" width="374" height="23"/>
+                                                <rect key="frame" x="20" y="824.66666666666663" width="374" height="23"/>
                                                 <fontDescription key="fontDescription" name="ComicNeue-Bold" family="Comic Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -175,7 +175,7 @@
                                             <constraint firstItem="3ZC-Ot-5cB" firstAttribute="top" secondItem="oy6-Sl-YjD" secondAttribute="bottom" constant="20" id="pK5-EW-CYR"/>
                                             <constraint firstItem="3ZC-Ot-5cB" firstAttribute="leading" secondItem="xX4-sc-Glp" secondAttribute="leading" constant="20" id="sW3-Fz-If2"/>
                                             <constraint firstItem="ogV-Zg-tJx" firstAttribute="top" secondItem="QU5-gM-C1e" secondAttribute="bottom" constant="20" id="v8g-Av-9Xl"/>
-                                            <constraint firstItem="oy6-Sl-YjD" firstAttribute="top" secondItem="xX4-sc-Glp" secondAttribute="top" constant="100" id="wdH-8j-2PB"/>
+                                            <constraint firstItem="oy6-Sl-YjD" firstAttribute="top" secondItem="xX4-sc-Glp" secondAttribute="top" constant="75" id="wdH-8j-2PB"/>
                                             <constraint firstItem="ygR-gK-hqI" firstAttribute="leading" secondItem="xX4-sc-Glp" secondAttribute="leading" constant="50" id="x7r-Bg-ef2"/>
                                             <constraint firstItem="3ZC-Ot-5cB" firstAttribute="centerX" secondItem="xX4-sc-Glp" secondAttribute="centerX" id="xdG-vC-u5Q"/>
                                         </constraints>
@@ -215,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dt1-24-qcc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1541.5384615384614" y="233.17535545023696"/>
+            <point key="canvasLocation" x="2409" y="232"/>
         </scene>
         <!--Steps-->
         <scene sceneID="iVN-UV-jgM">
@@ -247,7 +247,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifC-OK-ZM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2266" y="58"/>
+            <point key="canvasLocation" x="1500" y="57"/>
         </scene>
         <!--Info-->
         <scene sceneID="jU0-xN-Ik3">
