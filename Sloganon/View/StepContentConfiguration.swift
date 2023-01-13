@@ -54,6 +54,7 @@ class StepContentView : UIView, UIContentView {
         self.stepNumberLabel.text = configuration.stepNum
         self.stepLabel.text = configuration.step
         
+        
         let color = K.CellContentColor.step.darken(byPercentage: configuration.percentageBy)
         self.stepNumberLabel.textColor = color.contrastingColor(isFlat: false)
         self.stepNumberLabel.backgroundColor = color

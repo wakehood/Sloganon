@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "SerenityFlowchart.jpg",
+      "filename" : "SerenityFlowchart.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "SerenityFlowchart@2x.jpg",
+      "filename" : "SerenityFlowchart@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "SerenityFlowchart@3x.jpg",
+      "filename" : "SerenityFlowchart@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -42,7 +42,7 @@ struct K {
     struct RowHeight{
         static let sloganOfTheDay = 130.0
         static let slogans = 60.0
-        static let acronyms = 128.0
+        static let acronyms = 150.0
         static let steps = 175.0
     }
     

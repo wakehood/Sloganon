@@ -33,6 +33,8 @@ class SloganOfTheDayContentView : UIView, UIContentView {
         self.addSubview(self.textView)
         self.textView.centerVertically()
         self.textView.font = UIFont.boldSystemFont(ofSize: 30.0)
+        self.textView.isEditable = false
+        self.textView.isSelectable = false
 
         self.textView.textAlignment = .center
         

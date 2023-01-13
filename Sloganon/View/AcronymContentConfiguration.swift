@@ -48,6 +48,8 @@ class AcronymContentView : UIView, UIContentView {
         self.textView.text = configuration.text
         self.textView.centerVertically()
         self.textView.font = UIFont.systemFont(ofSize: 17.0)
+        self.textView.isEditable = false
+        self.textView.isSelectable = false
         
         let color = K.CellContentColor.acronym.darken(byPercentage: configuration.percentageBy)
         self.textView.textColor = color.contrastingColor(isFlat: false)

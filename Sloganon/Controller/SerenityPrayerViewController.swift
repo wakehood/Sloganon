@@ -9,12 +9,12 @@ import UIKit
 
 class SerenityPrayerViewController: UIViewController {
 
-    @IBOutlet weak var serenityPrayerLabel: UILabel!
-
+ 
+//    @IBOutlet weak var serenityPrayerScrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        serenityPrayerLabel.text = K.serenityPrayer
+//        serenityPrayerScrollView.contentSize = view.intrinsicContentSize
     }
     
 
