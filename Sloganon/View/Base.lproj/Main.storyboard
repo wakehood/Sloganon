@@ -28,6 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemGray3Color"/>
                     </tabBar>
                     <connections>
                         <segue destination="XD9-w4-8Na" kind="relationship" relationship="viewControllers" id="nh5-KG-j5u"/>
@@ -88,6 +89,38 @@
             </objects>
             <point key="canvasLocation" x="358" y="43"/>
         </scene>
+        <!--Steps-->
+        <scene sceneID="iVN-UV-jgM">
+            <objects>
+                <tableViewController title="Steps" id="jVR-0d-rL6" customClass="StepsTableViewController" customModule="Sloganon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="HgM-Dt-2Tz">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StepCell" id="Xt4-ql-IKq">
+                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xt4-ql-IKq" id="Wsa-r5-sPJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jVR-0d-rL6" id="cHg-XU-Qzi"/>
+                            <outlet property="delegate" destination="jVR-0d-rL6" id="p1P-kp-RpP"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Steps" id="dT5-o6-oQF">
+                        <imageReference key="image" image="stairs" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" systemColor="systemPurpleColor"/>
+                    </tabBarItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifC-OK-ZM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="57"/>
+        </scene>
         <!--SerenityPrayer-->
         <scene sceneID="vDb-68-FSK">
             <objects>
@@ -109,7 +142,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God Grant me the Serenity to accept the things I cannot change, change the things I can and the wisdom to know the difference" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZC-Ot-5cB">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God grant me the Serenity to accept the things I cannot change, change the things I can and wisdom to know the difference." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZC-Ot-5cB">
                                                 <rect key="frame" x="20" y="124.00000000000001" width="374" height="58.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="ComicNeue-Regular" family="Comic Neue" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -217,38 +250,6 @@
             </objects>
             <point key="canvasLocation" x="2409" y="232"/>
         </scene>
-        <!--Steps-->
-        <scene sceneID="iVN-UV-jgM">
-            <objects>
-                <tableViewController title="Steps" id="jVR-0d-rL6" customClass="StepsTableViewController" customModule="Sloganon" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="HgM-Dt-2Tz">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StepCell" id="Xt4-ql-IKq">
-                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xt4-ql-IKq" id="Wsa-r5-sPJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="jVR-0d-rL6" id="cHg-XU-Qzi"/>
-                            <outlet property="delegate" destination="jVR-0d-rL6" id="p1P-kp-RpP"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Steps" id="dT5-o6-oQF">
-                        <imageReference key="image" image="stairs" catalog="system" symbolScale="large"/>
-                        <color key="badgeColor" systemColor="systemPurpleColor"/>
-                    </tabBarItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ifC-OK-ZM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1500" y="57"/>
-        </scene>
         <!--Info-->
         <scene sceneID="jU0-xN-Ik3">
             <objects>
@@ -256,6 +257,28 @@
                     <view key="view" contentMode="scaleToFill" id="dR6-Hs-mtz">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSM-qD-3e3">
+                                <rect key="frame" x="101" y="194" width="190" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AcronymColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alanon Family Groups"/>
+                                <connections>
+                                    <action selector="afgButtonPushed:" destination="h6x-FA-3AC" eventType="touchUpInside" id="q17-Pt-zBb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFf-JL-A0K">
+                                <rect key="frame" x="63" y="321" width="266" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AcronymColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sonoma &amp; Napa County Alanon"/>
+                                <connections>
+                                    <action selector="sonapalanonButtonPushed:" destination="h6x-FA-3AC" eventType="touchUpInside" id="3U4-Hu-VWi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="j8p-Tb-eZE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -263,10 +286,14 @@
                         <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
                         <color key="badgeColor" systemColor="systemYellowColor"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="afgButton" destination="XSM-qD-3e3" id="RuH-zX-DhE"/>
+                        <outlet property="sonapaButton" destination="JFf-JL-A0K" id="mIf-je-wZa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qaH-jt-qDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3297" y="43"/>
+            <point key="canvasLocation" x="3296.9230769230767" y="42.654028436018955"/>
         </scene>
     </scenes>
     <resources>
@@ -278,11 +305,17 @@
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="stairs" catalog="system" width="128" height="115"/>
         <image name="textformat.abc" catalog="system" width="128" height="61"/>
+        <namedColor name="AcronymColor">
+            <color red="0.70599997043609619" green="0.81199997663497925" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="SerenityBackgroundColor">
             <color red="0.92900002002716064" green="0.89399999380111694" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

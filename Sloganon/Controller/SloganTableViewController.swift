@@ -17,19 +17,13 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        tableView.register(UINib(nibName: K.CellNibNames.sloganOfTheDayCellNibName, bundle: nil), forCellReuseIdentifier: K.CellReuseIdentifiers.sloganOfTheDayCellIdentifier)
-//
-//        tableView.register(UINib(nibName: K.CellNibNames.acronymCellNibName, bundle: nil), forCellReuseIdentifier: K.CellReuseIdentifiers.acronymCellIdentifier)
-        
+
         self.view.backgroundColor = K.sloganVCbackground
-  
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return sections.count
     }
 

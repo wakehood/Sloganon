@@ -67,8 +67,8 @@ struct K {
         static let step =           UIColor.checkColor(named: "StepColor")
     }
 
-    static let sloganVCbackground = UIColor.checkColor(named: "SloganBackgroundColor")
-    static let stepVCBackground =   UIColor.checkColor(named:"StepBackgroundColor")
+    static let sloganVCbackground = UIColor.systemGray3
+    static let stepVCBackground =   UIColor.systemGray3
     
     struct HeaderBackgroundColor {
         static let sloganOfTheDay = Color.sloganOfTheDay.darken(byPercentage: 0.25)
@@ -97,16 +97,6 @@ struct K {
 
 
 }
-
-//func checkColor(named: String) -> UIColor{
-//    if let color = UIColor(named:named) {
-//        return color
-//    } else {
-//        print("No Color found")
-//        return UIColor.white
-//    }
-//}
-
 
 
 
