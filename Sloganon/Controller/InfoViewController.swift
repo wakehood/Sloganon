@@ -23,7 +23,7 @@ class InfoViewController: UIViewController, SFSafariViewControllerDelegate {
         
         let urlString = "https://www.al-anon.org"
         
-        if let url = URL(string: urlString) {
+            if let url = URL(string: urlString) {
             let vc = SFSafariViewController(url: url)
             vc.delegate = self
 

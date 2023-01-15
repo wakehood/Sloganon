@@ -258,20 +258,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSM-qD-3e3">
-                                <rect key="frame" x="101" y="194" width="190" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSM-qD-3e3">
+                                <rect key="frame" x="20" y="97" width="350" height="35"/>
                                 <color key="backgroundColor" name="AcronymColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Bjo-aF-JYo"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Alanon Family Groups"/>
                                 <connections>
                                     <action selector="afgButtonPushed:" destination="h6x-FA-3AC" eventType="touchUpInside" id="q17-Pt-zBb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFf-JL-A0K">
-                                <rect key="frame" x="63" y="321" width="266" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFf-JL-A0K">
+                                <rect key="frame" x="20" y="332" width="350" height="35"/>
                                 <color key="backgroundColor" name="AcronymColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Rjv-HL-gdj"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sonoma &amp; Napa County Alanon"/>
                                 <connections>
@@ -281,6 +285,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j8p-Tb-eZE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j8p-Tb-eZE" firstAttribute="trailing" secondItem="XSM-qD-3e3" secondAttribute="trailing" constant="20" id="7Yr-wJ-hdW"/>
+                            <constraint firstItem="JFf-JL-A0K" firstAttribute="leading" secondItem="j8p-Tb-eZE" secondAttribute="leading" constant="20" id="8MP-Zr-OO3"/>
+                            <constraint firstItem="JFf-JL-A0K" firstAttribute="top" secondItem="XSM-qD-3e3" secondAttribute="bottom" constant="200" id="DKF-Ph-8tx"/>
+                            <constraint firstItem="XSM-qD-3e3" firstAttribute="leading" secondItem="j8p-Tb-eZE" secondAttribute="leading" constant="20" id="HhJ-BK-PHB"/>
+                            <constraint firstItem="XSM-qD-3e3" firstAttribute="top" secondItem="j8p-Tb-eZE" secondAttribute="top" constant="50" id="LBV-d6-bj2"/>
+                            <constraint firstItem="j8p-Tb-eZE" firstAttribute="trailing" secondItem="JFf-JL-A0K" secondAttribute="trailing" constant="20" id="zU5-gm-j3X"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" id="ZOi-Bl-V72">
                         <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
