@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB14DA162963C56F002FD7B2 /* AcronymTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14DA142963C56F002FD7B2 /* AcronymTableViewCell.swift */; };
-		CB14DA172963C56F002FD7B2 /* AcronymTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB14DA152963C56F002FD7B2 /* AcronymTableViewCell.xib */; };
 		CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB437DE2296B847E006C191E /* UITextViewExtension.swift */; };
 		CB6DC76F297207830075DEA6 /* ComicNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC769297207820075DEA6 /* ComicNeue-Light.ttf */; };
 		CB6DC770297207830075DEA6 /* ComicNeue-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76A297207830075DEA6 /* ComicNeue-Italic.ttf */; };
@@ -16,14 +14,15 @@
 		CB6DC772297207830075DEA6 /* ComicNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76C297207830075DEA6 /* ComicNeue-Regular.ttf */; };
 		CB6DC773297207830075DEA6 /* ComicNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76D297207830075DEA6 /* ComicNeue-Bold.ttf */; };
 		CB6DC774297207830075DEA6 /* ComicNeue-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76E297207830075DEA6 /* ComicNeue-LightItalic.ttf */; };
+		CB6DC7792973AA3C0075DEA6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CB6DC7782973AA3C0075DEA6 /* RealmSwift */; };
+		CB6DC77B2974A6730075DEA6 /* Acronym.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6DC77A2974A6730075DEA6 /* Acronym.swift */; };
 		CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */; };
 		CB6FF50428D5249C00DBB3AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50328D5249C00DBB3AD /* SceneDelegate.swift */; };
-		CB6FF50628D5249C00DBB3AD /* OldSloganViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50528D5249C00DBB3AD /* OldSloganViewController.swift */; };
 		CB6FF50928D5249C00DBB3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50728D5249C00DBB3AD /* Main.storyboard */; };
 		CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50A28D524A000DBB3AD /* Assets.xcassets */; };
 		CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */; };
 		CB6FF52F28DCC82800DBB3AD /* Slogan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF52E28DCC82800DBB3AD /* Slogan.swift */; };
-		CB6FF53228DCC91600DBB3AD /* Slogans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF53128DCC91600DBB3AD /* Slogans.swift */; };
+		CB6FF53228DCC91600DBB3AD /* SlogansAndAcronyms.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF53128DCC91600DBB3AD /* SlogansAndAcronyms.swift */; };
 		CB980514296DF903005770B8 /* AcronymContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB980513296DF903005770B8 /* AcronymContentConfiguration.swift */; };
 		CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */; };
 		CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB229556249006C38EE /* StepsTableViewController.swift */; };
@@ -31,9 +30,6 @@
 		CBCDE36529624F760080B182 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36429624F760080B182 /* K.swift */; };
 		CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE366296271CB0080B182 /* SloganTableViewController.swift */; };
 		CBCDE369296272360080B182 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE368296272350080B182 /* InfoViewController.swift */; };
-		CBCDE36C296278AB0080B182 /* SloganOfTheDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36A296278AB0080B182 /* SloganOfTheDayTableViewCell.swift */; };
-		CBCDE36D296278AB0080B182 /* SloganOfTheDayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCDE36B296278AB0080B182 /* SloganOfTheDayTableViewCell.xib */; };
-		CBCDE36F2962833B0080B182 /* SloganTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36E2962833B0080B182 /* SloganTableViewCell.swift */; };
 		CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6FD629666A020039A2F0 /* Steps.swift */; };
 		CBCF6FD92966706B0039A2F0 /* StepContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6FD82966706B0039A2F0 /* StepContentConfiguration.swift */; };
 		CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */; };
@@ -43,8 +39,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB14DA142963C56F002FD7B2 /* AcronymTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymTableViewCell.swift; sourceTree = "<group>"; };
-		CB14DA152963C56F002FD7B2 /* AcronymTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AcronymTableViewCell.xib; sourceTree = "<group>"; };
 		CB437DE2296B847E006C191E /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 		CB6DC769297207820075DEA6 /* ComicNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Light.ttf"; sourceTree = "<group>"; };
 		CB6DC76A297207830075DEA6 /* ComicNeue-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Italic.ttf"; sourceTree = "<group>"; };
@@ -52,16 +46,16 @@
 		CB6DC76C297207830075DEA6 /* ComicNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Regular.ttf"; sourceTree = "<group>"; };
 		CB6DC76D297207830075DEA6 /* ComicNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Bold.ttf"; sourceTree = "<group>"; };
 		CB6DC76E297207830075DEA6 /* ComicNeue-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-LightItalic.ttf"; sourceTree = "<group>"; };
+		CB6DC77A2974A6730075DEA6 /* Acronym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acronym.swift; sourceTree = "<group>"; };
 		CB6FF4FE28D5249C00DBB3AD /* Sloganon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sloganon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB6FF50328D5249C00DBB3AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB6FF50528D5249C00DBB3AD /* OldSloganViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldSloganViewController.swift; sourceTree = "<group>"; };
 		CB6FF50828D5249C00DBB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB6FF50A28D524A000DBB3AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB6FF50D28D524A000DBB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB6FF50F28D524A000DBB3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6FF52E28DCC82800DBB3AD /* Slogan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slogan.swift; sourceTree = "<group>"; };
-		CB6FF53128DCC91600DBB3AD /* Slogans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slogans.swift; sourceTree = "<group>"; };
+		CB6FF53128DCC91600DBB3AD /* SlogansAndAcronyms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlogansAndAcronyms.swift; sourceTree = "<group>"; };
 		CB980513296DF903005770B8 /* AcronymContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymContentConfiguration.swift; sourceTree = "<group>"; };
 		CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CBB48CB229556249006C38EE /* StepsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewController.swift; sourceTree = "<group>"; };
@@ -69,9 +63,6 @@
 		CBCDE36429624F760080B182 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		CBCDE366296271CB0080B182 /* SloganTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganTableViewController.swift; sourceTree = "<group>"; };
 		CBCDE368296272350080B182 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		CBCDE36A296278AB0080B182 /* SloganOfTheDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganOfTheDayTableViewCell.swift; sourceTree = "<group>"; };
-		CBCDE36B296278AB0080B182 /* SloganOfTheDayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SloganOfTheDayTableViewCell.xib; sourceTree = "<group>"; };
-		CBCDE36E2962833B0080B182 /* SloganTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganTableViewCell.swift; sourceTree = "<group>"; };
 		CBCF6FD629666A020039A2F0 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
 		CBCF6FD82966706B0039A2F0 /* StepContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepContentConfiguration.swift; sourceTree = "<group>"; };
 		CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -85,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6DC7792973AA3C0075DEA6 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,11 +137,6 @@
 			children = (
 				CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */,
 				CB6FF50728D5249C00DBB3AD /* Main.storyboard */,
-				CBCDE36A296278AB0080B182 /* SloganOfTheDayTableViewCell.swift */,
-				CBCDE36B296278AB0080B182 /* SloganOfTheDayTableViewCell.xib */,
-				CBCDE36E2962833B0080B182 /* SloganTableViewCell.swift */,
-				CB14DA142963C56F002FD7B2 /* AcronymTableViewCell.swift */,
-				CB14DA152963C56F002FD7B2 /* AcronymTableViewCell.xib */,
 				CBCF6FD82966706B0039A2F0 /* StepContentConfiguration.swift */,
 				CBD11B46296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift */,
 				CBD11B48296CD0D800ACC03D /* SloganContentConfiguration.swift */,
@@ -165,7 +152,6 @@
 				CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */,
 				CBB48CB229556249006C38EE /* StepsTableViewController.swift */,
 				CBCDE368296272350080B182 /* InfoViewController.swift */,
-				CB6FF50528D5249C00DBB3AD /* OldSloganViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,8 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				CB6FF52E28DCC82800DBB3AD /* Slogan.swift */,
-				CB6FF53128DCC91600DBB3AD /* Slogans.swift */,
+				CB6FF53128DCC91600DBB3AD /* SlogansAndAcronyms.swift */,
 				CBCF6FD629666A020039A2F0 /* Steps.swift */,
+				CB6DC77A2974A6730075DEA6 /* Acronym.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +183,9 @@
 			dependencies = (
 			);
 			name = Sloganon;
+			packageProductDependencies = (
+				CB6DC7782973AA3C0075DEA6 /* RealmSwift */,
+			);
 			productName = Sloganon;
 			productReference = CB6FF4FE28D5249C00DBB3AD /* Sloganon.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +214,9 @@
 				Base,
 			);
 			mainGroup = CB6FF4F528D5249C00DBB3AD;
+			packageReferences = (
+				CB6DC7772973AA3B0075DEA6 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = CB6FF4FF28D5249C00DBB3AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,9 +237,7 @@
 				CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */,
 				CB6FF50928D5249C00DBB3AD /* Main.storyboard in Resources */,
 				CB6DC774297207830075DEA6 /* ComicNeue-LightItalic.ttf in Resources */,
-				CBCDE36D296278AB0080B182 /* SloganOfTheDayTableViewCell.xib in Resources */,
 				CB6DC76F297207830075DEA6 /* ComicNeue-Light.ttf in Resources */,
-				CB14DA172963C56F002FD7B2 /* AcronymTableViewCell.xib in Resources */,
 				CB6DC770297207830075DEA6 /* ComicNeue-Italic.ttf in Resources */,
 				CB6DC772297207830075DEA6 /* ComicNeue-Regular.ttf in Resources */,
 			);
@@ -260,7 +251,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBB48CB7295562FD006C38EE /* SerenityPrayerViewController.swift in Sources */,
-				CB14DA162963C56F002FD7B2 /* AcronymTableViewCell.swift in Sources */,
 				CBCDE369296272360080B182 /* InfoViewController.swift in Sources */,
 				CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */,
 				CB980514296DF903005770B8 /* AcronymContentConfiguration.swift in Sources */,
@@ -269,18 +259,16 @@
 				CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */,
 				CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */,
 				CBD11B49296CD0D800ACC03D /* SloganContentConfiguration.swift in Sources */,
-				CB6FF50628D5249C00DBB3AD /* OldSloganViewController.swift in Sources */,
+				CB6DC77B2974A6730075DEA6 /* Acronym.swift in Sources */,
 				CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */,
 				CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */,
 				CBCF6FD92966706B0039A2F0 /* StepContentConfiguration.swift in Sources */,
 				CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */,
 				CB6FF50428D5249C00DBB3AD /* SceneDelegate.swift in Sources */,
 				CB6FF52F28DCC82800DBB3AD /* Slogan.swift in Sources */,
-				CBCDE36C296278AB0080B182 /* SloganOfTheDayTableViewCell.swift in Sources */,
 				CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */,
 				CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */,
-				CB6FF53228DCC91600DBB3AD /* Slogans.swift in Sources */,
-				CBCDE36F2962833B0080B182 /* SloganTableViewCell.swift in Sources */,
+				CB6FF53228DCC91600DBB3AD /* SlogansAndAcronyms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +486,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB6DC7772973AA3B0075DEA6 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB6DC7782973AA3C0075DEA6 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB6DC7772973AA3B0075DEA6 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB6FF4F628D5249C00DBB3AD /* Project object */;
 }

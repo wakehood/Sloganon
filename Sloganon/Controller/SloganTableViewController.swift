@@ -9,7 +9,7 @@ import UIKit
 
 class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
     
-    var slogans = Slogans()
+    //var theSlogans = Slogans()
     
     let sections = [K.HeaderText.sloganOfTheDay,
                     K.HeaderText.slogans,
@@ -31,9 +31,9 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
         if section == K.SectionNumber.sloganOfTheDay {
             return 1
         } else if section == K.SectionNumber.slogans {
-            return slogans.sloganList.count
+            return SlogansAndAcronyms.sortedSloganList().count
         } else  {
-            return slogans.acronymList.count
+            return SlogansAndAcronyms.sortedAcronymList().count
         }
     }
 
@@ -48,21 +48,21 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
         if section == K.SectionNumber.sloganOfTheDay {
             let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.sloganOfTheDayCellIdentifier, for: indexPath)
             
-            cell.contentConfiguration = SloganOfTheDayContentConfiguration(text: slogans.getSloganOfTheDay())
+            cell.contentConfiguration = SloganOfTheDayContentConfiguration(text: SlogansAndAcronyms.getSloganOfTheDay())
             cell.backgroundColor =  K.CellBackgroundColor.sloganOfTheDay
 
             return cell
         } else if section == K.SectionNumber.slogans {
             let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.sloganCellIdentifier, for: indexPath)
             
-            cell.contentConfiguration = SloganContentConfiguration(text: slogans.sortedSloganList()[indexPath.row], percentageBy: percentageBy)
+            cell.contentConfiguration = SloganContentConfiguration(text: SlogansAndAcronyms.sortedSloganList()[indexPath.row].slogan, percentageBy: percentageBy)
             cell.backgroundColor = K.CellBackgroundColor.slogan.darken(byPercentage: percentageBy)
             
             return cell
         } else  {
             let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.acronymCellIdentifier, for: indexPath) 
             
-            cell.contentConfiguration = AcronymContentConfiguration(text: slogans.sortedAcronymList()[indexPath.row], percentageBy: percentageBy)
+            cell.contentConfiguration = AcronymContentConfiguration(text: SlogansAndAcronyms.sortedAcronymList()[indexPath.row].acronym, percentageBy: percentageBy)
             cell.backgroundColor = K.CellBackgroundColor.acronym.darken(byPercentage: percentageBy)
 
             return cell

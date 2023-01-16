@@ -1,20 +1,21 @@
 //
-//  Slogan.swift
+//  Acronym.swift
 //  Sloganon
 //
-//  Created by Sylvia Wake-Hood on 9/22/22.
+//  Created by Sylvia Wake-Hood on 1/15/23.
 //
+
 import Foundation
 import RealmSwift
 
-class Slogan: Object{
-    @objc dynamic var slogan: String = ""
+class Acronym: Object{
+    @objc dynamic var acronym: String = ""
     @objc dynamic var isFavorite: Bool = false
     @objc dynamic var  isDeletable: Bool = false
     
-    convenience init(slogan: String = "", isFavorite: Bool = false, isDeletable: Bool = false) {
+    convenience init(acronym: String = "", isFavorite: Bool = false, isDeletable: Bool = false) {
         self.init()
-        self.slogan = slogan
+        self.acronym = acronym
         self.isFavorite = isFavorite
         self.isDeletable = isDeletable
     }
