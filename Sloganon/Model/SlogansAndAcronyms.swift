@@ -126,22 +126,21 @@ class SlogansAndAcronyms {
 //        return combinedSlogan
 //    }
     
-    static func sortedSloganList() -> Array<Slogan> {
+    static func sortedSloganList() -> Array<String> {
         let realm = try! Realm()
         
-        let sloganResults = realm.objects(Slogan.self)
-            .sorted(byKeyPath: "slogan")
-        let sloganArray = Array(sloganResults)
+        //use map function to get String array
+        let sloganArray = Array(realm.objects(Slogan.self)
+            .sorted(byKeyPath: "slogan"))
+            .map{$0.slogan}
         
         return sloganArray
     }
     
-    static func sortedAcronymList() -> Array<Acronym> {
+    static func sortedAcronymList() -> Array<String> {
         let realm = try! Realm()
         
-        let acronymResults = realm.objects(Acronym.self)
-            .sorted(byKeyPath: "acronym")
-        let acronymArray = Array(acronymResults)
+        let acronymArray = Array(realm.objects(Acronym.self).sorted(byKeyPath: "acronym")).map{$0.acronym}
         
         return acronymArray
     }

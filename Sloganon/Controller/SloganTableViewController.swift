@@ -8,8 +8,9 @@
 import UIKit
 
 class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
-    
-    //var theSlogans = Slogans()
+
+    var slogans: Array<String> = []
+    var acronyms: Array<String> = []
     
     let sections = [K.HeaderText.sloganOfTheDay,
                     K.HeaderText.slogans,
@@ -19,6 +20,10 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
         super.viewDidLoad()
 
         self.view.backgroundColor = K.sloganVCbackground
+        
+        slogans = SlogansAndAcronyms.sortedSloganList()
+        acronyms = SlogansAndAcronyms.sortedAcronymList()
+        
     }
 
     // MARK: - Table view data source
@@ -31,9 +36,9 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
         if section == K.SectionNumber.sloganOfTheDay {
             return 1
         } else if section == K.SectionNumber.slogans {
-            return SlogansAndAcronyms.sortedSloganList().count
+            return self.slogans.count
         } else  {
-            return SlogansAndAcronyms.sortedAcronymList().count
+            return self.acronyms.count
         }
     }
 
@@ -55,14 +60,14 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
         } else if section == K.SectionNumber.slogans {
             let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.sloganCellIdentifier, for: indexPath)
             
-            cell.contentConfiguration = SloganContentConfiguration(text: SlogansAndAcronyms.sortedSloganList()[indexPath.row].slogan, percentageBy: percentageBy)
+            cell.contentConfiguration = SloganContentConfiguration(text: slogans[indexPath.row], percentageBy: percentageBy)
             cell.backgroundColor = K.CellBackgroundColor.slogan.darken(byPercentage: percentageBy)
             
             return cell
         } else  {
             let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.acronymCellIdentifier, for: indexPath) 
             
-            cell.contentConfiguration = AcronymContentConfiguration(text: SlogansAndAcronyms.sortedAcronymList()[indexPath.row].acronym, percentageBy: percentageBy)
+            cell.contentConfiguration = AcronymContentConfiguration(text: acronyms[indexPath.row], percentageBy: percentageBy)
             cell.backgroundColor = K.CellBackgroundColor.acronym.darken(byPercentage: percentageBy)
 
             return cell
