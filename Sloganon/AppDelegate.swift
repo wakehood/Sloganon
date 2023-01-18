@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         
-        print(Realm.Configuration.defaultConfiguration.fileURL ?? "")
+        //print(Realm.Configuration.defaultConfiguration.fileURL ?? "")
         do {
             let realm = try Realm()
             
@@ -29,6 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if realm.objects(Acronym.self).isEmpty
             {
                 SlogansAndAcronyms.initalizeAcronyms()
+                
+            }
+            
+            //only add default acronyms if realm is empty
+            if realm.objects(WebPage.self).isEmpty
+            {
+                WebPage.initializeWebPages()
                 
             }
         } catch {

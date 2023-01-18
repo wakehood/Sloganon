@@ -58,26 +58,10 @@ class SlogansAndAcronyms {
             print("Error adding acronyms \(error)")
         }
     }
-    
-    //Returns a String array of all the slogans and acronyms
-    static func sloganAndAcronymList() -> Array<String>
-    {
-        let realm = try! Realm()
         
-        //use map function to get String array
-        let sloganArray = Array(realm.objects(Slogan.self).sorted(byKeyPath: "slogan")).map{$0.slogan}
-        
-        
-//        let acronymArray = Array(realm.objects(Acronym.self).sorted(byKeyPath: "acronym")).map{$0.acronym}
-        
-//        let combinedArray = sloganArray + acronymArray
-        
-        return sloganArray
-    }
-    
     //return a random number from 0 to size of list - 1
     static func getRandomSlogan()-> String {
-        let sayingslist = sloganAndAcronymList()
+        let sayingslist = sortedSloganList()
         let listSize = sayingslist.count
         let index = Int.random(in: 0...(listSize-1))
         
@@ -93,7 +77,7 @@ class SlogansAndAcronyms {
         let days = interval / K.secsInDay
         
         //get the sayings list
-        let sayingslist = sloganAndAcronymList()
+        let sayingslist = sortedSloganList()
         
         //get the modulus
         let index = (days % sayingslist.count)
@@ -103,28 +87,7 @@ class SlogansAndAcronyms {
         return slogan
     }
     
-//    func searchSlogans(keyword: String) -> String{
-//
-//        var found = false
-//        var combinedSlogan = ""
-//
-//        //clean up the keyword; remove whitespace; make lowercase
-//        let cleanKeyword = keyword.lowercased().trimmingCharacters(in: .whitespaces)
-//
-//        for s in sloganList {
-//            //convert slogan to array of strings
-//            let strArray = s.lowercased().removingCharacters(from: .newlines).components(separatedBy: " ")
-//            let wordFound = strArray.contains(cleanKeyword.lowercased())
-//            if(wordFound){
-//                combinedSlogan += s + "\n"
-//                found = true
-//            }
-//        }
-//        if(!found){
-//            combinedSlogan = "No slogan was found with keyword \"\(keyword)\""
-//        }
-//        return combinedSlogan
-//    }
+
     
     static func sortedSloganList() -> Array<String> {
         let realm = try! Realm()

@@ -22,6 +22,7 @@ struct K {
         static let sloganCellIdentifier = "SloganCell"
         static let acronymCellIdentifier = "AcronymCell"
         static let stepCellIdentifier = "StepCell"
+        static let webPageInfoCellIdentifier = "webPageInfoCell"
 
     }
 
@@ -37,6 +38,7 @@ struct K {
         static let slogans = 1
         static let acronyms = 2
         static let steps = 0
+        static let webinfo = 0
     }
     
     struct RowHeight{
@@ -44,6 +46,7 @@ struct K {
         static let slogans = 60.0
         static let acronyms = 150.0
         static let steps = 175.0
+        static let webinfo = 100.0
     }
     
     struct HeaderText {
@@ -51,6 +54,7 @@ struct K {
         static let slogans = "Slogans"
         static let acronyms = "Acronyms"
         static let _12Steps = "The 12 Steps"
+        static let webinfo = "Alanon Websites for further Info"
     }
     
     static let HeaderHeight = 50.0
@@ -65,10 +69,12 @@ struct K {
         static let acronym =        UIColor.checkColor(named: "AcronymColor")
         
         static let step =           UIColor.checkColor(named: "StepColor")
+        static let webinfo = UIColor.checkColor(named: "WebInfoColor")
     }
 
     static let sloganVCbackground = UIColor.systemGray3
     static let stepVCBackground =   UIColor.systemGray3
+    static let webInfoVCBackground =   UIColor.systemGray3
     
     struct HeaderBackgroundColor {
         static let sloganOfTheDay = Color.sloganOfTheDay.darken(byPercentage: 0.25)
@@ -76,6 +82,8 @@ struct K {
         static let acronym =        Color.acronym.darken(byPercentage: 0.25)
         
         static let step =           Color.step.darken(byPercentage: 0.25)
+        
+        static let webinfo = Color.webinfo.darken(byPercentage: 0.25)
     }
     
     struct CellBackgroundColor {
@@ -84,6 +92,7 @@ struct K {
         static let acronym =        Color.acronym
         
         static let step =           Color.step
+        static let webinfo =        Color.webinfo
     }
     
     struct CellContentColor {
@@ -92,10 +101,13 @@ struct K {
         static let acronym =        Color.acronym
         
         static let step =           Color.step
+        static let webinfo =        Color.webinfo
     }
     
     static let secsInDay = 24 * 60 * 60
     
+    
+    //default list of acronyms
     static let sloganList = [
         "Detachment not Amputation ",
         "Look back without staring ",
@@ -143,6 +155,7 @@ struct K {
         "Think ", 
     ]
 
+    //default list of acronyms
     static  let acronymList = [
         "THREE A'S\n\tAwareness\n\tAcceptance\n\tAction",
         "THREE C’s\n\tI didn’t cause it\n\tI can’t control it\n\tI can’t cure it",
@@ -160,6 +173,12 @@ struct K {
         "STEPS\n\tSolutions\n\tTo\n\tEvery\n\tProblem",
         "QTIP\n\tQuit\n\tTaking\n\tIt\n\tPersonally",
         "DENIAL\n\tDon’t\n\tEven\n\tNotice\n\tI\n\tAm \n\tLying"
+    ]
+    
+    //starting list of web pages
+    static let webPageList = [
+        ["World Service Organization", "https://www.al-anon.org"],
+        ["Sonoma and Napa Alanon", "https://sonapal-anon.org"]
     ]
 }
 

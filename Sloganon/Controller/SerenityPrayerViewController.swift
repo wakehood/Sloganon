@@ -19,6 +19,8 @@ class SerenityPrayerViewController: UIViewController, UIScrollViewDelegate {
         serenityPrayerScrollView.minimumZoomScale = 0.5
         serenityPrayerScrollView.maximumZoomScale = 6.0
         serenityPrayerScrollView.delegate = self
+        
+        self.view.backgroundColor = K.sloganVCbackground
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
