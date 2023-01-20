@@ -50,11 +50,11 @@ struct K {
     }
     
     struct HeaderText {
-        static let sloganOfTheDay = "Slogan or Acronym of the Day"
+        static let sloganOfTheDay = "Slogan of the Day"
         static let slogans = "Slogans"
         static let acronyms = "Acronyms"
         static let _12Steps = "The 12 Steps"
-        static let webinfo = "Alanon Websites for further Info"
+        static let webinfo = "Alanon Websites for Further Info"
     }
     
     static let HeaderHeight = 50.0
