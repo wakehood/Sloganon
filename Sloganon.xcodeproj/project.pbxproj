@@ -22,7 +22,6 @@
 		CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50A28D524A000DBB3AD /* Assets.xcassets */; };
 		CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */; };
 		CB6FF52F28DCC82800DBB3AD /* Slogan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF52E28DCC82800DBB3AD /* Slogan.swift */; };
-		CB6FF53228DCC91600DBB3AD /* SlogansAndAcronyms.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF53128DCC91600DBB3AD /* SlogansAndAcronyms.swift */; };
 		CB980514296DF903005770B8 /* AcronymContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB980513296DF903005770B8 /* AcronymContentConfiguration.swift */; };
 		CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */; };
 		CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB229556249006C38EE /* StepsTableViewController.swift */; };
@@ -58,7 +57,6 @@
 		CB6FF50D28D524A000DBB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB6FF50F28D524A000DBB3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6FF52E28DCC82800DBB3AD /* Slogan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slogan.swift; sourceTree = "<group>"; };
-		CB6FF53128DCC91600DBB3AD /* SlogansAndAcronyms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlogansAndAcronyms.swift; sourceTree = "<group>"; };
 		CB980513296DF903005770B8 /* AcronymContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymContentConfiguration.swift; sourceTree = "<group>"; };
 		CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CBB48CB229556249006C38EE /* StepsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewController.swift; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 			children = (
 				CB6FF52E28DCC82800DBB3AD /* Slogan.swift */,
 				CBBC4C052976604400D9FF2B /* WebPage.swift */,
-				CB6FF53128DCC91600DBB3AD /* SlogansAndAcronyms.swift */,
 				CBCF6FD629666A020039A2F0 /* Steps.swift */,
 				CB6DC77A2974A6730075DEA6 /* Acronym.swift */,
 			);
@@ -280,7 +277,6 @@
 				CB6FF52F28DCC82800DBB3AD /* Slogan.swift in Sources */,
 				CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */,
 				CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */,
-				CB6FF53228DCC91600DBB3AD /* SlogansAndAcronyms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -410,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

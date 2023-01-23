@@ -21,14 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //Only add default slogans if realm is empty
             if realm.objects(Slogan.self).isEmpty
             {
-                SlogansAndAcronyms.initalizeSlogans()
+                Slogan.initalizeSlogans()
                 
             }
             
             //only add default acronyms if realm is empty
             if realm.objects(Acronym.self).isEmpty
             {
-                SlogansAndAcronyms.initalizeAcronyms()
+                Acronym.initalizeAcronyms()
                 
             }
             
