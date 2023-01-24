@@ -24,16 +24,11 @@ class Slogan: Object{
     //This function should only be called the first time the app is run
     static func initalizeSlogans(){
         let realm = try! Realm()
+        
+        //ensure that realm slogan is empty
+        assert(realm.objects(Slogan.self).isEmpty, "trying to initialize when realm Slogan is not empty")
+        
         do {
-            //don't add slogans twice - this is belt and suspenders
-            let sloganResults = realm.objects(Slogan.self)
-            if sloganResults.count != 0 {
-                //also check if results count is the same as the list count
-                if(sloganResults.count != K.sloganList.count){
-                    print ("unexpected number of slogans; expect \(K.sloganList.count) but have \(sloganResults.count)")
-                }
-                return
-            }
             try realm.write {
                 for item in K.sloganList {
                     let slogan = Slogan(slogan: item, isFavorite: false, isDeletable: false)
@@ -41,7 +36,7 @@ class Slogan: Object{
                 }
             }
         } catch {
-            print("Error adding slogans \(error)")
+            assertionFailure("Error adding slogans \(error)")
         }
     }
     

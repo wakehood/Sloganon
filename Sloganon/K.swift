@@ -62,6 +62,11 @@ struct K {
     static let serenityPrayer =
     "God grant me the serenity\nTo accept the things I cannot change,\nCourage to change the things I can\nAnd wisdom to know the difference."
     
+    struct accessoryViewIcon {
+        static let selectedSlogan   = "heart.fill"
+        static let unselectedSlogan = "heart"
+    }
+    
     
     struct Color {
         static let sloganOfTheDay = UIColor.checkColor(named: "SloganOfTheDayColor")
@@ -152,7 +157,7 @@ struct K {
         "Listen and Learn ",
         "Live and Let Live ",
         "One Day at a Time ",
-        "Think ", 
+        
     ]
 
     //default list of acronyms
@@ -176,9 +181,28 @@ struct K {
     ]
     
     //starting list of web pages
-    static let webPageList = [
-        ["World Service Organization", "https://www.al-anon.org"],
-        ["Sonoma and Napa Alanon", "https://sonapal-anon.org"]
+    static let elementsPerWebPageInfo = 3
+        
+    static let webPages = [
+        ["World Service Organization", "US", "https://www.al-anon.org"],
+        ["Arizona Al-Anon/Alateen Family Groups", "AZ", "https://al-anon-az.org/"],
+        ["Sonoma and Napa Alanon", "CA", "https://sonapal-anon.org"],
+
+        ["East Valley Al-Anon Information Center (EVIC)", "AZ", "http://al-anoneastvalley.org/"],
+        ["Al-Anon Meetings Mesa", "AZ", "https://findrecovery.com/alanon_meetings/az/mesa/"],
+        ["Salt River Valley Al-Anon Information Service (SRVAIS) – For ...", "AZ", "https://srvais.org/"],
+        ["Al-Anon and Alateen Santa Barbara", "CA", "https://www.alanonsantabarbara.info/"],
+        ["Monterey County Al-Anon", "CA", "https://www.montereycountyal-anon.org/"],
+        ["Grand Rapids Al-Anon", "MI", "https://aisgr.org/"],
+        ["Al-Anon and Alateen Family Groups of Utah", "UT", "https://utah-alanon.org/"],
+        ["Texas Al-Anon and Alateen", "TX", "https://texas-al-anon.org/"],
+        ["Al-Anon Suffolk ", "NY", "https://www.al-anon-suffolk-ny.org/"],
+        ["Al-Anon Baltimore", "MD", "https://www.alanon-maryland.org/"],
+        ["Florida North Alanon", "FL", "https://www.afgarea9.org/"],
+        ["Southern Arizona Al-Anon and Alateen", "AZ", "https://so-az-alanon.org/"],
+        ["New Jersey Al-Anon/Alateen", "NJ", "https://nj-al-anon.org/"],
+        ["Rhode Island Al-Anon Family Groups", "RI", "https://www.riafg.org/"],
+        ["Al-Anon Information Services of Oklahoma", "OK", "https://www.okcalanon.org/"],
     ]
 }
 

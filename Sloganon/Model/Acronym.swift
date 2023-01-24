@@ -24,16 +24,11 @@ class Acronym: Object{
     //This function should only be called the first time the app is run
     static func initalizeAcronyms(){
         let realm = try! Realm()
+        
+        //don't add acronyms twice - this is belt and suspenders
+        assert(realm.objects(Acronym.self).isEmpty, "realm Acronym is not empty")
+
         do {
-            //don't add acronyms twice - this is belt and suspenders
-            let acronymResults = realm.objects(Acronym.self)
-            if acronymResults.count != 0 {
-                //also check if results count is the same as the list count
-                if(acronymResults.count != K.acronymList.count){
-                    print ("unexpected number of acronyms; expect \(K.acronymList.count) but have \(acronymResults.count)")
-                }
-                return
-            }
             try realm.write {
                 for item in K.acronymList {
                     let acronym = Acronym(acronym: item,isFavorite: false, isDeletable: false)
@@ -41,7 +36,7 @@ class Acronym: Object{
                 }
             }
         } catch {
-            print("Error adding acronyms \(error)")
+            assertionFailure("Error adding acronyms \(error)")
         }
     }
     

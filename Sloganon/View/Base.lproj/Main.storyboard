@@ -335,7 +335,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Info" id="UNW-Lx-nJW" userLabel="Info">
-                        <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
+                        <imageReference key="image" image="network" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nfg-RW-Ifz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -349,7 +349,7 @@
         <image name="SerenityFlowchart" width="114.66666412353516" height="164"/>
         <image name="SerenityPrayerWithColors" width="117" height="32.666667938232422"/>
         <image name="bird" catalog="system" width="126" height="128"/>
-        <image name="info.circle" catalog="system" width="128" height="123"/>
+        <image name="network" catalog="system" width="128" height="123"/>
         <image name="stairs" catalog="system" width="128" height="115"/>
         <image name="textformat.abc" catalog="system" width="128" height="61"/>
         <namedColor name="SerenityBackgroundColor">

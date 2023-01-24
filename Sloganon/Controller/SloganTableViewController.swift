@@ -69,7 +69,9 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
             
             //set up the heart accessory view
             cell.accessoryType = (isFavorite) ? .checkmark : .none
-            let heartImage = (isFavorite) ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
+            let heartImage = (isFavorite) ?
+            UIImage(systemName: K.accessoryViewIcon.selectedSlogan) :
+            UIImage(systemName: K.accessoryViewIcon.unselectedSlogan)
             let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
             imgView.image = heartImage
             cell.accessoryView = imgView
