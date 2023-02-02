@@ -22,6 +22,7 @@
 		CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50A28D524A000DBB3AD /* Assets.xcassets */; };
 		CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */; };
 		CB6FF52F28DCC82800DBB3AD /* Slogan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF52E28DCC82800DBB3AD /* Slogan.swift */; };
+		CB7FC99829804FB8007C89D9 /* TwoLabelContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FC99729804FB8007C89D9 /* TwoLabelContentConfiguration.swift */; };
 		CB980514296DF903005770B8 /* AcronymContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB980513296DF903005770B8 /* AcronymContentConfiguration.swift */; };
 		CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */; };
 		CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB229556249006C38EE /* StepsTableViewController.swift */; };
@@ -31,13 +32,11 @@
 		CBCDE36529624F760080B182 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36429624F760080B182 /* K.swift */; };
 		CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE366296271CB0080B182 /* SloganTableViewController.swift */; };
 		CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6FD629666A020039A2F0 /* Steps.swift */; };
-		CBCF6FD92966706B0039A2F0 /* StepContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6FD82966706B0039A2F0 /* StepContentConfiguration.swift */; };
 		CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */; };
 		CBD11B47296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD11B46296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift */; };
-		CBD11B49296CD0D800ACC03D /* SloganContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD11B48296CD0D800ACC03D /* SloganContentConfiguration.swift */; };
+		CBD11B49296CD0D800ACC03D /* OneLabelContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD11B48296CD0D800ACC03D /* OneLabelContentConfiguration.swift */; };
 		CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF764BD28DD60870072D01D /* StringExtensions.swift */; };
 		CBFDC9622977577300E30404 /* WebPageInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFDC9612977577300E30404 /* WebPageInfoTableViewController.swift */; };
-		CBFDC9642977607800E30404 /* WebPageInfoContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFDC9632977607800E30404 /* WebPageInfoContentConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +56,7 @@
 		CB6FF50D28D524A000DBB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB6FF50F28D524A000DBB3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6FF52E28DCC82800DBB3AD /* Slogan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slogan.swift; sourceTree = "<group>"; };
+		CB7FC99729804FB8007C89D9 /* TwoLabelContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelContentConfiguration.swift; sourceTree = "<group>"; };
 		CB980513296DF903005770B8 /* AcronymContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymContentConfiguration.swift; sourceTree = "<group>"; };
 		CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CBB48CB229556249006C38EE /* StepsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewController.swift; sourceTree = "<group>"; };
@@ -65,13 +65,11 @@
 		CBCDE36429624F760080B182 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		CBCDE366296271CB0080B182 /* SloganTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganTableViewController.swift; sourceTree = "<group>"; };
 		CBCF6FD629666A020039A2F0 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
-		CBCF6FD82966706B0039A2F0 /* StepContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepContentConfiguration.swift; sourceTree = "<group>"; };
 		CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CBD11B46296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganOfTheDayContentConfiguration.swift; sourceTree = "<group>"; };
-		CBD11B48296CD0D800ACC03D /* SloganContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganContentConfiguration.swift; sourceTree = "<group>"; };
+		CBD11B48296CD0D800ACC03D /* OneLabelContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLabelContentConfiguration.swift; sourceTree = "<group>"; };
 		CBF764BD28DD60870072D01D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		CBFDC9612977577300E30404 /* WebPageInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageInfoTableViewController.swift; sourceTree = "<group>"; };
-		CBFDC9632977607800E30404 /* WebPageInfoContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageInfoContentConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,11 +139,10 @@
 			children = (
 				CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */,
 				CB6FF50728D5249C00DBB3AD /* Main.storyboard */,
-				CBCF6FD82966706B0039A2F0 /* StepContentConfiguration.swift */,
 				CBD11B46296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift */,
-				CBD11B48296CD0D800ACC03D /* SloganContentConfiguration.swift */,
+				CBD11B48296CD0D800ACC03D /* OneLabelContentConfiguration.swift */,
 				CB980513296DF903005770B8 /* AcronymContentConfiguration.swift */,
-				CBFDC9632977607800E30404 /* WebPageInfoContentConfiguration.swift */,
+				CB7FC99729804FB8007C89D9 /* TwoLabelContentConfiguration.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,10 +161,10 @@
 		CB6FF53028DCC83300DBB3AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CB6FF52E28DCC82800DBB3AD /* Slogan.swift */,
-				CBBC4C052976604400D9FF2B /* WebPage.swift */,
-				CBCF6FD629666A020039A2F0 /* Steps.swift */,
 				CB6DC77A2974A6730075DEA6 /* Acronym.swift */,
+				CB6FF52E28DCC82800DBB3AD /* Slogan.swift */,
+				CBCF6FD629666A020039A2F0 /* Steps.swift */,
+				CBBC4C052976604400D9FF2B /* WebPage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,21 +254,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7FC99829804FB8007C89D9 /* TwoLabelContentConfiguration.swift in Sources */,
 				CBFDC9622977577300E30404 /* WebPageInfoTableViewController.swift in Sources */,
 				CBB48CB7295562FD006C38EE /* SerenityPrayerViewController.swift in Sources */,
 				CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */,
 				CB980514296DF903005770B8 /* AcronymContentConfiguration.swift in Sources */,
 				CBD11B47296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift in Sources */,
-				CBFDC9642977607800E30404 /* WebPageInfoContentConfiguration.swift in Sources */,
 				CBCDE36529624F760080B182 /* K.swift in Sources */,
 				CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */,
 				CBBC4C062976604400D9FF2B /* WebPage.swift in Sources */,
 				CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */,
-				CBD11B49296CD0D800ACC03D /* SloganContentConfiguration.swift in Sources */,
+				CBD11B49296CD0D800ACC03D /* OneLabelContentConfiguration.swift in Sources */,
 				CB6DC77B2974A6730075DEA6 /* Acronym.swift in Sources */,
 				CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */,
 				CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */,
-				CBCF6FD92966706B0039A2F0 /* StepContentConfiguration.swift in Sources */,
 				CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */,
 				CB6FF50428D5249C00DBB3AD /* SceneDelegate.swift in Sources */,
 				CB6FF52F28DCC82800DBB3AD /* Slogan.swift in Sources */,

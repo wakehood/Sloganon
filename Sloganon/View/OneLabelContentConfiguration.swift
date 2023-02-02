@@ -9,19 +9,22 @@ import Foundation
 import UIKit
 
 
-struct SloganContentConfiguration : UIContentConfiguration {
+struct OneLabelContentConfiguration : UIContentConfiguration {
     var text = ""
+    var cellColor = UIColor.white
     var percentageBy = 0.0
+
+    
     func makeContentView() -> UIView & UIContentView {
-        return SloganContentView(self)
+        return OneLabelContentView(self)
     }
-    func updated(for state: UIConfigurationState) -> SloganContentConfiguration {
+    func updated(for state: UIConfigurationState) -> OneLabelContentConfiguration {
         return self
     }
 }
 
 
-class SloganContentView : UIView, UIContentView {
+class OneLabelContentView : UIView, UIContentView {
     var configuration: UIContentConfiguration {
         didSet {
             self.configure(configuration: configuration)
@@ -44,13 +47,13 @@ class SloganContentView : UIView, UIContentView {
         fatalError("init(coder:) has not been implemented")
     }
     func configure(configuration: UIContentConfiguration) {
-        guard let configuration = configuration as? SloganContentConfiguration else { return }
+        guard let configuration = configuration as? OneLabelContentConfiguration else { return }
         self.label.text = configuration.text
         label.textAlignment = .left
         label.numberOfLines = 0
         label.minimumScaleFactor = 0.5
 
-        let color = K.CellContentColor.slogan.darken(byPercentage: configuration.percentageBy)
+        let color = configuration.cellColor.darken(byPercentage: configuration.percentageBy)
         self.label.backgroundColor = color
         self.label.textColor = color.contrastingColor(isFlat: false)
    

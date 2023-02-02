@@ -63,33 +63,5 @@ extension UIView {
              heightAnchor.constraint(equalToConstant: size.height).isActive = true
          }
      }
-    
-//    func addColorGradient(color1: UIColor, color2: UIColor) {
-//
-//        let gradient = CAGradientLayer()
-//        gradient.frame = self.bounds
-//       // gradient.colors = [color1.cgColor, color2.cgColor]
-//        
-//        gradient.colors = [UIColor.red.cgColor,
-//                                UIColor.yellow.cgColor,
-//                                UIColor.green.cgColor,
-//                                UIColor.blue.cgColor]
-//             
-//        //gradient.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 1)
-//        
-//        UIGraphicsBeginImageContextWithOptions(gradient.bounds.size, false, 1.0)
-//        
-//        if let context = UIGraphicsGetCurrentContext() {
-//            gradient.render(in: context)
-//            var gradientImage = UIGraphicsGetImageFromCurrentImageContext()
-//            
-//            var imageView = UIImageView(image: gradientImage)
-//            self.addSubview(imageView)
-//        }
-//  
-//        UIGraphicsEndImageContext()
-//        
-//
-//    }
 }
 

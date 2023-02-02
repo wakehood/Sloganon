@@ -64,7 +64,7 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate  {
             let slogan = slogans?[indexPath.row].slogan ?? "No slogans"
             let isFavorite = slogans?[indexPath.row].isFavorite ?? false
             
-            cell.contentConfiguration = SloganContentConfiguration(text: slogan, percentageBy: percentageBy)
+            cell.contentConfiguration = OneLabelContentConfiguration(text: slogan, cellColor: K.CellContentColor.slogan, percentageBy: percentageBy)
             cell.backgroundColor = K.CellBackgroundColor.slogan.darken(byPercentage: percentageBy)
             
             //set up the heart accessory view

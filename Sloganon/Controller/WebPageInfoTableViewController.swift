@@ -28,13 +28,14 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
         return webPages.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.webPageInfoCellIdentifier, for: indexPath)
 
         // Configure the cell...
-        let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 12)
-        cell.contentConfiguration = WebPageInfoContentConfiguration(text: webPages[indexPath.row].displayName, percentageBy: percentageBy)
+        let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 10)
+        let config = TwoLabelContentConfiguration(leftText: webPages[indexPath.row].state, mainText: webPages[indexPath.row].displayName, cellColor: K.CellContentColor.webinfo, percentageBy: percentageBy)
+
+        cell.contentConfiguration = config
         cell.backgroundColor = K.CellBackgroundColor.webinfo.darken(byPercentage: percentageBy)
 
         return cell
@@ -65,13 +66,15 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
         let urlString = webPages[indexPath.row].url
         
         if let url = URL(string: urlString) {
-        let vc = SFSafariViewController(url: url)
-        vc.delegate = self
+            let vc = SFSafariViewController(url: url)
+            vc.delegate = self
 
-        present(vc, animated: true)
+            present(vc, animated: true)
         }
     }
     
+    
+    // MARK: - Configure safariViewController delegate methods
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         dismiss(animated: true)
     }

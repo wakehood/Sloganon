@@ -23,7 +23,11 @@ class WebPage: Object {
     
     static func webPageList() -> Array<WebPage> {
         let realm = try! Realm()
-        return Array(realm.objects(WebPage.self))
+
+        //sort alphabetically
+        let sortedWebPages = Array(realm.objects(WebPage.self)).sorted {$0.state.localizedStandardCompare($1.state) == .orderedAscending}
+        
+        return sortedWebPages
     }
     
     static func initializeWebPages() {

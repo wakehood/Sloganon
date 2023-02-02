@@ -16,7 +16,7 @@ class SerenityPrayerViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        serenityPrayerScrollView.minimumZoomScale = 0.5
+        serenityPrayerScrollView.minimumZoomScale = 1.0
         serenityPrayerScrollView.maximumZoomScale = 6.0
         serenityPrayerScrollView.delegate = self
         

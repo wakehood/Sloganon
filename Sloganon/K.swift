@@ -22,6 +22,7 @@ struct K {
         static let sloganCellIdentifier = "SloganCell"
         static let acronymCellIdentifier = "AcronymCell"
         static let stepCellIdentifier = "StepCell"
+        static let stepCopyrightCellIdentifier = "StepCopyrightCell"
         static let webPageInfoCellIdentifier = "webPageInfoCell"
 
     }
@@ -46,6 +47,7 @@ struct K {
         static let slogans = 60.0
         static let acronyms = 150.0
         static let steps = 175.0
+        static let stepsCopyright = 100.0
         static let webinfo = 100.0
     }
     
@@ -58,6 +60,7 @@ struct K {
     }
     
     static let HeaderHeight = 50.0
+    static let CopyrightHeaderHeight = 0.0
     
     static let serenityPrayer =
     "God grant me the serenity\nTo accept the things I cannot change,\nCourage to change the things I can\nAnd wisdom to know the difference."
@@ -74,7 +77,7 @@ struct K {
         static let acronym =        UIColor.checkColor(named: "AcronymColor")
         
         static let step =           UIColor.checkColor(named: "StepColor")
-        static let webinfo = UIColor.checkColor(named: "WebInfoColor")
+        static let webinfo =        UIColor.checkColor(named: "WebInfoColor")
     }
 
     static let sloganVCbackground = UIColor.systemGray3
@@ -142,7 +145,7 @@ struct K {
         "Pain is inevitable. Suffering is optional ",
         "Success is getting what you want. Happiness is wanting what you get. ",
         "It’s impossible to be resentful and grateful at the same time ",
-        "“No” is a complete sentence ",
+        "\"No\" is a complete sentence ",
         "Acceptance has to occur before change can occur ",
         "Are you seeing the disease or the person? ",
         "The elevator to recovery is broken; please use the Steps instead ",
@@ -180,19 +183,17 @@ struct K {
         "DENIAL\n\tDon’t\n\tEven\n\tNotice\n\tI\n\tAm \n\tLying"
     ]
     
+    static let stepsCopyright = "© Al-Anon’s Twelve Steps, copyright 1996 by Al-Anon Family Group Headquarters, Inc. Reprinted with permission of Al-Anon Family Group Headquarters, Inc."
+    
     //starting list of web pages
     static let elementsPerWebPageInfo = 3
         
     static let webPages = [
         ["World Service Organization", "US", "https://www.al-anon.org"],
         ["Arizona Al-Anon/Alateen Family Groups", "AZ", "https://al-anon-az.org/"],
-        ["Sonoma and Napa Alanon", "CA", "https://sonapal-anon.org"],
-
+        
         ["East Valley Al-Anon Information Center (EVIC)", "AZ", "http://al-anoneastvalley.org/"],
-        ["Al-Anon Meetings Mesa", "AZ", "https://findrecovery.com/alanon_meetings/az/mesa/"],
-        ["Salt River Valley Al-Anon Information Service (SRVAIS) – For ...", "AZ", "https://srvais.org/"],
-        ["Al-Anon and Alateen Santa Barbara", "CA", "https://www.alanonsantabarbara.info/"],
-        ["Monterey County Al-Anon", "CA", "https://www.montereycountyal-anon.org/"],
+       
         ["Grand Rapids Al-Anon", "MI", "https://aisgr.org/"],
         ["Al-Anon and Alateen Family Groups of Utah", "UT", "https://utah-alanon.org/"],
         ["Texas Al-Anon and Alateen", "TX", "https://texas-al-anon.org/"],
@@ -203,6 +204,38 @@ struct K {
         ["New Jersey Al-Anon/Alateen", "NJ", "https://nj-al-anon.org/"],
         ["Rhode Island Al-Anon Family Groups", "RI", "https://www.riafg.org/"],
         ["Al-Anon Information Services of Oklahoma", "OK", "https://www.okcalanon.org/"],
+        ["Alabama, Northwest Florida Al-Anon & Alateen","AL","http://www.alnwfl-al-anon.org"],
+        ["Alabama, Northwest Florida Al-Anon & Alateen","FL","http://www.alnwfl-al-anon.org"],
+        ["The Greater Birmingham Al-Anon and Alateen Family Groups","AL","https://bham-al-anon.com"],
+        ["Al-Anon Montgomery Alabama","AL","https://aldistrict6afg.org"],
+        ["Alaska Al-Anon Family Groups","AK","https://al-anon-ak.org"],
+        ["Arizona Al-Anon / Alateen Family Groups","AZ ","https://al-anon-az.org/"],
+        
+        
+        ["Al-Anon Alateen in Northern California","CA","https://northerncaliforniaal-anon.org/"],
+        ["Al-Anon Family Groups of Greater Los Angeles","CA","https://alanonla.org/"],
+        ["Al-Anon/Alateen Southern California World Service","CA","https://www.scws-al-anon.org/"],
+        ["Al-Anon Family Groups Information Services of Orange County","CA","https://www.ocalanon.org/"],
+        ["Al-Anon San Diego","CA","https://www.alanonsandiego.org/"],
+        ["Inland Empire of California Al-Anon and Alateen","CA","https://iealanon.org/"],
+        ["Ventura County Al-Anon Family Groups","CA","https://www.alanonventura.org/"],
+        ["Al-Anon in the Desert","CA","https://www.alanoninthedesert.com/"],
+        ["AL-Anon / Alateen of the Mid-Peninsula","CA","https://alanonmidpeninsula.org/"],
+        ["Al-Anon Family Groups Santa Clara Valley","CA","https://www.scv-afg.org/"],
+        ["Al-Anon / Alateen for Santa Cruz and San Benito Counties","CA","https://district23alanon.org/"],
+        ["Al-Anon by the Bay","CA","https://al-anonbythebay.org/"],
+        ["Al-Anon Family Groups of Central Valley","CA","https://southvalleyalanon.org/"],
+        ["AL-ANON GREATER TEMECULA & SW RIVERSIDE CO","CA","https://al-anonriverside.org/"],
+        ["Al-Anon District 15 Oakland-Hayward","CA","https://ncwsadistrict15.org/"],
+        ["Al-Anon District 3 San Luis Obispo and Northern Santa Barbara Counties","CA","https://al-anoncacentralcoast.org/"],
+        ["Al-Anon / Alateen District 11 Marin","CA","https://marinal-anon.org/"],
+        ["Al-Anon Kern County","CA","https://www.kernal-anon.org/"],
+        ["Northern Peninsula Al-Anon","CA","https://www.peninsula-alanonalateen.org/"],
+        ["San Joaquin Valley Al-anon","CA","https://alanonsanjoaquinvalley.org/"],
+        ["Al-Anon Family Groups of Great Long Beach","CA","https://al-anonlongbeach.org/"],
+        ["Sonoma and Napa Alanon", "CA", "https://sonapal-anon.org"],
+        ["Al-Anon and Alateen Santa Barbara", "CA", "https://www.alanonsantabarbara.info/"],
+        ["Monterey County Al-Anon", "CA", "https://www.montereycountyal-anon.org/"],
     ]
 }
 
