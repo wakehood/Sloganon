@@ -63,14 +63,14 @@ class StepsTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return K.RowHeight.steps
-        }
-        else{
-            return K.RowHeight.stepsCopyright
-        }
-    }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.section == 0 {
+//            return K.RowHeight.steps
+//        }
+//        else{
+//            return K.RowHeight.stepsCopyright
+//        }
+//    }
    
     // MARK: - Configure TableView Headers with delegate methods
     

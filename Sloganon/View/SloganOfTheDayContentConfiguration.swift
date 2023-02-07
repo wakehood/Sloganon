@@ -26,21 +26,21 @@ class SloganOfTheDayContentView : UIView, UIContentView {
             self.configure(configuration: configuration)
         }
     }
-    let textView = UITextView()
+    let label = UILabel()
     init(_ configuration: UIContentConfiguration) {
         self.configuration = configuration
         super.init(frame:.zero)
-        self.addSubview(self.textView)
-        self.textView.centerVertically()
-        self.textView.font = UIFont.boldSystemFont(ofSize: 30.0)
-        self.textView.isEditable = false
-        self.textView.isSelectable = false
+        self.addSubview(self.label)
 
-        self.textView.textAlignment = .center
+        self.label.font = UIFont.systemFont(ofSize: 30.0)
+
+
+        self.label.textAlignment = .left
+        self.label.numberOfLines = 0
         
-        textView.translatesAutoresizingMaskIntoConstraints = false
+        label.translatesAutoresizingMaskIntoConstraints = false
 
-        textView.layout(top:self.topAnchor, leading:self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 5, left: 10, bottom: 5, right: 10))
+        label.layout(top:self.topAnchor, leading:self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 5, left: 10, bottom: 5, right: 10))
         
         self.configure(configuration: configuration)
     }
@@ -49,10 +49,10 @@ class SloganOfTheDayContentView : UIView, UIContentView {
     }
     func configure(configuration: UIContentConfiguration) {
         guard let configuration = configuration as? SloganOfTheDayContentConfiguration else { return }
-        self.textView.text = configuration.text
+        self.label.text = configuration.text
         
         let color = K.CellContentColor.sloganOfTheDay.darken(byPercentage: configuration.percentageBy)
-        self.textView.textColor = color.contrastingColor(isFlat: false)
-        self.textView.backgroundColor = color
+        self.label.textColor = color.contrastingColor(isFlat: false)
+        self.label.backgroundColor = color
     }
 }

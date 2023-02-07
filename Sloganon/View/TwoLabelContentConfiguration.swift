@@ -27,16 +27,16 @@ class TwoLabelContentView : UIView, UIContentView {
                
         labelsView.layout(top:self.topAnchor, leading:self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 5, left: 10, bottom: 5, right: 10))
 
-        leftLabel.textAlignment = .center
-        leftLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
+//        leftLabel.textAlignment = .center
+//        leftLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         
         labelsView.addSubview(leftLabel)
         leftLabel.layout(top: labelsView.topAnchor, leading:labelsView.leadingAnchor, bottom: labelsView.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 40, height: 0))
         
 
-        mainLabel.numberOfLines = 0
-        mainLabel.minimumScaleFactor = 0.5
-        mainLabel.font = UIFont.systemFont(ofSize: 20.0)
+//        mainLabel.numberOfLines = 0
+//        mainLabel.minimumScaleFactor = 0.5
+//        mainLabel.font = UIFont.systemFont(ofSize: 20.0)
         
         labelsView.addSubview(mainLabel)
                 
@@ -51,6 +51,11 @@ class TwoLabelContentView : UIView, UIContentView {
         guard let configuration = configuration as? TwoLabelContentConfiguration else { return }
         self.leftLabel.text = configuration.leftText
         self.mainLabel.text = configuration.mainText
+        self.mainLabel.numberOfLines = 0
+        self.mainLabel.minimumScaleFactor = 0.5
+        self.mainLabel.font = UIFont.systemFont(ofSize: 20.0)
+        self.leftLabel.textAlignment = .center
+        self.leftLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         
         let color = configuration.cellColor.darken(byPercentage: configuration.percentageBy)
         self.leftLabel.textColor = color.contrastingColor(isFlat: false)

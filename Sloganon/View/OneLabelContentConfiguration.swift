@@ -39,7 +39,7 @@ class OneLabelContentView : UIView, UIContentView {
 
         label.translatesAutoresizingMaskIntoConstraints = false
         
-        label.layout(top:self.topAnchor, leading:self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 5, left: 10, bottom: 5, right: 10))
+        label.layout(top:self.topAnchor, leading:self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 10, left: 10, bottom: 10, right: 10))
         
         self.configure(configuration: configuration)
     }
@@ -49,13 +49,19 @@ class OneLabelContentView : UIView, UIContentView {
     func configure(configuration: UIContentConfiguration) {
         guard let configuration = configuration as? OneLabelContentConfiguration else { return }
         self.label.text = configuration.text
-        label.textAlignment = .left
-        label.numberOfLines = 0
-        label.minimumScaleFactor = 0.5
+        self.label.textAlignment = .left
+        self.label.numberOfLines = 0
+        self.label.minimumScaleFactor = 0.5
+        self.label.font = UIFont.systemFont(ofSize: 25.0)
 
         let color = configuration.cellColor.darken(byPercentage: configuration.percentageBy)
         self.label.backgroundColor = color
         self.label.textColor = color.contrastingColor(isFlat: false)
+        
+        self.layer.cornerRadius = 5
+        self.layer.masksToBounds = true
+        
+     //   self.roundCorners(corners: [.topLeft, .topRight], radius: 18)
    
     }
 }

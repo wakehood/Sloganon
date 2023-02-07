@@ -10,14 +10,12 @@ import RealmSwift
 
 class WebPage: Object {
     @objc dynamic var displayName: String = ""
-    @objc dynamic var state: String = ""
     @objc dynamic var url: String = ""
     
-    convenience init(dn: String, s: String, u: String) {
+    convenience init(dn: String,  u: String) {
         self.init()
         
         self.displayName = dn
-        self.state = s
         self.url = u
     }
     
@@ -25,7 +23,7 @@ class WebPage: Object {
         let realm = try! Realm()
 
         //sort alphabetically
-        let sortedWebPages = Array(realm.objects(WebPage.self)).sorted {$0.state.localizedStandardCompare($1.state) == .orderedAscending}
+        let sortedWebPages = Array(realm.objects(WebPage.self)).sorted {$0.displayName.localizedStandardCompare($1.displayName) == .orderedAscending}
         
         return sortedWebPages
     }
@@ -42,7 +40,7 @@ class WebPage: Object {
                     //use an assert to check for valid formatting; NB asserts are not compiled into production code
                     assert(wpInfo.count == K.elementsPerWebPageInfo, "Unexpected K.webPage formating, at least one webpage in the list does not have three elements")
  
-                    let webPage = WebPage(dn: wpInfo[0], s: wpInfo[1], u: wpInfo[2])
+                    let webPage = WebPage(dn: wpInfo[0], u: wpInfo[1])
                     realm.add(webPage)
                 }
             }

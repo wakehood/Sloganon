@@ -10,18 +10,24 @@ import UIKit
 
 extension UIView {
     func headerViewWithLabel(title: String, color: UIColor = UIColor.clear) -> UIView {
+
         let label = UILabel()
-   //     label.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.text = title
         label.textAlignment = .left
-        label.textColor = color.contrastingColor(isFlat: false)
+        label.textColor = UIColor.black
+     //   label.layer.cornerRadius = 8.0
+     //   label.layer.masksToBounds = true
+     //   label.layer.borderColor = UIColor.black.cgColor
+       // label.layer.borderWidth = 2.0
         
         self.addSubview(label)
         
+      //  self.roundCorners(corners: [.topLeft, .topRight], radius: 18)
+        
         label.layout(top:self.topAnchor, leading:self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 5, left: 10, bottom: 5, right: 10))
         
-        self.backgroundColor = color
+        self.backgroundColor = UIColor.clear
         
         return self
     }
@@ -63,5 +69,14 @@ extension UIView {
              heightAnchor.constraint(equalToConstant: size.height).isActive = true
          }
      }
+    
+
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+    }
+
 }
 

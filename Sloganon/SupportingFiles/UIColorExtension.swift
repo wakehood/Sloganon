@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    //
+    
     func darken(byPercentage: CGFloat) -> UIColor {
         
         var h: CGFloat = 0.0
@@ -30,6 +30,30 @@ extension UIColor {
                        alpha: a)
     }
     
+    func lighten(byPercentage: CGFloat) -> UIColor {
+            
+        //Define HSBA values
+        var h: CGFloat = 0.0
+        var s: CGFloat = 0.0
+        var b: CGFloat = 0.0
+        var a: CGFloat = 0.0
+            
+        //Check if HSBA values exist
+        guard getHue(&h, saturation: &s, brightness: &b, alpha: &a)
+            else {return self}
+
+                
+        //Make sure our percentage is greater than 0
+        if (byPercentage > 0) {
+           b = min(b + byPercentage, 1.0);
+        }
+                
+        return UIColor(hue: h,
+                       saturation: s,
+                       brightness: b,
+                       alpha: a)
+        }
+        
     func contrastingColor(isFlat: Bool) -> UIColor {
         var r: CGFloat = 0.0
         var g: CGFloat = 0.0
@@ -69,8 +93,7 @@ extension UIColor {
     // repeatEvery is how many rows for the gradient to conclude
     // It defaults to 10
     
-    static func getPercentBy(row: Int, repeatEvery: Int = 10) -> CGFloat
-    {
+    static func getPercentBy(row: Int, repeatEvery: Int = 10) -> CGFloat {
         
         //Do Integer division to figure out which "repeat group" of 10 rows this is
         //And the figure out if its an even or odd group
@@ -89,7 +112,7 @@ extension UIColor {
     
     //Function to check if asset "named" color is valid
     //returns white if not
-    static func checkColor(named: String) -> UIColor{
+    static func checkColor(named: String) -> UIColor {
         if let color = UIColor(named:named) {
             return color
         } else {

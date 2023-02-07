@@ -33,7 +33,7 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
 
         // Configure the cell...
         let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 10)
-        let config = TwoLabelContentConfiguration(leftText: webPages[indexPath.row].state, mainText: webPages[indexPath.row].displayName, cellColor: K.CellContentColor.webinfo, percentageBy: percentageBy)
+        let config = TwoLabelContentConfiguration(leftText: "", mainText: webPages[indexPath.row].displayName, cellColor: K.CellContentColor.webinfo, percentageBy: percentageBy)
 
         cell.contentConfiguration = config
         cell.backgroundColor = K.CellBackgroundColor.webinfo.darken(byPercentage: percentageBy)
