@@ -95,10 +95,8 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, Sl
             return cell
         } else  {
             let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.favoritesCellIdentifier, for: indexPath)
-
-//            let favorite = favorites?.count == 0 ? "You don't have any favorites Yet. \n\u{1F496} your favorite Slogans, Sayings or Acronyms!! " : favorites![indexPath.row].text
             
-            let favorite = favorites?.count == 0 ? "You don't have any favorites Yet. \n\u{2764} your favorite Slogans, Sayings or Acronyms!! " : favorites![indexPath.row].text
+            let favorite = favorites?.count == 0 ? "You don't have any favorites yet. \n\n\u{2764} your favorite Slogans, Sayings or Acronyms!! " : favorites![indexPath.row].text
 
             cell.contentConfiguration = OneLabelContentConfiguration(text: favorite,  cellColor: K.CellContentColor.favorites, percentageBy: percentageBy)
             cell.backgroundColor = K.CellBackgroundColor.favorites.darken(byPercentage: percentageBy)
@@ -121,23 +119,6 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, Sl
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
-//        let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "headerView")
-//
-//        headerCell?.contentConfiguration = OneLabelContentConfiguration(text: self.tableView(tableView, titleForHeaderInSection: section) ?? "", cellColor: K.HeaderBackgroundColor.sloganOfTheDay, percentageBy: 10.0)
-//
-
-
-//        var cellColor = UIColor()
-//
-//        if section == K.SectionNumber.sloganOfTheDay {
-//            cellColor = K.HeaderBackgroundColor.sloganOfTheDay
-//        } else if section == K.SectionNumber.slogansSayingsOrAcronyms {
-//            cellColor = K.HeaderBackgroundColor.ssoa
-//        } else {
-//            cellColor = K.HeaderBackgroundColor.favorites
-//        }
-
-//        let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "", color: cellColor)
         let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "")
         headerView.backgroundColor = UIColor.clear
         return headerView
@@ -151,28 +132,32 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, Sl
     //Mark: - Tableview Delegate Methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
      //   tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: K.SegueIdentifier, sender: self)
+        if indexPath.section == 1 {
+            performSegue(withIdentifier: K.SegueIdentifier, sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let destinationVC = segue.destination as! SlogansSayingOrAcronymsTableViewController
-        
-        destinationVC.delegate = self
-        
+                
         if let indexPath = tableView.indexPathForSelectedRow {
-            switch indexPath.row {
-            case 0:
-                destinationVC.arrayOfSelectedType = slogans
-                destinationVC.selectedTitle = K.HeaderText.slogans
-            case 1:
-                destinationVC.arrayOfSelectedType = sayings
-                destinationVC.selectedTitle = K.HeaderText.sayings
-            case 2:
-                destinationVC.arrayOfSelectedType = acronyms
-                destinationVC.selectedTitle = K.HeaderText.acronyms
-            default:
-                assertionFailure()
+            if indexPath.section == 1 {
+                let destinationVC = segue.destination as! SlogansSayingOrAcronymsTableViewController
+                
+                destinationVC.delegate = self
+                
+                switch indexPath.row {
+                case 0:
+                    destinationVC.arrayOfSelectedType = slogans
+                    destinationVC.selectedTitle = K.HeaderText.slogans
+                case 1:
+                    destinationVC.arrayOfSelectedType = sayings
+                    destinationVC.selectedTitle = K.HeaderText.sayings
+                case 2:
+                    destinationVC.arrayOfSelectedType = acronyms
+                    destinationVC.selectedTitle = K.HeaderText.acronyms
+                default:
+                    assertionFailure()
+                }
             }
             
             tableView.deselectRow(at: indexPath, animated: true)

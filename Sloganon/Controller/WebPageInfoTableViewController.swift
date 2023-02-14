@@ -12,53 +12,55 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
 
     var webPages: Array<WebPage> = []
     
+    var sections = [K.HeaderText.webinfo1, K.HeaderText.webinfo2]
+    
+    var userInputTitle = ""
+    var userInputUrl = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = K.stepVCBackground
         webPages = WebPage.webPageList()
+        self.tableView.register(UINib(nibName: K.CellNibNames.addWebPageInfoNibName, bundle: nil), forCellReuseIdentifier: K.CellReuseIdentifiers.addWebPageInfoIdentifier)
+
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
-        
-        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
-        navBar.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 25.0)]
-        view.addSubview(navBar)
-
-        let navItem = UINavigationItem(title: "Helpful Alanon Websites")
-        navBar.barTintColor = K.stepVCBackground
-
-        let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
-        
-        addItem.tintColor = K.HeaderBackgroundColor.ssoa
-
-        navItem.rightBarButtonItem = addItem
-        navBar.backgroundColor = K.stepVCBackground
-
-        navBar.setItems([navItem], animated: false)
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return sections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return webPages.count
+        if section == 0 {
+            return webPages.count
+        } else {
+            return 1
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.webPageInfoCellIdentifier, for: indexPath)
-
-        // Configure the cell...
         let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 10)
-        let config = OneLabelContentConfiguration(text: webPages[indexPath.row].displayName, cellColor: K.CellContentColor.webinfo, percentageBy: percentageBy)
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.webPageInfoCellIdentifier, for: indexPath)
 
-        cell.contentConfiguration = config
-        cell.backgroundColor = K.CellBackgroundColor.webinfo.darken(byPercentage: percentageBy)
-
-        return cell
+            // Configure the cell...
+            cell.contentConfiguration = OneLabelContentConfiguration(text: webPages[indexPath.row].displayName, cellColor: K.CellContentColor.webinfo, percentageBy: percentageBy)
+            
+            cell.backgroundColor = K.CellBackgroundColor.webinfo.darken(byPercentage: percentageBy)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.addWebPageInfoIdentifier, for: indexPath) as! AddWebPageTableViewCell
+            
+            let color = K.CellBackgroundColor.webinfo.darken(byPercentage: percentageBy)
+            
+            cell.webPageNameTextField.text = ""
+            cell.urlTextField.text = ""
+            cell.webPageNameTextField.backgroundColor = UIColor.white
+            cell.urlTextField.backgroundColor = UIColor.white
+            cell.backgroundColor = color
+            return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -67,30 +69,92 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
    
     // MARK: - Configure TableView Headers with delegate methods
     
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        K.HeaderText.webinfo
-//    }
-//
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//
-//        let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "", color: K.HeaderBackgroundColor.webinfo)
-//
-//        return headerView
-//    }
-//
-//    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return K.HeaderHeight
-//    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0  {
+            return K.HeaderText.webinfo1
+        } else {
+            return K.HeaderText.webinfo2
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "", color: K.HeaderBackgroundColor.webinfo)
+
+        return headerView
+    }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return K.HeaderHeight
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let urlString = webPages[indexPath.row].url
+        //if user added url
+        if indexPath.section == 1 {
+            let currentCell = tableView.cellForRow(at: indexPath) as! AddWebPageTableViewCell
+            userInputTitle = currentCell.webPageNameTextField.text ??  ""
+            userInputUrl = currentCell.urlTextField.text ?? ""
+        }
         
-        if let url = URL(string: urlString) {
+        let urlString = indexPath.section == 0 ? webPages[indexPath.row].url : userInputUrl
+        
+        guard let url = URL(string: urlString) else {
+            
+            let alert = UIAlertController(title: "Error", message: "Not a valid URL", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                switch action.style{
+                    case .default:
+                    print("default")
+                    
+                    case .cancel:
+                    print("cancel")
+                 
+                default:
+                    print("the actual default")
+                    
+                }
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+
+        }
+        
+        if ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
+            
+            
             let vc = SFSafariViewController(url: url)
             vc.delegate = self
-
+            
             present(vc, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Error", message:"URL must begin with https:// or http://", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                switch action.style{
+                    case .default:
+                    print("default")
+                    
+                    case .cancel:
+                    print("cancel")
+                 
+                default:
+                    print("the actual default")
+                    
+                }
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
         }
+            
+        
+//        if indexPath.section == 1 {
+//            let currentCell = tableView.cellForRow(at: indexPath) as! AddWebPageTableViewCell
+//            currentCell.webPageNameTextField.text =  ""
+//            currentCell.urlTextField.text = ""
+//        }
+        
     }
     
     @objc func add() {
@@ -101,19 +165,6 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
         let action = UIAlertAction(title: "Webpage Title | url", style: .default) { (action) in
             
             print("Add Item \(String(describing: textField.text))")
-//            if let currentCategory = self.selectedCategory {
-//                do {
-//                    try self.realm.write {
-//                        let newItem = Item()
-//                        newItem.title = textField.text!
-//                        newItem.dateCreated = Date()
-//                        currentCategory.items.append(newItem)
-//                    }
-//                } catch {
-//                    print("Error saving new items, \(error)")
-//                }
-//            }
-//            self.tableView.reloadData()
         }
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new item"
@@ -130,6 +181,18 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
         dismiss(animated: true)
     }
     
+    func safariViewController(_ controller: SFSafariViewController, didCompleteInitialLoad didLoadSuccessfully: Bool) {
+        if didLoadSuccessfully {
+            //add to realm
+            WebPage.addWebPage(displayName: userInputTitle, url: userInputUrl)
+
+            webPages = WebPage.webPageList()
+            self.tableView.reloadData()
+        } else {
+            controller.dismiss(animated: true)
+        }
+    }
+       
     
     /*
     // Override to support conditional editing of the table view.
@@ -139,17 +202,24 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        if indexPath.section == 0 {
+            if editingStyle == .delete {
+                // Delete the row from the data source
+                WebPage.deleteWebPage(id: webPages[indexPath.row]._id)
+                
+                webPages = WebPage.webPageList()
+                
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } else if editingStyle == .insert {
+                // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+            }
+        }
+        
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

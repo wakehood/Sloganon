@@ -9,8 +9,9 @@ import Foundation
 import RealmSwift
 
 class WebPage: Object {
-    @objc dynamic var displayName: String = ""
-    @objc dynamic var url: String = ""
+    @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted var displayName: String = ""
+    @Persisted var url: String = ""
     
     convenience init(dn: String,  u: String) {
         self.init()
@@ -46,6 +47,33 @@ class WebPage: Object {
             }
         } catch {
             assertionFailure("Error adding webPages \(error)")
+        }
+    }
+    
+    static func addWebPage(displayName: String, url: String) {
+        let realm = try! Realm()
+        
+        do {
+            try realm.write {
+                let webPage = WebPage(dn: displayName, u: url)
+                realm.add(webPage)
+            }
+        } catch {
+            print("Error saving web page, \(error)")
+        }
+    }
+    
+    static func deleteWebPage (id: ObjectId) {
+        let realm = try! Realm()
+        
+        guard let webPageToBeDeleted = realm.object(ofType: WebPage.self, forPrimaryKey: id) else { return}
+        
+        do {
+            try realm.write {
+                realm.delete(webPageToBeDeleted)
+            }
+        } catch {
+            print("Error deleting web page, \(error)")
         }
     }
 

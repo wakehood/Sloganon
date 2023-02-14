@@ -16,14 +16,11 @@ extension UIView {
         label.text = title
         label.textAlignment = .left
         label.textColor = UIColor.black
-     //   label.layer.cornerRadius = 8.0
-     //   label.layer.masksToBounds = true
-     //   label.layer.borderColor = UIColor.black.cgColor
-       // label.layer.borderWidth = 2.0
+
+        label.minimumScaleFactor = 0.5
+        label.adjustsFontSizeToFitWidth = true
         
         self.addSubview(label)
-        
-      //  self.roundCorners(corners: [.topLeft, .topRight], radius: 18)
         
         label.layout(top:self.topAnchor, leading:self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 5, left: 10, bottom: 5, right: 10))
         

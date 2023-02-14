@@ -20,6 +20,7 @@ class SlogansSayingOrAcronymsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +39,8 @@ class SlogansSayingOrAcronymsTableViewController: UITableViewController {
 
 
         navBar.setItems([navItem], animated: false)
+        
+        
     }
     
     @objc func done() {

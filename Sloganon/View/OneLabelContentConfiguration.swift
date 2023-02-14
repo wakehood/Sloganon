@@ -13,7 +13,6 @@ struct OneLabelContentConfiguration : UIContentConfiguration {
     var text = ""
     var cellColor = UIColor.white
     var percentageBy = 0.0
-
     
     func makeContentView() -> UIView & UIContentView {
         return OneLabelContentView(self)

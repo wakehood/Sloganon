@@ -22,6 +22,8 @@
 		CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */; };
 		CB6FF52F28DCC82800DBB3AD /* SloganSayingOrAcronym.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF52E28DCC82800DBB3AD /* SloganSayingOrAcronym.swift */; };
 		CB7FC99829804FB8007C89D9 /* TwoLabelContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FC99729804FB8007C89D9 /* TwoLabelContentConfiguration.swift */; };
+		CB8F49AB299BEF76003B54DF /* AddWebPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8F49A9299BEF76003B54DF /* AddWebPageTableViewCell.swift */; };
+		CB8F49AC299BEF76003B54DF /* AddWebPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8F49AA299BEF76003B54DF /* AddWebPageTableViewCell.xib */; };
 		CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */; };
 		CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB229556249006C38EE /* StepsTableViewController.swift */; };
 		CBB48CB7295562FD006C38EE /* SerenityPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */; };
@@ -55,6 +57,8 @@
 		CB6FF50F28D524A000DBB3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6FF52E28DCC82800DBB3AD /* SloganSayingOrAcronym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganSayingOrAcronym.swift; sourceTree = "<group>"; };
 		CB7FC99729804FB8007C89D9 /* TwoLabelContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelContentConfiguration.swift; sourceTree = "<group>"; };
+		CB8F49A9299BEF76003B54DF /* AddWebPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWebPageTableViewCell.swift; sourceTree = "<group>"; };
+		CB8F49AA299BEF76003B54DF /* AddWebPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddWebPageTableViewCell.xib; sourceTree = "<group>"; };
 		CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CBB48CB229556249006C38EE /* StepsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewController.swift; sourceTree = "<group>"; };
 		CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerenityPrayerViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				CBD11B46296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift */,
 				CBD11B48296CD0D800ACC03D /* OneLabelContentConfiguration.swift */,
 				CB7FC99729804FB8007C89D9 /* TwoLabelContentConfiguration.swift */,
+				CB8F49A9299BEF76003B54DF /* AddWebPageTableViewCell.swift */,
+				CB8F49AA299BEF76003B54DF /* AddWebPageTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6DC771297207830075DEA6 /* ComicNeue-BoldItalic.ttf in Resources */,
+				CB8F49AC299BEF76003B54DF /* AddWebPageTableViewCell.xib in Resources */,
 				CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */,
 				CB6DC773297207830075DEA6 /* ComicNeue-Bold.ttf in Resources */,
 				CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */,
@@ -262,6 +269,7 @@
 				CBBC4C062976604400D9FF2B /* WebPage.swift in Sources */,
 				CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */,
 				CBD11B49296CD0D800ACC03D /* OneLabelContentConfiguration.swift in Sources */,
+				CB8F49AB299BEF76003B54DF /* AddWebPageTableViewCell.swift in Sources */,
 				CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */,
 				CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */,
 				CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */,

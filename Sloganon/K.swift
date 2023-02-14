@@ -14,6 +14,7 @@ struct K {
     struct CellNibNames{
         static let sloganOfTheDayCellNibName = "SloganOfTheDayTableViewCell"
         static let acronymCellNibName = "AcronymTableViewCell"
+        static let addWebPageInfoNibName = "AddWebPageTableViewCell"
     }
     
     //cell reuse identifiers
@@ -28,6 +29,7 @@ struct K {
         static let stepCopyrightCellIdentifier = "StepCopyrightCell"
         
         static let webPageInfoCellIdentifier = "webPageInfoCell"
+        static let addWebPageInfoIdentifier = "AddWebPageCell"
 
     }
 
@@ -55,7 +57,7 @@ struct K {
     struct RowHeight{
         static let sloganOfTheDay = 130.0
         static let slogans = 60.0
-        static let acronyms = 150.0
+        static let acronyms = 175.0
         static let steps = 175.0
         static let stepsCopyright = 100.0
         static let webinfo = 100.0
@@ -71,7 +73,9 @@ struct K {
         static let acronyms = "Acronyms"
         
         static let _12Steps = "The 12 Steps"
-        static let webinfo = "Alanon Websites for Further Info"
+        
+        static let webinfo1 = "Websites for Further Info"
+        static let webinfo2 = "Add Your Own Website"
     }
     
     static let SegueIdentifier = "goToSlogansSayingsOrAcronyms"
@@ -100,6 +104,8 @@ struct K {
     static let sloganVCbackground   = UIColor.systemGray3
     static let stepVCBackground     = UIColor.systemGray3
     static let webInfoVCBackground  = UIColor.systemGray3
+    
+    static let webInputCursorColor = Color.webinfo.darken(byPercentage: 0.50)
     
     struct HeaderBackgroundColor {
         static let sloganOfTheDay   = Color.sloganOfTheDay.darken(byPercentage: 0.25)
@@ -147,7 +153,8 @@ struct K {
         "Listen and Learn ",
         "Live and Let Live ",
         "One Day at a Time ",
-        "Progress not Perfection"
+        "Progress not Perfection",
+        "Together We Can Make It ",
     ]
     
     static let sayingsList = [
@@ -159,7 +166,6 @@ struct K {
         "Live at Peace with Ourselves & Others ",
         "Take Care of Yourself ",
         "Quiet the Mind, Open the Heart ",
-        "Together We Can Make It ",
         "The Healing is in the Hearing ",
         "Keep the Focus on Yourself ",
         "Take your Own Inventory (not someone elses) ",
@@ -211,57 +217,9 @@ struct K {
         
     static let webPages = [
         ["World Service Office", "https://www.al-anon.org"],
-        
-//        ["Arizona Al-Anon/Alateen Family Groups", "US", "AZ", "https://al-anon-az.org/"],
-//
-//        ["East Valley Al-Anon Information Center (EVIC)",  "US", "AZ", "http://al-anoneastvalley.org/"],
-//
-//        ["Grand Rapids Al-Anon", "US", "MI", "https://aisgr.org/"],
-//        ["Al-Anon and Alateen Family Groups of Utah", "US",  "UT", "https://utah-alanon.org/"],
-//        ["Texas Al-Anon and Alateen",  "US", "TX", "https://texas-al-anon.org/"],
-//        ["Al-Anon Suffolk ",  "US", "NY", "https://www.al-anon-suffolk-ny.org/"],
-//        ["Al-Anon Baltimore",  "US", "MD", "https://www.alanon-maryland.org/"],
-//        ["Florida North Alanon",  "US", "FL", "https://www.afgarea9.org/"],
-//        ["Southern Arizona Al-Anon and Alateen", "US",  "AZ", "https://so-az-alanon.org/"],
-//        ["New Jersey Al-Anon/Alateen",  "US", "NJ", "https://nj-al-anon.org/"],
-//        ["Rhode Island Al-Anon Family Groups",  "US", "RI", "https://www.riafg.org/"],
-//        ["Al-Anon Information Services of Oklahoma",  "US", "OK", "https://www.okcalanon.org/"],
-//        ["Alabama, Northwest Florida Al-Anon & Alateen", "US", "AL","http://www.alnwfl-al-anon.org"],
-//        ["Alabama, Northwest Florida Al-Anon & Alateen", "US", "FL","http://www.alnwfl-al-anon.org"],
-//        ["The Greater Birmingham Al-Anon and Alateen Family Groups", "US", "AL","https://bham-al-anon.com"],
-//        ["Al-Anon Montgomery Alabama", "US", "AL","https://aldistrict6afg.org"],
-//        ["Alaska Al-Anon Family Groups", "US", "AK","https://al-anon-ak.org"],
-//        ["Arizona Al-Anon / Alateen Family Groups", "US", "AZ ","https://al-anon-az.org/"],
-//
-//
         ["Al-Anon Alateen in Northern California", "https://northerncaliforniaal-anon.org/"],
-//        ["Al-Anon Family Groups of Greater Los Angeles", "US", "CA","https://alanonla.org/"],
-//        ["Al-Anon/Alateen Southern California World Service", "US", "CA","https://www.scws-al-anon.org/"],
-//        ["Al-Anon Family Groups Information Services of Orange County", "US", "CA","https://www.ocalanon.org/"],
-//        ["Al-Anon San Diego", "US", "CA","https://www.alanonsandiego.org/"],
-//        ["Inland Empire of California Al-Anon and Alateen", "US", "CA","https://iealanon.org/"],
-//        ["Ventura County Al-Anon Family Groups", "US", "CA","https://www.alanonventura.org/"],
-//        ["Al-Anon in the Desert", "US", "CA","https://www.alanoninthedesert.com/"],
-//        ["AL-Anon / Alateen of the Mid-Peninsula", "US", "CA","https://alanonmidpeninsula.org/"],
-//        ["Al-Anon Family Groups Santa Clara Valley", "US", "CA","https://www.scv-afg.org/"],
-//        ["Al-Anon / Alateen for Santa Cruz and San Benito Counties", "US", "CA","https://district23alanon.org/"],
-//        ["Al-Anon by the Bay", "US", "CA","https://al-anonbythebay.org/"],
-//        ["Al-Anon Family Groups of Central Valley", "US", "CA","https://southvalleyalanon.org/"],
-//        ["AL-ANON GREATER TEMECULA & SW RIVERSIDE CO", "US", "CA","https://al-anonriverside.org/"],
-//        ["Al-Anon District 15 Oakland-Hayward","US","CA","https://ncwsadistrict15.org/"],
-//        ["Al-Anon District 3 San Luis Obispo and Northern Santa Barbara Counties", "US", "CA","https://al-anoncacentralcoast.org/"],
-//        ["Al-Anon / Alateen District 11 Marin", "US", "CA","https://marinal-anon.org/"],
-//        ["Al-Anon Kern County", "US", "CA","https://www.kernal-anon.org/"],
-//        ["Northern Peninsula Al-Anon", "US", "CA","https://www.peninsula-alanonalateen.org/"],
-//        ["San Joaquin Valley Al-anon", "US", "CA","https://alanonsanjoaquinvalley.org/"],
-//        ["Al-Anon Family Groups of Great Long Beach", "US", "CA","https://al-anonlongbeach.org/"],
         ["Sonoma and Napa Alanon",   "https://sonapal-anon.org"],
-//        ["Al-Anon and Alateen Santa Barbara",  "US", "CA", "https://www.alanonsantabarbara.info/"],
-//        ["Monterey County Al-Anon",  "US", "CA", "https://www.montereycountyal-anon.org/"],
-//
-//
-//        ["Al-Anon and Alateen Ottawa", "Canada", "ON", "https://www.al-anon-ottawa.ca/"],
-//        ["Al-Anon / Alateen London and Area", "Canada", "ON", "https://www.london-on-al-anon.org/"],
+
     ]
 }
 
