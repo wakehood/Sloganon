@@ -54,11 +54,13 @@ class StepsTableViewController: UITableViewController {
         
         if indexPath.section == 0 {
             cell.contentConfiguration = TwoLabelContentConfiguration(leftText: String(indexPath.row + 1), mainText: steps.stepsList[indexPath.row], cellColor: K.CellContentColor.step, percentageBy: percentageBy)
+            cell.backgroundColor = K.CellBackgroundColor.step.darken(byPercentage: percentageBy)
         } else {
-            cell.contentConfiguration = OneLabelContentConfiguration(text: K.stepsCopyright,cellColor: K.CellContentColor.step, percentageBy: percentageBy)
+            cell.contentConfiguration = OneLabelContentConfiguration(text: K.stepsCopyright,cellColor: K.CellContentColor.step, percentageBy: 0.70)
+            cell.backgroundColor = K.CellBackgroundColor.step.darken(byPercentage: 0.70)
         }
 
-        cell.backgroundColor = K.CellBackgroundColor.step.darken(byPercentage: percentageBy)
+        
 
         return cell
     }

@@ -31,7 +31,7 @@ class TwoLabelContentView : UIView, UIContentView {
 //        leftLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         
         labelsView.addSubview(leftLabel)
-        leftLabel.layout(top: labelsView.topAnchor, leading:labelsView.leadingAnchor, bottom: labelsView.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 40, height: 0))
+        leftLabel.layout(top: labelsView.topAnchor, leading:labelsView.leadingAnchor, bottom: labelsView.bottomAnchor, trailing: nil, padding: .init(top: 10, left: 0, bottom: 10, right: 0), size: .init(width: 40, height: 0))
         
 
 //        mainLabel.numberOfLines = 0
@@ -40,7 +40,7 @@ class TwoLabelContentView : UIView, UIContentView {
         
         labelsView.addSubview(mainLabel)
                 
-        mainLabel.layout(top: labelsView.topAnchor, leading:leftLabel.trailingAnchor, bottom: labelsView.bottomAnchor, trailing: labelsView.trailingAnchor, padding: .init(top: 0, left: 10, bottom: 0, right: 10), size: .init(width: 0, height: 0))
+        mainLabel.layout(top: labelsView.topAnchor, leading:leftLabel.trailingAnchor, bottom: labelsView.bottomAnchor, trailing: labelsView.trailingAnchor, padding: .init(top: 10, left: 10, bottom: 10, right: 10), size: .init(width: 0, height: 0))
 
         self.configure(configuration: configuration)
     }
@@ -53,9 +53,9 @@ class TwoLabelContentView : UIView, UIContentView {
         self.mainLabel.text = configuration.mainText
         self.mainLabel.numberOfLines = 0
         self.mainLabel.minimumScaleFactor = 0.5
-        self.mainLabel.font = UIFont.systemFont(ofSize: 20.0)
+        self.mainLabel.font = UIFont.systemFont(ofSize: 25.0)
         self.leftLabel.textAlignment = .center
-        self.leftLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
+        self.leftLabel.font = UIFont.boldSystemFont(ofSize: 25.0)
         
         let color = configuration.cellColor.darken(byPercentage: configuration.percentageBy)
         self.leftLabel.textColor = color.contrastingColor(isFlat: false)

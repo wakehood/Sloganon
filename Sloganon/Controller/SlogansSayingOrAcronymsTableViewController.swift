@@ -65,7 +65,7 @@ class SlogansSayingOrAcronymsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.slogansayingAcronymCellIdentifier, for: indexPath)
 
-        let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 12)
+        let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 10)
         
         let itemText = arrayOfSelectedType?[indexPath.row].text
         let isFavorite = arrayOfSelectedType?[indexPath.row].isFavorite

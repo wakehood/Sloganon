@@ -17,6 +17,26 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
         self.view.backgroundColor = K.stepVCBackground
         webPages = WebPage.webPageList()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+        
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
+        navBar.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 25.0)]
+        view.addSubview(navBar)
+
+        let navItem = UINavigationItem(title: "Helpful Alanon Websites")
+        navBar.barTintColor = K.stepVCBackground
+
+        let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
+        
+        addItem.tintColor = K.HeaderBackgroundColor.ssoa
+
+        navItem.rightBarButtonItem = addItem
+        navBar.backgroundColor = K.stepVCBackground
+
+        navBar.setItems([navItem], animated: false)
+    }
 
     // MARK: - Table view data source
 
@@ -33,7 +53,7 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
 
         // Configure the cell...
         let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 10)
-        let config = TwoLabelContentConfiguration(leftText: "", mainText: webPages[indexPath.row].displayName, cellColor: K.CellContentColor.webinfo, percentageBy: percentageBy)
+        let config = OneLabelContentConfiguration(text: webPages[indexPath.row].displayName, cellColor: K.CellContentColor.webinfo, percentageBy: percentageBy)
 
         cell.contentConfiguration = config
         cell.backgroundColor = K.CellBackgroundColor.webinfo.darken(byPercentage: percentageBy)
@@ -47,20 +67,20 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
    
     // MARK: - Configure TableView Headers with delegate methods
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        K.HeaderText.webinfo
-    }
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-
-        let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "", color: K.HeaderBackgroundColor.webinfo)
-        
-        return headerView
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return K.HeaderHeight
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        K.HeaderText.webinfo
+//    }
+//
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//
+//        let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "", color: K.HeaderBackgroundColor.webinfo)
+//
+//        return headerView
+//    }
+//
+//    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return K.HeaderHeight
+//    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let urlString = webPages[indexPath.row].url
@@ -71,6 +91,37 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
 
             present(vc, animated: true)
         }
+    }
+    
+    @objc func add() {
+
+        print("Add")
+        var textField = UITextField()
+        let alert = UIAlertController(title: "Add a WebSite", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Webpage Title | url", style: .default) { (action) in
+            
+            print("Add Item \(String(describing: textField.text))")
+//            if let currentCategory = self.selectedCategory {
+//                do {
+//                    try self.realm.write {
+//                        let newItem = Item()
+//                        newItem.title = textField.text!
+//                        newItem.dateCreated = Date()
+//                        currentCategory.items.append(newItem)
+//                    }
+//                } catch {
+//                    print("Error saving new items, \(error)")
+//                }
+//            }
+//            self.tableView.reloadData()
+        }
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new item"
+            textField = alertTextField
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
     }
     
     
