@@ -80,6 +80,7 @@ struct K {
     }
     
     static let SegueIdentifier = "goToSlogansSayingsOrAcronyms"
+    static let newSegueIdentifier = "goToSSOAViewController"
     
     static let HeaderHeight = 50.0
     static let CopyrightHeaderHeight = 0.0

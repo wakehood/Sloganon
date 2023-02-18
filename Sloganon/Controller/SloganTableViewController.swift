@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 
 
-class SloganTableViewController: UITableViewController,  UITextFieldDelegate, SlogansSayingOrAcronymsTableViewControllerDelegate{
+class SloganTableViewController: UITableViewController,  UITextFieldDelegate, SSOAViewControllerDelegate{
 
     var slogans: Array<SloganSayingOrAcronym>?
     var sayings: Array<SloganSayingOrAcronym>?
@@ -76,7 +76,7 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, Sl
         
         let section = indexPath.section
                 
-        let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 20)
+        let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 12)
         
         if section == K.SectionNumber.sloganOfTheDay {
             let cell = tableView.dequeueReusableCell(withIdentifier: DailySloganTableViewCell.identifier, for: indexPath) as! DailySloganTableViewCell
@@ -132,7 +132,7 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, Sl
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
      //   tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 1 {
-            performSegue(withIdentifier: K.SegueIdentifier, sender: self)
+            performSegue(withIdentifier: K.newSegueIdentifier, sender: self)
         }
     }
     
@@ -140,7 +140,7 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, Sl
                 
         if let indexPath = tableView.indexPathForSelectedRow {
             if indexPath.section == 1 {
-                let destinationVC = segue.destination as! SlogansSayingOrAcronymsTableViewController
+                let destinationVC = segue.destination as! SSOAViewController
                 
                 destinationVC.delegate = self
                 
