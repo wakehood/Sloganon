@@ -20,7 +20,11 @@ class SlogansSayingOrAcronymsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //For dynamic row height
+        self.tableView.estimatedRowHeight = 100
+        self.tableView.rowHeight = UITableView.automaticDimension
+        
+        self.tableView.register(SlogansSayingOrAcronymsTableViewCell.self, forCellReuseIdentifier: SlogansSayingOrAcronymsTableViewCell.identifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +44,7 @@ class SlogansSayingOrAcronymsTableViewController: UITableViewController {
 
         navBar.setItems([navItem], animated: false)
         
+       
         
     }
     
@@ -66,15 +71,16 @@ class SlogansSayingOrAcronymsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.slogansayingAcronymCellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: SlogansSayingOrAcronymsTableViewCell.identifier, for: indexPath) as! SlogansSayingOrAcronymsTableViewCell
 
         let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 10)
         
         let itemText = arrayOfSelectedType?[indexPath.row].text
         let isFavorite = arrayOfSelectedType?[indexPath.row].isFavorite
-
-        cell.contentConfiguration = OneLabelContentConfiguration(text: itemText!, cellColor: K.CellContentColor.ssoa, percentageBy: percentageBy)
-        cell.backgroundColor = K.CellBackgroundColor.ssoa.darken(byPercentage: percentageBy)
+        
+        cell.title = itemText!
+        cell.setColors(color: K.Color.ssoa)
+        cell.darkenColor(byPercentage: percentageBy)
         
         //set up the heart accessory view
         cell.accessoryType = (isFavorite ?? false) ? .checkmark : .none
@@ -94,59 +100,9 @@ class SlogansSayingOrAcronymsTableViewController: UITableViewController {
     
             if let slogan = arrayOfSelectedType?[indexPath.row]  {
                 SloganSayingOrAcronym.toggleIsFavorite(ssoa: slogan)
-    
-//                //update class member list
-//                slogans = SloganSayingOrAcronym.getSlogans()
-    
+        
                 //update the tableview
                 tableView.reloadData()
             }
         }
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

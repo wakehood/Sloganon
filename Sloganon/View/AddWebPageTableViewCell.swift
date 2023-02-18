@@ -7,8 +7,9 @@
 
 import UIKit
 
-class WebPageTableViewCell: UITableViewCell {
-    static let identifier = "CustomTableViewCell"
+class AddWebPageTableViewCell: UITableViewCell {
+    static let identifier = "AddWebPageTableViewCell"
+    var color = UIColor.white
     
     //Create some tags to differentiate between textFields
     static let webPageTitleTag = 0
@@ -24,8 +25,6 @@ class WebPageTableViewCell: UITableViewCell {
         textField.tag = webPageTitleTag
         textField.tintColor = K.webInputCursorColor
         textField.keyboardType = .default
-//        textField.layer.cornerRadius = 10
-//        textField.layer.masksToBounds = true
         
         textField.borderStyle = .roundedRect
         return textField
@@ -36,13 +35,11 @@ class WebPageTableViewCell: UITableViewCell {
         textField.placeholder = "https://www.yourwebaddress.com"
         textField.text = ""
         textField.textColor = .black
-        textField.font = UIFont.systemFont(ofSize: 25.0)
+        textField.font = UIFont.systemFont(ofSize: 17.0)
         textField.backgroundColor = .white
         textField.tag = urlTag
         textField.tintColor = K.webInputCursorColor
         textField.keyboardType = .URL
-//        textField.layer.cornerRadius = 10
-//        textField.layer.masksToBounds = true
         
         textField.borderStyle = .roundedRect
 
@@ -58,10 +55,20 @@ class WebPageTableViewCell: UITableViewCell {
         set { self.urlTextField.text = newValue}
         get { return urlTextField.text!}
     }
+    
+    func setColors(color: UIColor) {
+        self.color = color
+        self.backgroundColor = color
+    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-    
+        
+        let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imgView.image = UIImage(systemName: K.accessoryViewIcon.addWebInfo)
+        self.accessoryView = imgView
+        self.accessoryView?.tintColor = UIColor.systemGray
+        setColors(color:K.CellBackgroundColor.webinfo)
 
         contentView.addSubview(webPageNameTextField)
         contentView.addSubview(urlTextField)
@@ -87,8 +94,13 @@ class WebPageTableViewCell: UITableViewCell {
                                             width: contentWidth - 2 * xPadding,
                                             height: heightOfTextFields)
         urlTextField.frame =  CGRect(x: xPadding,
-                                     y: 2 * yPadding + heightOfTextFields,
+                                     y: yPadding + separator + heightOfTextFields,
                                      width: contentWidth - 2 * xPadding,
                                      height: heightOfTextFields)
+    }
+    
+    func darkenColor(byPercentage: CGFloat){
+        let currentColor = self.color
+        self.setColors(color: currentColor.darken(byPercentage: byPercentage))
     }
 }

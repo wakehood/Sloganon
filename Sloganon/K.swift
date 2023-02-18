@@ -32,6 +32,7 @@ struct K {
         static let addWebPageInfoIdentifier = "AddWebPageCell"
 
     }
+    
 
     struct ViewControllers{
         static let sloganViewControllerTitle = "Slogans"
@@ -89,6 +90,7 @@ struct K {
     struct accessoryViewIcon {
         static let selectedSlogan   = "heart.fill"
         static let unselectedSlogan = "heart"
+        static let addWebInfo       = "plus"
     }
     
     

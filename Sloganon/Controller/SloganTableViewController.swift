@@ -31,10 +31,16 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, Sl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       // print("viewDidLoad")
+       
+        //For dynamic row height
+        self.tableView.estimatedRowHeight = 100
+        self.tableView.rowHeight = UITableView.automaticDimension
         
-   //     tableView.register(SloganTableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "headerView")
-
+        self.tableView.register(DailySloganTableViewCell.self, forCellReuseIdentifier: DailySloganTableViewCell.identifier)
+        
+        self.tableView.register(SloganonChoicesTableViewCell.self, forCellReuseIdentifier: SloganonChoicesTableViewCell.identifier)
+        
+        self.tableView.register(FavoritesTableViewCell.self, forCellReuseIdentifier: FavoritesTableViewCell.identifier)
 
         self.view.backgroundColor = K.sloganVCbackground
         slogans = SloganSayingOrAcronym.getSlogans()
@@ -50,8 +56,6 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, Sl
         return sections.count
     }
     
-
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == K.SectionNumber.sloganOfTheDay {
             return 1
@@ -75,31 +79,26 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, Sl
         let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 20)
         
         if section == K.SectionNumber.sloganOfTheDay {
-            let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.sloganOfTheDayCellIdentifier, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: DailySloganTableViewCell.identifier, for: indexPath) as! DailySloganTableViewCell
 
-            cell.contentConfiguration = SloganOfTheDayContentConfiguration(text: SloganSayingOrAcronym.getSloganOfTheDay())
-            cell.backgroundColor =  K.CellBackgroundColor.sloganOfTheDay
+            cell.setColors(color: K.Color.sloganOfTheDay)
+            cell.title = SloganSayingOrAcronym.getSloganOfTheDay()
 
             return cell
         } else if section == K.SectionNumber.slogansSayingsOrAcronyms {
-            let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.choiceCellIdentifier, for: indexPath)
-            
-            let item = sloganSayingsOrAcronymsSection[indexPath.row]
+            let cell  = tableView.dequeueReusableCell(withIdentifier: SloganonChoicesTableViewCell.identifier, for: indexPath) as! SloganonChoicesTableViewCell
 
+            cell.title = sloganSayingsOrAcronymsSection[indexPath.row]
+            cell.setColors(color: K.Color.ssoa)
+            cell.darkenColor(byPercentage: percentageBy)
             
-            cell.contentConfiguration = OneLabelContentConfiguration(text: item, cellColor: K.CellContentColor.ssoa, percentageBy: percentageBy)
-            cell.backgroundColor = K.CellBackgroundColor.ssoa.darken(byPercentage: percentageBy)
-            
-            cell.accessoryType = .disclosureIndicator
-
             return cell
         } else  {
-            let cell  = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.favoritesCellIdentifier, for: indexPath)
+            let cell  = tableView.dequeueReusableCell(withIdentifier: FavoritesTableViewCell.identifier, for: indexPath) as! FavoritesTableViewCell
             
-            let favorite = favorites?.count == 0 ? "You don't have any favorites yet. \n\n\u{2764} your favorite Slogans, Sayings or Acronyms!! " : favorites![indexPath.row].text
-
-            cell.contentConfiguration = OneLabelContentConfiguration(text: favorite,  cellColor: K.CellContentColor.favorites, percentageBy: percentageBy)
-            cell.backgroundColor = K.CellBackgroundColor.favorites.darken(byPercentage: percentageBy)
+            cell.title = favorites?.count == 0 ? "You don't have any favorites yet. \n\n\u{2764} your favorite Slogans, Sayings or Acronyms!! " : favorites![indexPath.row].text
+            cell.setColors(color: K.Color.favorites)
+            cell.darkenColor(byPercentage: percentageBy)
 
             return cell
         }

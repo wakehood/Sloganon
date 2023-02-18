@@ -59,8 +59,6 @@ class OneLabelContentView : UIView, UIContentView {
         
         self.layer.cornerRadius = 5
         self.layer.masksToBounds = true
-        
-     //   self.roundCorners(corners: [.topLeft, .topRight], radius: 18)
    
     }
 }

@@ -76,6 +76,16 @@ class WebPage: Object {
             print("Error deleting web page, \(error)")
         }
     }
+    
+    static func alreadyExists (title: String, url: String) ->Bool {
+        let realm = try! Realm()
+    
+        
+        let predicate = "displayName = '" + title + "' AND url = '" + url + "'"
+        let results =  realm.objects(WebPage.self).filter(predicate)
+
+        return results.count == 0 ? false : true
+    }
 
 }
 

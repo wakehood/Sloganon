@@ -8,21 +8,20 @@
 import UIKit
 import SafariServices
 
-class WebPageInfoTableViewController: UITableViewController, SFSafariViewControllerDelegate {
+class WebPageInfoTableViewController: UITableViewController, SFSafariViewControllerDelegate, UITextFieldDelegate {
 
     var webPages: Array<WebPage> = []
     
     var sections = [K.HeaderText.webinfo1, K.HeaderText.webinfo2]
     
-    var userInputTitle = ""
-    var userInputUrl = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = K.stepVCBackground
         webPages = WebPage.webPageList()
-        self.tableView.register(UINib(nibName: K.CellNibNames.addWebPageInfoNibName, bundle: nil), forCellReuseIdentifier: K.CellReuseIdentifiers.addWebPageInfoIdentifier)
-
+    
+        self.tableView.register(WebPageInfoTableViewCell.self, forCellReuseIdentifier: WebPageInfoTableViewCell.identifier)
+        
+        self.tableView.register(AddWebPageTableViewCell.self, forCellReuseIdentifier: AddWebPageTableViewCell.identifier)
     }
     
     // MARK: - Table view data source
@@ -42,23 +41,18 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 10)
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.webPageInfoCellIdentifier, for: indexPath)
-
-            // Configure the cell...
-            cell.contentConfiguration = OneLabelContentConfiguration(text: webPages[indexPath.row].displayName, cellColor: K.CellContentColor.webinfo, percentageBy: percentageBy)
+            let cell = tableView.dequeueReusableCell(withIdentifier: WebPageInfoTableViewCell.identifier, for: indexPath) as! WebPageInfoTableViewCell
             
-            cell.backgroundColor = K.CellBackgroundColor.webinfo.darken(byPercentage: percentageBy)
+            cell.title = webPages[indexPath.row].displayName
+            cell.darkenColor(byPercentage: percentageBy)
+            
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.addWebPageInfoIdentifier, for: indexPath) as! AddWebPageTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: AddWebPageTableViewCell.identifier, for: indexPath) as! AddWebPageTableViewCell
             
             let color = K.CellBackgroundColor.webinfo.darken(byPercentage: percentageBy)
-            
-            cell.webPageNameTextField.text = ""
-            cell.urlTextField.text = ""
-            cell.webPageNameTextField.backgroundColor = UIColor.white
-            cell.urlTextField.backgroundColor = UIColor.white
             cell.backgroundColor = color
+            
             return cell
         }
     }
@@ -92,115 +86,66 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
         //if user added url
         if indexPath.section == 1 {
             let currentCell = tableView.cellForRow(at: indexPath) as! AddWebPageTableViewCell
-            userInputTitle = currentCell.webPageNameTextField.text ??  ""
-            userInputUrl = currentCell.urlTextField.text ?? ""
-        }
-        
-        let urlString = indexPath.section == 0 ? webPages[indexPath.row].url : userInputUrl
-        
-        guard let url = URL(string: urlString) else {
             
-            let alert = UIAlertController(title: "Error", message: "Not a valid URL", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                switch action.style{
-                    case .default:
-                    print("default")
-                    
-                    case .cancel:
-                    print("cancel")
-                 
-                default:
-                    print("the actual default")
-                    
+            guard let url = URL(string: currentCell.url) else {
+                DispatchQueue.main.async {
+                    self.showErrorAlert(message: "Not a valid URL")
                 }
-            }))
+                return
+            }
             
-            self.present(alert, animated: true, completion: nil)
+            if !["http", "https"].contains(url.scheme?.lowercased() ?? "") {
+                DispatchQueue.main.async {
+                    self.showErrorAlert(message: "URL must begin with https: or http:")
+                }
+            }
             
-            return
+            url.isReachable(completion: {success in
+                if success {
+                    DispatchQueue.main.async {
+                        //check if already exists
+                        let exists = WebPage.alreadyExists(title: currentCell.title, url: currentCell.url)
+                        
+                        if exists {
+                            self.showErrorAlert(message: "Web page already exists")
+                        } else {
+                            // if add to realm
+                            WebPage.addWebPage(displayName: currentCell.title, url: currentCell.url)
+                            currentCell.title = ""
+                            currentCell.url = ""
+                            self.webPages = WebPage.webPageList()
+                            self.tableView.reloadData()
+                        }
 
-        }
-        
-        if ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
+                    }
+                   
+                } else {
+                    DispatchQueue.main.async {
+                        self.showErrorAlert(message: "That web address is unreachable")
+                    }
+                }
+            })
             
+        } else {
             
+            let urlString = indexPath.section == 0 ? webPages[indexPath.row].url : ""
+            
+            guard let url = URL(string: urlString) else {
+                return
+            }
+                
             let vc = SFSafariViewController(url: url)
             vc.delegate = self
             
             present(vc, animated: true)
-        } else {
-            let alert = UIAlertController(title: "Error", message:"URL must begin with https:// or http://", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                switch action.style{
-                    case .default:
-                    print("default")
-                    
-                    case .cancel:
-                    print("cancel")
-                 
-                default:
-                    print("the actual default")
-                    
-                }
-            }))
-            
-            self.present(alert, animated: true, completion: nil)
         }
-            
-        
-//        if indexPath.section == 1 {
-//            let currentCell = tableView.cellForRow(at: indexPath) as! AddWebPageTableViewCell
-//            currentCell.webPageNameTextField.text =  ""
-//            currentCell.urlTextField.text = ""
-//        }
-        
     }
-    
-    @objc func add() {
 
-        print("Add")
-        var textField = UITextField()
-        let alert = UIAlertController(title: "Add a WebSite", message: "", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Webpage Title | url", style: .default) { (action) in
-            
-            print("Add Item \(String(describing: textField.text))")
-        }
-        alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "Create new item"
-            textField = alertTextField
-        }
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-        
-    }
-    
-    
-    // MARK: - Configure safariViewController delegate methods
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        dismiss(animated: true)
-    }
-    
-    func safariViewController(_ controller: SFSafariViewController, didCompleteInitialLoad didLoadSuccessfully: Bool) {
-        if didLoadSuccessfully {
-            //add to realm
-            WebPage.addWebPage(displayName: userInputTitle, url: userInputUrl)
-
-            webPages = WebPage.webPageList()
-            self.tableView.reloadData()
-        } else {
-            controller.dismiss(animated: true)
-        }
-    }
-       
-    
-    /*
-    // Override to support conditional editing of the table view.
+    // We don't want to be able to edit (i.e. delete cells) section 1
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+        return indexPath.section == 0 ? true : false
     }
-    */
+    
 
     
     // Override to support editing the table view.
@@ -213,37 +158,37 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
                 webPages = WebPage.webPageList()
                 
                 tableView.deleteRows(at: [indexPath], with: .fade)
-            } else if editingStyle == .insert {
-                // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
             }
         }
-        
+    }
+
+    // MARK: - SF safariViewController delegate methods
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
     
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    // MARK: - TextField delegate methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.tag == 0{
+            textField.resignFirstResponder()
+            if let nextField = textField.superview?.viewWithTag(1) as? UITextField {
+                nextField.becomeFirstResponder()
+            }
+            return true
+        } else {
+            textField.resignFirstResponder()
+            return false
+        }
     }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    // MARK: - Helper methods
+    func showErrorAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

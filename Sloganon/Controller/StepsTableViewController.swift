@@ -15,6 +15,12 @@ class StepsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.estimatedRowHeight = 100
+        self.tableView.rowHeight = UITableView.automaticDimension
+        
+        self.tableView.register(StepsTableViewCell.self, forCellReuseIdentifier: StepsTableViewCell.identifier)
+        
+        self.tableView.register(StepsCopyrightTableViewCell.self, forCellReuseIdentifier: StepsCopyrightTableViewCell.identifier)
         
         self.view.backgroundColor = K.stepVCBackground
 
@@ -39,41 +45,23 @@ class StepsTableViewController: UITableViewController {
     // MARK: - Configure TableView Rows with delegate methods
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        var reUseIdentifier = ""
+              
         
         if indexPath.section == 0 {
-            reUseIdentifier = K.CellReuseIdentifiers.stepCellIdentifier
-        } else {
-            reUseIdentifier = K.CellReuseIdentifiers.stepCopyrightCellIdentifier
-        }
-        let cell = tableView.dequeueReusableCell(withIdentifier: reUseIdentifier, for: indexPath)
+            let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 12)
+            let cell = tableView.dequeueReusableCell(withIdentifier: StepsTableViewCell.identifier, for: indexPath) as! StepsTableViewCell
             
-        
-        let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 12)
-        
-        if indexPath.section == 0 {
-            cell.contentConfiguration = TwoLabelContentConfiguration(leftText: String(indexPath.row + 1), mainText: steps.stepsList[indexPath.row], cellColor: K.CellContentColor.step, percentageBy: percentageBy)
-            cell.backgroundColor = K.CellBackgroundColor.step.darken(byPercentage: percentageBy)
+            cell.leftTitle = String(indexPath.row + 1) //Step Number
+            cell.mainTitle = steps.stepsList[indexPath.row]
+            cell.setColors(color: K.CellContentColor.step)
+            cell.darkenColor(byPercentage: percentageBy)
+            return cell
         } else {
-            cell.contentConfiguration = OneLabelContentConfiguration(text: K.stepsCopyright,cellColor: K.CellContentColor.step, percentageBy: 0.70)
-            cell.backgroundColor = K.CellBackgroundColor.step.darken(byPercentage: 0.70)
+            let cell = tableView.dequeueReusableCell(withIdentifier: StepsCopyrightTableViewCell.identifier, for: indexPath) 
+            return cell
         }
-
-        
-
-        return cell
     }
-    
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.section == 0 {
-//            return K.RowHeight.steps
-//        }
-//        else{
-//            return K.RowHeight.stepsCopyright
-//        }
-//    }
-   
+       
     // MARK: - Configure TableView Headers with delegate methods
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

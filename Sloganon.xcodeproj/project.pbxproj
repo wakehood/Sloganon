@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB437DE2296B847E006C191E /* UITextViewExtension.swift */; };
+		CB57EA99299DAD2A0035C42D /* AddWebPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57EA98299DAD2A0035C42D /* AddWebPageTableViewCell.swift */; };
 		CB6DC76F297207830075DEA6 /* ComicNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC769297207820075DEA6 /* ComicNeue-Light.ttf */; };
 		CB6DC770297207830075DEA6 /* ComicNeue-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76A297207830075DEA6 /* ComicNeue-Italic.ttf */; };
 		CB6DC771297207830075DEA6 /* ComicNeue-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76B297207830075DEA6 /* ComicNeue-BoldItalic.ttf */; };
@@ -21,27 +22,27 @@
 		CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50A28D524A000DBB3AD /* Assets.xcassets */; };
 		CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */; };
 		CB6FF52F28DCC82800DBB3AD /* SloganSayingOrAcronym.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF52E28DCC82800DBB3AD /* SloganSayingOrAcronym.swift */; };
-		CB7FC99829804FB8007C89D9 /* TwoLabelContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FC99729804FB8007C89D9 /* TwoLabelContentConfiguration.swift */; };
-		CB8F49AB299BEF76003B54DF /* AddWebPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8F49A9299BEF76003B54DF /* AddWebPageTableViewCell.swift */; };
-		CB8F49AC299BEF76003B54DF /* AddWebPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8F49AA299BEF76003B54DF /* AddWebPageTableViewCell.xib */; };
 		CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */; };
 		CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB229556249006C38EE /* StepsTableViewController.swift */; };
 		CBB48CB7295562FD006C38EE /* SerenityPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */; };
+		CBB94AD0299FF66C00DD0713 /* OneLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB94ACF299FF66C00DD0713 /* OneLabelTableViewCell.swift */; };
+		CBB94AD229A04CED00DD0713 /* TwoLabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB94AD129A04CED00DD0713 /* TwoLabelsTableViewCell.swift */; };
 		CBBC4C062976604400D9FF2B /* WebPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBC4C052976604400D9FF2B /* WebPage.swift */; };
 		CBBC4C092976622D00D9FF2B /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBBC4C082976622D00D9FF2B /* SwipeCellKit */; };
+		CBC340AA299FE93200CA6BF8 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC340A9299FE93200CA6BF8 /* URLExtension.swift */; };
 		CBC74732298F3F7D007E5D96 /* SlogansSayingOrAcronymsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC74731298F3F7D007E5D96 /* SlogansSayingOrAcronymsTableViewController.swift */; };
 		CBCDE36529624F760080B182 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36429624F760080B182 /* K.swift */; };
 		CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE366296271CB0080B182 /* SloganTableViewController.swift */; };
 		CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6FD629666A020039A2F0 /* Steps.swift */; };
 		CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */; };
 		CBD11B47296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD11B46296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift */; };
-		CBD11B49296CD0D800ACC03D /* OneLabelContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD11B48296CD0D800ACC03D /* OneLabelContentConfiguration.swift */; };
 		CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF764BD28DD60870072D01D /* StringExtensions.swift */; };
 		CBFDC9622977577300E30404 /* WebPageInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFDC9612977577300E30404 /* WebPageInfoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB437DE2296B847E006C191E /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		CB57EA98299DAD2A0035C42D /* AddWebPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWebPageTableViewCell.swift; sourceTree = "<group>"; };
 		CB6DC769297207820075DEA6 /* ComicNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Light.ttf"; sourceTree = "<group>"; };
 		CB6DC76A297207830075DEA6 /* ComicNeue-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Italic.ttf"; sourceTree = "<group>"; };
 		CB6DC76B297207830075DEA6 /* ComicNeue-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -56,20 +57,19 @@
 		CB6FF50D28D524A000DBB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB6FF50F28D524A000DBB3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6FF52E28DCC82800DBB3AD /* SloganSayingOrAcronym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganSayingOrAcronym.swift; sourceTree = "<group>"; };
-		CB7FC99729804FB8007C89D9 /* TwoLabelContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelContentConfiguration.swift; sourceTree = "<group>"; };
-		CB8F49A9299BEF76003B54DF /* AddWebPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWebPageTableViewCell.swift; sourceTree = "<group>"; };
-		CB8F49AA299BEF76003B54DF /* AddWebPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddWebPageTableViewCell.xib; sourceTree = "<group>"; };
 		CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CBB48CB229556249006C38EE /* StepsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewController.swift; sourceTree = "<group>"; };
 		CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerenityPrayerViewController.swift; sourceTree = "<group>"; };
+		CBB94ACF299FF66C00DD0713 /* OneLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLabelTableViewCell.swift; sourceTree = "<group>"; };
+		CBB94AD129A04CED00DD0713 /* TwoLabelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelsTableViewCell.swift; sourceTree = "<group>"; };
 		CBBC4C052976604400D9FF2B /* WebPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPage.swift; sourceTree = "<group>"; };
+		CBC340A9299FE93200CA6BF8 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		CBC74731298F3F7D007E5D96 /* SlogansSayingOrAcronymsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlogansSayingOrAcronymsTableViewController.swift; path = Sloganon/Controller/SlogansSayingOrAcronymsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		CBCDE36429624F760080B182 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		CBCDE366296271CB0080B182 /* SloganTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganTableViewController.swift; sourceTree = "<group>"; };
 		CBCF6FD629666A020039A2F0 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
 		CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CBD11B46296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganOfTheDayContentConfiguration.swift; sourceTree = "<group>"; };
-		CBD11B48296CD0D800ACC03D /* OneLabelContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLabelContentConfiguration.swift; sourceTree = "<group>"; };
 		CBF764BD28DD60870072D01D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		CBFDC9612977577300E30404 /* WebPageInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageInfoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +101,7 @@
 				CB6DC769297207820075DEA6 /* ComicNeue-Light.ttf */,
 				CB6DC76E297207830075DEA6 /* ComicNeue-LightItalic.ttf */,
 				CB6DC76C297207830075DEA6 /* ComicNeue-Regular.ttf */,
+				CBC340A9299FE93200CA6BF8 /* URLExtension.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -142,10 +143,9 @@
 				CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */,
 				CB6FF50728D5249C00DBB3AD /* Main.storyboard */,
 				CBD11B46296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift */,
-				CBD11B48296CD0D800ACC03D /* OneLabelContentConfiguration.swift */,
-				CB7FC99729804FB8007C89D9 /* TwoLabelContentConfiguration.swift */,
-				CB8F49A9299BEF76003B54DF /* AddWebPageTableViewCell.swift */,
-				CB8F49AA299BEF76003B54DF /* AddWebPageTableViewCell.xib */,
+				CB57EA98299DAD2A0035C42D /* AddWebPageTableViewCell.swift */,
+				CBB94ACF299FF66C00DD0713 /* OneLabelTableViewCell.swift */,
+				CBB94AD129A04CED00DD0713 /* TwoLabelsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,7 +239,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6DC771297207830075DEA6 /* ComicNeue-BoldItalic.ttf in Resources */,
-				CB8F49AC299BEF76003B54DF /* AddWebPageTableViewCell.xib in Resources */,
 				CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */,
 				CB6DC773297207830075DEA6 /* ComicNeue-Bold.ttf in Resources */,
 				CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */,
@@ -258,18 +257,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB7FC99829804FB8007C89D9 /* TwoLabelContentConfiguration.swift in Sources */,
 				CBFDC9622977577300E30404 /* WebPageInfoTableViewController.swift in Sources */,
 				CBB48CB7295562FD006C38EE /* SerenityPrayerViewController.swift in Sources */,
 				CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */,
 				CBC74732298F3F7D007E5D96 /* SlogansSayingOrAcronymsTableViewController.swift in Sources */,
+				CBB94AD0299FF66C00DD0713 /* OneLabelTableViewCell.swift in Sources */,
 				CBD11B47296CAF1700ACC03D /* SloganOfTheDayContentConfiguration.swift in Sources */,
+				CB57EA99299DAD2A0035C42D /* AddWebPageTableViewCell.swift in Sources */,
 				CBCDE36529624F760080B182 /* K.swift in Sources */,
+				CBC340AA299FE93200CA6BF8 /* URLExtension.swift in Sources */,
 				CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */,
 				CBBC4C062976604400D9FF2B /* WebPage.swift in Sources */,
 				CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */,
-				CBD11B49296CD0D800ACC03D /* OneLabelContentConfiguration.swift in Sources */,
-				CB8F49AB299BEF76003B54DF /* AddWebPageTableViewCell.swift in Sources */,
 				CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */,
 				CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */,
 				CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */,
@@ -277,6 +276,7 @@
 				CB6FF52F28DCC82800DBB3AD /* SloganSayingOrAcronym.swift in Sources */,
 				CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */,
 				CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */,
+				CBB94AD229A04CED00DD0713 /* TwoLabelsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
