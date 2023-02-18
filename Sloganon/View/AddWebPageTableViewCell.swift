@@ -25,6 +25,7 @@ class AddWebPageTableViewCell: UITableViewCell {
         textField.tag = webPageTitleTag
         textField.tintColor = K.webInputCursorColor
         textField.keyboardType = .default
+        textField.returnKeyType = .next
         
         textField.borderStyle = .roundedRect
         return textField
@@ -40,6 +41,7 @@ class AddWebPageTableViewCell: UITableViewCell {
         textField.tag = urlTag
         textField.tintColor = K.webInputCursorColor
         textField.keyboardType = .URL
+        textField.returnKeyType = .done
         
         textField.borderStyle = .roundedRect
 
@@ -59,6 +61,13 @@ class AddWebPageTableViewCell: UITableViewCell {
     func setColors(color: UIColor) {
         self.color = color
         self.backgroundColor = color
+        self.contentView.backgroundColor = color
+    }
+    
+    func setDelegates(delegate: UITextFieldDelegate)
+    {
+        self.webPageNameTextField.delegate = delegate
+        self.urlTextField.delegate = delegate
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
@@ -72,33 +81,27 @@ class AddWebPageTableViewCell: UITableViewCell {
 
         contentView.addSubview(webPageNameTextField)
         contentView.addSubview(urlTextField)
+        
+        let marginGuide = contentView.layoutMarginsGuide
+        
+        webPageNameTextField.translatesAutoresizingMaskIntoConstraints = false
+        webPageNameTextField.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor).isActive = true
+        webPageNameTextField.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
+        webPageNameTextField.heightAnchor.constraint(equalToConstant: 35.0).isActive = true
+        webPageNameTextField.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
+        
+        
+        urlTextField.translatesAutoresizingMaskIntoConstraints = false
+        urlTextField.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor).isActive = true
+        urlTextField.heightAnchor.constraint(equalToConstant: 35.0).isActive = true
+        urlTextField.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
+        urlTextField.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
         
-        let xPadding = 10.0
-        let yPadding = 10.0
-        let separator = 5.0
-        let contentHeight = contentView.frame.size.height
-        let contentWidth = contentView.frame.size.width
-        
-        let heightOfTextFields = (contentHeight - 2 * yPadding - separator) / 2
-        
-        webPageNameTextField.frame = CGRect(x: xPadding,
-                                            y: yPadding,
-                                            width: contentWidth - 2 * xPadding,
-                                            height: heightOfTextFields)
-        urlTextField.frame =  CGRect(x: xPadding,
-                                     y: yPadding + separator + heightOfTextFields,
-                                     width: contentWidth - 2 * xPadding,
-                                     height: heightOfTextFields)
-    }
-    
     func darkenColor(byPercentage: CGFloat){
         let currentColor = self.color
         self.setColors(color: currentColor.darken(byPercentage: byPercentage))
