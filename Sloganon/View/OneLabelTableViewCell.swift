@@ -58,6 +58,7 @@ class OneLabelTableViewCell: UITableViewCell {
         self.aLabel.backgroundColor = color
         self.aLabel.textColor = color.contrastingColor(isFlat: false)
         self.backgroundColor = color
+        self.contentView.backgroundColor = color
     }
     
     func darkenColor(byPercentage: CGFloat){
