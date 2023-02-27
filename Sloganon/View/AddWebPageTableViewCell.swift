@@ -62,6 +62,7 @@ class AddWebPageTableViewCell: UITableViewCell {
         self.color = color
         self.backgroundColor = color
         self.contentView.backgroundColor = color
+        self.accessoryView?.backgroundColor = color
     }
     
     func setDelegates(delegate: UITextFieldDelegate)

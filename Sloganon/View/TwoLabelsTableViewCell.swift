@@ -90,6 +90,7 @@ class TwoLabelsTableViewCell: UITableViewCell {
         self.mainLabel.textColor = color.contrastingColor(isFlat: false)
         self.backgroundColor = color
         self.contentView.backgroundColor = color
+        self.accessoryView?.backgroundColor = color
     }
     
     func darkenColor(byPercentage: CGFloat){
