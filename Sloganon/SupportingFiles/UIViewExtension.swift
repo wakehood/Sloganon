@@ -12,7 +12,8 @@ extension UIView {
     func headerViewWithLabel(title: String, color: UIColor = UIColor.clear) -> UIView {
 
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 24)
+        //label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.font = K.HeaderFont
         label.text = title
         label.textAlignment = .left
         label.textColor = UIColor.black
@@ -28,6 +29,29 @@ extension UIView {
         
         return self
     }
+    
+    func headerViewWithAttributedLabel(title: NSMutableAttributedString, color: UIColor = UIColor.clear) -> UIView {
+        
+        let label = UILabel()
+        //label.font = UIFont.boldSystemFont(ofSize: 24)
+       // label.text = title
+        label.textAlignment = .left
+        label.textColor = UIColor.black
+        label.attributedText = title
+
+        label.minimumScaleFactor = 0.5
+        label.adjustsFontSizeToFitWidth = true
+        
+        self.addSubview(label)
+        
+        label.layout(top:self.topAnchor, leading:self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 5, left: 10, bottom: 5, right: 10))
+        
+        self.backgroundColor = UIColor.clear
+        
+        return self
+    }
+    
+    
     
     
     

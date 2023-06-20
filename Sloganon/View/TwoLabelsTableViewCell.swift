@@ -121,3 +121,22 @@ class StepsTableViewCell : TwoLabelsTableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+// MARK: - The Steps Reference Cell on the Steps tab
+class StepsRefTableViewCell : TwoLabelsTableViewCell {
+    static let identifier = K.CellReuseIdentifiers.stepsReferenceCellIdentifiers
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.setColors(color: K.Color.step)
+        self.darkenColor(byPercentage: 0.55)
+        self.setMainFont(font: UIFont.systemFont(ofSize: 14))
+        self.setLeftFont(font: UIFont.systemFont(ofSize: 10))
+        self.isUserInteractionEnabled = false
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}

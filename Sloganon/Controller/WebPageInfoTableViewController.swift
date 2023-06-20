@@ -1,5 +1,5 @@
 //
-//  InfoTableViewController.swift
+//  WebPageInfoTableViewController.swift
 //  Sloganon
 //
 //  Created by Sylvia Wake-Hood on 1/17/23.
@@ -14,13 +14,16 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
     
     var sections = [K.HeaderText.webinfo1, K.HeaderText.webinfo2]
     
+    
+    var activityIndicatorView: UIActivityIndicatorView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         self.view.backgroundColor = K.stepVCBackground
         webPages = WebPage.webPageList()
     
         self.tableView.register(WebPageInfoTableViewCell.self, forCellReuseIdentifier: WebPageInfoTableViewCell.identifier)
-        
         self.tableView.register(AddWebPageTableViewCell.self, forCellReuseIdentifier: AddWebPageTableViewCell.identifier)
     }
     
@@ -44,15 +47,16 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
             let cell = tableView.dequeueReusableCell(withIdentifier: WebPageInfoTableViewCell.identifier, for: indexPath) as! WebPageInfoTableViewCell
             
             cell.title = webPages[indexPath.row].displayName
+            cell.setColors(color: K.Color.webinfo)
             cell.darkenColor(byPercentage: percentageBy)
             
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: AddWebPageTableViewCell.identifier, for: indexPath) as! AddWebPageTableViewCell
-            
             let color = K.CellBackgroundColor.webinfo.darken(byPercentage: percentageBy)
-            cell.backgroundColor = color
-            
+            cell.setColors(color: color)
+            cell.setDelegates(delegate: self)
+
             return cell
         }
     }
@@ -86,26 +90,31 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
         //if user added url
         if indexPath.section == 1 {
             let currentCell = tableView.cellForRow(at: indexPath) as! AddWebPageTableViewCell
-            
+
             guard let url = URL(string: currentCell.url) else {
                 DispatchQueue.main.async {
                     self.showErrorAlert(message: "Not a valid URL")
                 }
                 return
             }
-            
+
             if !["http", "https"].contains(url.scheme?.lowercased() ?? "") {
                 DispatchQueue.main.async {
                     self.showErrorAlert(message: "URL must begin with https: or http:")
                 }
             }
-            
+
+           // showActivityIndicator()
+
             url.isReachable(completion: {success in
                 if success {
+
                     DispatchQueue.main.async {
-                        //check if already exists
+                        //self.hideActivityIndicator()
+
+                        //check if already exists in database
                         let exists = WebPage.alreadyExists(title: currentCell.title, url: currentCell.url)
-                        
+
                         if exists {
                             self.showErrorAlert(message: "Web page already exists")
                         } else {
@@ -114,18 +123,20 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
                             currentCell.title = ""
                             currentCell.url = ""
                             self.webPages = WebPage.webPageList()
+
                             self.tableView.reloadData()
                         }
-
                     }
-                   
+
                 } else {
                     DispatchQueue.main.async {
+                       // self.hideActivityIndicator()
                         self.showErrorAlert(message: "That web address is unreachable")
                     }
                 }
             })
-            
+
+
         } else {
             
             let urlString = indexPath.section == 0 ? webPages[indexPath.row].url : ""
@@ -146,8 +157,6 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
         return indexPath.section == 0 ? true : false
     }
     
-
-    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
@@ -167,9 +176,10 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
         dismiss(animated: true)
     }
     
+    
     // MARK: - TextField delegate methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.tag == 0{
+        if textField.tag == 0 {
             textField.resignFirstResponder()
             if let nextField = textField.superview?.viewWithTag(1) as? UITextField {
                 nextField.becomeFirstResponder()
@@ -177,9 +187,11 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
             return true
         } else {
             textField.resignFirstResponder()
+           // self.tableView.selectRow(at: IndexPath(row: 1, section: 1), animated: true, scrollPosition: .none)
             return false
         }
     }
+    
 
     // MARK: - Helper methods
     func showErrorAlert(message: String) {
@@ -191,4 +203,25 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
         self.present(alert, animated: true, completion: nil)
     }
     
+//    func showActivityIndicator() {
+////        if (activityIndicatorView == nil) {
+////            activityIndicatorView = UIActivityIndicatorView(style: .large)
+////            activityIndicatorView?.center = self.view.center
+////            self.view.addSubview(activityIndicatorView!)
+////        }
+////        activityIndicatorView?.startAnimating()
+//        self.largeActivityIndicator.isHidden = false
+//        self.largeActivityIndicator.startAnimating()
+//    }
+//
+//    func hideActivityIndicator(){
+////        if (activityIndicatorView != nil){
+////            activityIndicatorView?.stopAnimating()
+////        }
+//        self.largeActivityIndicator.isHidden = true
+//        self.largeActivityIndicator.stopAnimating()
+//    }
+    
 }
+
+

@@ -20,7 +20,7 @@ class StepsTableViewController: UITableViewController {
         
         self.tableView.register(StepsTableViewCell.self, forCellReuseIdentifier: StepsTableViewCell.identifier)
         
-        self.tableView.register(StepsCopyrightTableViewCell.self, forCellReuseIdentifier: StepsCopyrightTableViewCell.identifier)
+        self.tableView.register(StepsRefTableViewCell.self, forCellReuseIdentifier: StepsRefTableViewCell.identifier)
         
         self.view.backgroundColor = K.stepVCBackground
 
@@ -38,7 +38,7 @@ class StepsTableViewController: UITableViewController {
             return steps.stepsList.count
         }
         else {
-            return 1 //the copyright row
+            return 1 //the reference row
         }
     }
 
@@ -46,7 +46,6 @@ class StepsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
               
-        
         if indexPath.section == 0 {
             let percentageBy = UIColor.getPercentBy(row: indexPath.row, repeatEvery: 12)
             let cell = tableView.dequeueReusableCell(withIdentifier: StepsTableViewCell.identifier, for: indexPath) as! StepsTableViewCell
@@ -57,7 +56,11 @@ class StepsTableViewController: UITableViewController {
             cell.darkenColor(byPercentage: percentageBy)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: StepsCopyrightTableViewCell.identifier, for: indexPath) 
+            let cell = tableView.dequeueReusableCell(withIdentifier: StepsRefTableViewCell.identifier, for: indexPath) as! StepsRefTableViewCell
+            
+            cell.leftTitle = K.referenceNumber
+            cell.mainTitle = K.stepsReference
+            
             return cell
         }
     }
@@ -75,7 +78,17 @@ class StepsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
-            let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "", color: K.HeaderBackgroundColor.step)
+            let _12StepString = NSMutableAttributedString(string: "The 12 Steps", attributes: [.font:K.HeaderFont!])
+            
+            let fontSuper:UIFont? = UIFont(name: "Helvetica", size:10)
+            let superscriptString = NSMutableAttributedString(string: K.referenceNumber, attributes: [.font:fontSuper!, .baselineOffset:10])
+            
+            let combinedString = NSMutableAttributedString()
+            combinedString.append(_12StepString)
+            combinedString.append(superscriptString)
+            
+            let headerView = UIView().headerViewWithAttributedLabel(title: combinedString, color: K.CellContentColor.step)
+            
             return headerView
         }
         else{
@@ -89,7 +102,7 @@ class StepsTableViewController: UITableViewController {
             return  K.HeaderHeight
         }
         else{
-            return 0.0
+            return K.StepsReferenceHeaderHeight
         }
     }
 }

@@ -22,6 +22,8 @@ class OneLabelTableViewCell: UITableViewCell {
         label.layer.cornerRadius = 5
         label.layer.masksToBounds = true
         
+        label.attributedText = NSMutableAttributedString()
+        
         return label 
     }()
     
@@ -70,6 +72,11 @@ class OneLabelTableViewCell: UITableViewCell {
     func setFont(font: UIFont) {
         self.aLabel.font = font
     }
+    
+    func setAttributedText(attrString: NSMutableAttributedString) {
+        self.aLabel.attributedText = attrString
+    }
+    
 }
 
 // MARK: - The Web Page Info Cells on the Info tab
@@ -157,21 +164,6 @@ class SlogansSayingOrAcronymsTableViewCell : OneLabelTableViewCell {
     }
 }
 
-// MARK: - The Steps Copyright Cell on the Steps tab
+// MARK: - The Steps Reference Cell on the Steps tab
 
-class StepsCopyrightTableViewCell : OneLabelTableViewCell {
-    static let identifier = K.CellReuseIdentifiers.stepCopyrightCellIdentifier
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.title = K.stepsCopyright
-        self.setColors(color: K.Color.step)
-        self.darkenColor(byPercentage: 0.55)
-        self.setFont(font: UIFont.systemFont(ofSize: 14))
-        self.isUserInteractionEnabled = false
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
+

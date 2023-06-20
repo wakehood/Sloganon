@@ -9,7 +9,6 @@ import UIKit
 
 class SerenityPrayerViewController: UIViewController, UIScrollViewDelegate {
 
- 
     @IBOutlet weak var serenityPrayerScrollView: UIScrollView!
     
     @IBOutlet weak var contentView: UIView!

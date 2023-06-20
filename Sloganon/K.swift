@@ -26,7 +26,7 @@ struct K {
         static let slogansayingAcronymCellIdentifier = "sloganSayingOrAcronymCell"
         
         static let stepCellIdentifier = "StepCell"
-        static let stepCopyrightCellIdentifier = "StepCopyrightCell"
+        static let stepsReferenceCellIdentifiers = "StepsReferenceCell"
         
         static let webPageInfoCellIdentifier = "webPageInfoCell"
         static let addWebPageInfoIdentifier = "AddWebPageCell"
@@ -79,11 +79,12 @@ struct K {
         static let webinfo2 = "Add Your Own Website"
     }
     
+    static let HeaderFont = UIFont(name: "Rockwell", size: 24)
     static let SegueIdentifier = "goToSlogansSayingsOrAcronyms"
     static let newSegueIdentifier = "goToSSOAViewController"
     
     static let HeaderHeight = 50.0
-    static let CopyrightHeaderHeight = 0.0
+    static let StepsReferenceHeaderHeight = 0.0
     
     static let serenityPrayer =
     "God grant me the serenity\nTo accept the things I cannot change,\nCourage to change the things I can\nAnd wisdom to know the difference."
@@ -213,7 +214,8 @@ struct K {
         "DENIAL\n\tDon’t\n\tEven\n\tNotice\n\tI\n\tAm \n\tLying"
     ]
     
-    static let stepsCopyright = "© Al-Anon’s Twelve Steps, copyright 1996 by Al-Anon Family Group Headquarters, Inc. Reprinted with permission of Al-Anon Family Group Headquarters, Inc."
+    static let stepsReference = "\"Twelve-step program.\" Wikipedia, Wikimedia Foundation, 24 April 2023, https://en.wikipedia.org/wiki/Twelve-step_program#Twelve_Steps."
+    static let referenceNumber = "[1]"
     
     //starting list of web pages
     static let elementsPerWebPageInfo = 2
@@ -222,7 +224,6 @@ struct K {
         ["World Service Office", "https://www.al-anon.org"],
         ["Al-Anon Alateen in Northern California", "https://northerncaliforniaal-anon.org/"],
         ["Sonoma and Napa Alanon",   "https://sonapal-anon.org"],
-
     ]
 }
 

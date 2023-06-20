@@ -18,13 +18,15 @@ class SSOAViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
-    var selectedTitle = ""
+    var selectedTitle:  String = ""
     var arrayOfSelectedType : Array<SloganSayingOrAcronym>?
     
     weak var delegate : SSOAViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        navigationBar.topItem?.titleView = UIView().headerViewWithLabel(title: self.selectedTitle)
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -39,6 +41,12 @@ class SSOAViewController: UIViewController , UITableViewDelegate, UITableViewDat
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.doneButton.tintColor = K.HeaderBackgroundColor.ssoa
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if let delegate = delegate{
+            delegate.updateDataAndTableview()
+        }
     }
     
     // MARK: - Table view data source

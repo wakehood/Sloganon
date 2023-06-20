@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB30FD2529A16C4B001A81DE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */; };
 		CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB437DE2296B847E006C191E /* UITextViewExtension.swift */; };
-		CB57EA99299DAD2A0035C42D /* AddWebPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57EA98299DAD2A0035C42D /* AddWebPageTableViewCell.swift */; };
 		CB6DC76F297207830075DEA6 /* ComicNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC769297207820075DEA6 /* ComicNeue-Light.ttf */; };
 		CB6DC770297207830075DEA6 /* ComicNeue-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76A297207830075DEA6 /* ComicNeue-Italic.ttf */; };
 		CB6DC771297207830075DEA6 /* ComicNeue-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76B297207830075DEA6 /* ComicNeue-BoldItalic.ttf */; };
@@ -17,11 +17,12 @@
 		CB6DC774297207830075DEA6 /* ComicNeue-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76E297207830075DEA6 /* ComicNeue-LightItalic.ttf */; };
 		CB6DC7792973AA3C0075DEA6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CB6DC7782973AA3C0075DEA6 /* RealmSwift */; };
 		CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */; };
-		CB6FF50428D5249C00DBB3AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50328D5249C00DBB3AD /* SceneDelegate.swift */; };
 		CB6FF50928D5249C00DBB3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50728D5249C00DBB3AD /* Main.storyboard */; };
 		CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50A28D524A000DBB3AD /* Assets.xcassets */; };
 		CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */; };
 		CB6FF52F28DCC82800DBB3AD /* SloganSayingOrAcronym.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF52E28DCC82800DBB3AD /* SloganSayingOrAcronym.swift */; };
+		CB75E7A429AE98F7006C58D4 /* AddWebpageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB75E7A329AE98F7006C58D4 /* AddWebpageTableViewCell.swift */; };
+		CB7E6B002A3D642300194364 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7E6AFF2A3D642300194364 /* SceneDelegate.swift */; };
 		CB94009C29A082EE006AB3AE /* SSOAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94009B29A082EE006AB3AE /* SSOAViewController.swift */; };
 		CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */; };
 		CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB229556249006C38EE /* StepsTableViewController.swift */; };
@@ -40,8 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		CB437DE2296B847E006C191E /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
-		CB57EA98299DAD2A0035C42D /* AddWebPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWebPageTableViewCell.swift; sourceTree = "<group>"; };
 		CB6DC769297207820075DEA6 /* ComicNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Light.ttf"; sourceTree = "<group>"; };
 		CB6DC76A297207830075DEA6 /* ComicNeue-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Italic.ttf"; sourceTree = "<group>"; };
 		CB6DC76B297207830075DEA6 /* ComicNeue-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -50,12 +51,13 @@
 		CB6DC76E297207830075DEA6 /* ComicNeue-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-LightItalic.ttf"; sourceTree = "<group>"; };
 		CB6FF4FE28D5249C00DBB3AD /* Sloganon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sloganon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB6FF50328D5249C00DBB3AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CB6FF50828D5249C00DBB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB6FF50A28D524A000DBB3AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB6FF50D28D524A000DBB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB6FF50F28D524A000DBB3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6FF52E28DCC82800DBB3AD /* SloganSayingOrAcronym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganSayingOrAcronym.swift; sourceTree = "<group>"; };
+		CB75E7A329AE98F7006C58D4 /* AddWebpageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWebpageTableViewCell.swift; sourceTree = "<group>"; };
+		CB7E6AFF2A3D642300194364 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CB94009B29A082EE006AB3AE /* SSOAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOAViewController.swift; sourceTree = "<group>"; };
 		CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CBB48CB229556249006C38EE /* StepsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewController.swift; sourceTree = "<group>"; };
@@ -93,13 +95,14 @@
 				CB437DE2296B847E006C191E /* UITextViewExtension.swift */,
 				CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */,
 				CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */,
+				CBC340A9299FE93200CA6BF8 /* URLExtension.swift */,
+				CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */,
 				CB6DC76D297207830075DEA6 /* ComicNeue-Bold.ttf */,
 				CB6DC76B297207830075DEA6 /* ComicNeue-BoldItalic.ttf */,
 				CB6DC76A297207830075DEA6 /* ComicNeue-Italic.ttf */,
 				CB6DC769297207820075DEA6 /* ComicNeue-Light.ttf */,
 				CB6DC76E297207830075DEA6 /* ComicNeue-LightItalic.ttf */,
 				CB6DC76C297207830075DEA6 /* ComicNeue-Regular.ttf */,
-				CBC340A9299FE93200CA6BF8 /* URLExtension.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -123,8 +126,8 @@
 		CB6FF50028D5249C00DBB3AD /* Sloganon */ = {
 			isa = PBXGroup;
 			children = (
+				CB7E6AFF2A3D642300194364 /* SceneDelegate.swift */,
 				CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */,
-				CB6FF50328D5249C00DBB3AD /* SceneDelegate.swift */,
 				CB6FF53028DCC83300DBB3AD /* Model */,
 				CB6FF51528D524B900DBB3AD /* View */,
 				CB6FF51628D524E300DBB3AD /* Controller */,
@@ -138,9 +141,9 @@
 		CB6FF51528D524B900DBB3AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB75E7A329AE98F7006C58D4 /* AddWebpageTableViewCell.swift */,
 				CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */,
 				CB6FF50728D5249C00DBB3AD /* Main.storyboard */,
-				CB57EA98299DAD2A0035C42D /* AddWebPageTableViewCell.swift */,
 				CBB94ACF299FF66C00DD0713 /* OneLabelTableViewCell.swift */,
 				CBB94AD129A04CED00DD0713 /* TwoLabelsTableViewCell.swift */,
 			);
@@ -258,7 +261,6 @@
 				CBB48CB7295562FD006C38EE /* SerenityPrayerViewController.swift in Sources */,
 				CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */,
 				CBB94AD0299FF66C00DD0713 /* OneLabelTableViewCell.swift in Sources */,
-				CB57EA99299DAD2A0035C42D /* AddWebPageTableViewCell.swift in Sources */,
 				CBCDE36529624F760080B182 /* K.swift in Sources */,
 				CBC340AA299FE93200CA6BF8 /* URLExtension.swift in Sources */,
 				CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */,
@@ -266,13 +268,15 @@
 				CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */,
 				CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */,
 				CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */,
+				CB30FD2529A16C4B001A81DE /* UIViewControllerExtension.swift in Sources */,
 				CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */,
-				CB6FF50428D5249C00DBB3AD /* SceneDelegate.swift in Sources */,
 				CB94009C29A082EE006AB3AE /* SSOAViewController.swift in Sources */,
 				CB6FF52F28DCC82800DBB3AD /* SloganSayingOrAcronym.swift in Sources */,
+				CB7E6B002A3D642300194364 /* SceneDelegate.swift in Sources */,
 				CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */,
 				CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */,
 				CBB94AD229A04CED00DD0713 /* TwoLabelsTableViewCell.swift in Sources */,
+				CB75E7A429AE98F7006C58D4 /* AddWebpageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
