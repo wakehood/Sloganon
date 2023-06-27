@@ -78,7 +78,7 @@ class StepsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
-            let _12StepString = NSMutableAttributedString(string: "The 12 Steps", attributes: [.font:K.HeaderFont!])
+            let _12StepString = NSMutableAttributedString(string: "The 12 Steps ", attributes: [.font:K.HeaderFont!])
             
             let fontSuper:UIFont? = UIFont(name: "Helvetica", size:10)
             let superscriptString = NSMutableAttributedString(string: K.referenceNumber, attributes: [.font:fontSuper!, .baselineOffset:10])
