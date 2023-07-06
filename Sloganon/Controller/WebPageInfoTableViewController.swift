@@ -14,7 +14,6 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
     
     var sections = [K.HeaderText.webinfo1, K.HeaderText.webinfo2]
     
-    
     var activityIndicatorView: UIActivityIndicatorView?
     
     override func viewDidLoad() {
@@ -100,40 +99,43 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
 
             if !["http", "https"].contains(url.scheme?.lowercased() ?? "") {
                 DispatchQueue.main.async {
-                    self.showErrorAlert(message: "URL must begin with https: or http:")
+                    self.showErrorAlert(message: "URL must begin with https:// or http://")
                 }
             }
 
-           // showActivityIndicator()
+            DispatchQueue.main.async {
+                self.showActivityIndicator()
+            }
 
             url.isReachable(completion: {success in
                 if success {
 
                     DispatchQueue.main.async {
-                        //self.hideActivityIndicator()
-
                         //check if already exists in database
-                        let exists = WebPage.alreadyExists(title: currentCell.title, url: currentCell.url)
-
+                        let exists = WebPage.alreadyExists(url: currentCell.url)
+                        
                         if exists {
                             self.showErrorAlert(message: "Web page already exists")
                         } else {
-                            // if add to realm
+                            // if a new webPage add to realm
                             WebPage.addWebPage(displayName: currentCell.title, url: currentCell.url)
                             currentCell.title = ""
-                            currentCell.url = ""
+                            currentCell.url = "https://www."
                             self.webPages = WebPage.webPageList()
-
-                            self.tableView.reloadData()
                         }
                     }
 
                 } else {
                     DispatchQueue.main.async {
-                       // self.hideActivityIndicator()
-                        self.showErrorAlert(message: "That web address is unreachable")
+                       self.showErrorAlert(message: "That web address is unreachable")
                     }
                 }
+                
+                DispatchQueue.main.async {
+                    self.hideActivityIndicator()
+                    self.tableView.reloadData()
+                }
+                
             })
 
 
@@ -203,24 +205,23 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
         self.present(alert, animated: true, completion: nil)
     }
     
-//    func showActivityIndicator() {
-////        if (activityIndicatorView == nil) {
-////            activityIndicatorView = UIActivityIndicatorView(style: .large)
-////            activityIndicatorView?.center = self.view.center
-////            self.view.addSubview(activityIndicatorView!)
-////        }
-////        activityIndicatorView?.startAnimating()
-//        self.largeActivityIndicator.isHidden = false
-//        self.largeActivityIndicator.startAnimating()
-//    }
-//
-//    func hideActivityIndicator(){
-////        if (activityIndicatorView != nil){
-////            activityIndicatorView?.stopAnimating()
-////        }
-//        self.largeActivityIndicator.isHidden = true
-//        self.largeActivityIndicator.stopAnimating()
-//    }
+    func showActivityIndicator() {
+        if (activityIndicatorView == nil) {
+            activityIndicatorView = UIActivityIndicatorView(style: .large)
+            activityIndicatorView?.center = self.view.center
+            activityIndicatorView?.color = UIColor.black
+            activityIndicatorView?.isHidden = false
+            self.view.addSubview(activityIndicatorView!)
+        }
+        activityIndicatorView?.startAnimating()
+    }
+
+    func hideActivityIndicator(){
+        if (activityIndicatorView != nil){
+            activityIndicatorView?.isHidden = true
+            activityIndicatorView?.stopAnimating()
+        }
+    }
     
 }
 

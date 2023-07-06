@@ -147,22 +147,22 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t08-ec-bfa" userLabel="SerenityBackground">
                                                         <rect key="frame" x="10" y="0.0" width="394" height="150"/>
                                                         <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Serenity Prayer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oy6-Sl-YjD">
+                                                                <rect key="frame" x="10" y="10" width="374" height="35"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="35" id="oTI-p3-F35"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="24"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God grant me the Serenity to accept the things I cannot change, change the things I can and wisdom to know the difference." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZC-Ot-5cB">
                                                                 <rect key="frame" x="10" y="40" width="374" height="100"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="100" id="0f1-pw-gow"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Serenity Prayer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oy6-Sl-YjD">
-                                                                <rect key="frame" x="10" y="10" width="374" height="30"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="oTI-p3-F35"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -268,7 +268,7 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" name="SerenityBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <constraints>
                                             <constraint firstItem="sBj-fe-BHM" firstAttribute="leading" secondItem="xX4-sc-Glp" secondAttribute="leading" id="8qB-Ct-A9A"/>
                                             <constraint firstAttribute="trailing" secondItem="sBj-fe-BHM" secondAttribute="trailing" id="I6y-qN-ny0"/>
@@ -278,7 +278,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" name="SerenityBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="xX4-sc-Glp" secondAttribute="trailing" id="B3b-EX-90G"/>
                                     <constraint firstItem="xX4-sc-Glp" firstAttribute="centerX" secondItem="b80-gc-7yF" secondAttribute="centerX" id="PAs-O7-1BX"/>
@@ -292,7 +292,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="plC-8p-2nC"/>
-                        <color key="backgroundColor" name="SerenityBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
                             <constraint firstItem="b80-gc-7yF" firstAttribute="top" secondItem="PSv-gw-Jyl" secondAttribute="top" id="5XU-TT-yF9"/>
                             <constraint firstItem="b80-gc-7yF" firstAttribute="leading" secondItem="plC-8p-2nC" secondAttribute="leading" id="H5G-sM-8Bm"/>
@@ -414,9 +414,6 @@
         <image name="textformat.abc" catalog="system" width="128" height="61"/>
         <namedColor name="DarkSloganColor">
             <color red="0.30799999833106995" green="0.37000000476837158" blue="0.32800000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="SerenityBackgroundColor">
-            <color red="0.99599999189376831" green="0.98400002717971802" blue="0.90600001811981201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SerenitySectionViewColor">
             <color red="0.97600001096725464" green="0.92199999094009399" blue="0.7839999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

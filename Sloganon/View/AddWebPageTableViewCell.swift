@@ -33,8 +33,8 @@ class AddWebPageTableViewCell: UITableViewCell {
     
     private let urlTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "https://www.yourwebaddress.com"
-        textField.text = ""
+        textField.placeholder = "https://www."
+        textField.text = "https://www."
         textField.textColor = .black
         textField.font = UIFont.systemFont(ofSize: 17.0)
         textField.backgroundColor = .white

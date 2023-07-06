@@ -55,7 +55,7 @@ class WebPage: Object {
         
         do {
             try realm.write {
-                let webPage = WebPage(dn: displayName, u: url)
+                let webPage = WebPage(dn: displayName, u: url.lowercased())
                 realm.add(webPage)
             }
         } catch {
@@ -77,14 +77,13 @@ class WebPage: Object {
         }
     }
     
-    static func alreadyExists (title: String, url: String) ->Bool {
+    static func alreadyExists (url: String) ->Bool {
         let realm = try! Realm()
     
-        
-        let predicate = "displayName = '" + title + "' AND url = '" + url + "'"
-        let results =  realm.objects(WebPage.self).filter(predicate)
+        let webPages = realm.objects(WebPage.self)
+        let containsURL = webPages.where { $0.url == url.lowercased()}
 
-        return results.count == 0 ? false : true
+        return containsURL.count == 0 ? false : true
     }
 
 }
