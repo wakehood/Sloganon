@@ -9,12 +9,6 @@
 /* Begin PBXBuildFile section */
 		CB30FD2529A16C4B001A81DE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */; };
 		CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB437DE2296B847E006C191E /* UITextViewExtension.swift */; };
-		CB6DC76F297207830075DEA6 /* ComicNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC769297207820075DEA6 /* ComicNeue-Light.ttf */; };
-		CB6DC770297207830075DEA6 /* ComicNeue-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76A297207830075DEA6 /* ComicNeue-Italic.ttf */; };
-		CB6DC771297207830075DEA6 /* ComicNeue-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76B297207830075DEA6 /* ComicNeue-BoldItalic.ttf */; };
-		CB6DC772297207830075DEA6 /* ComicNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76C297207830075DEA6 /* ComicNeue-Regular.ttf */; };
-		CB6DC773297207830075DEA6 /* ComicNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76D297207830075DEA6 /* ComicNeue-Bold.ttf */; };
-		CB6DC774297207830075DEA6 /* ComicNeue-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB6DC76E297207830075DEA6 /* ComicNeue-LightItalic.ttf */; };
 		CB6DC7792973AA3C0075DEA6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CB6DC7782973AA3C0075DEA6 /* RealmSwift */; };
 		CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */; };
 		CB6FF50928D5249C00DBB3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50728D5249C00DBB3AD /* Main.storyboard */; };
@@ -43,12 +37,6 @@
 /* Begin PBXFileReference section */
 		CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		CB437DE2296B847E006C191E /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
-		CB6DC769297207820075DEA6 /* ComicNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Light.ttf"; sourceTree = "<group>"; };
-		CB6DC76A297207830075DEA6 /* ComicNeue-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Italic.ttf"; sourceTree = "<group>"; };
-		CB6DC76B297207830075DEA6 /* ComicNeue-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-BoldItalic.ttf"; sourceTree = "<group>"; };
-		CB6DC76C297207830075DEA6 /* ComicNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Regular.ttf"; sourceTree = "<group>"; };
-		CB6DC76D297207830075DEA6 /* ComicNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Bold.ttf"; sourceTree = "<group>"; };
-		CB6DC76E297207830075DEA6 /* ComicNeue-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-LightItalic.ttf"; sourceTree = "<group>"; };
 		CB6FF4FE28D5249C00DBB3AD /* Sloganon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sloganon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB6FF50828D5249C00DBB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,12 +85,6 @@
 				CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */,
 				CBC340A9299FE93200CA6BF8 /* URLExtension.swift */,
 				CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */,
-				CB6DC76D297207830075DEA6 /* ComicNeue-Bold.ttf */,
-				CB6DC76B297207830075DEA6 /* ComicNeue-BoldItalic.ttf */,
-				CB6DC76A297207830075DEA6 /* ComicNeue-Italic.ttf */,
-				CB6DC769297207820075DEA6 /* ComicNeue-Light.ttf */,
-				CB6DC76E297207830075DEA6 /* ComicNeue-LightItalic.ttf */,
-				CB6DC76C297207830075DEA6 /* ComicNeue-Regular.ttf */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -238,15 +220,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB6DC771297207830075DEA6 /* ComicNeue-BoldItalic.ttf in Resources */,
 				CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */,
-				CB6DC773297207830075DEA6 /* ComicNeue-Bold.ttf in Resources */,
 				CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */,
 				CB6FF50928D5249C00DBB3AD /* Main.storyboard in Resources */,
-				CB6DC774297207830075DEA6 /* ComicNeue-LightItalic.ttf in Resources */,
-				CB6DC76F297207830075DEA6 /* ComicNeue-Light.ttf in Resources */,
-				CB6DC770297207830075DEA6 /* ComicNeue-Italic.ttf in Resources */,
-				CB6DC772297207830075DEA6 /* ComicNeue-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +399,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PJV7KY2Q33;
+				DEVELOPMENT_TEAM = 8JF9FYJ59K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sloganon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -452,7 +428,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PJV7KY2Q33;
+				DEVELOPMENT_TEAM = 8JF9FYJ59K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sloganon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

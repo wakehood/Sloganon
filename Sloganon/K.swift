@@ -207,7 +207,7 @@ struct K {
         "FEAR\n\tFalse\n\tEvidence\n\tAppearing\n\tReal",
         "HOPE\n\tHappy\n\tOur\n\tProgram\n\tExists",
         "NUTS\n\tNot\n\tUsing\n\tThe\n\tSteps",
-        "DETACH\n\tDon’t\n\tEven \n\tThink\n\tAbout\n\tChanging Him/Her",
+        "DETACH\n\tDon’t\n\tEven \n\tThink\n\tAbout\n\tChanging Him/Her/Them",
         "HOW\n\tHonest\n\tOpen\n\tWilling",
         "STEPS\n\tSolutions\n\tTo\n\tEvery\n\tProblem",
         "QTIP\n\tQuit\n\tTaking\n\tIt\n\tPersonally",
