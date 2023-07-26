@@ -10,6 +10,12 @@ import UIKit
 
 extension UIColor {
     
+    static let sloganOfTheDay     = checkColor(named: "SloganOfTheDayColor")
+    static let ssoa               = checkColor(named: "SloganColor")
+    static let favorites          = checkColor(named: "FavoritesColor")
+    static let step               = checkColor(named: "StepColor")
+    static let webinfo            = checkColor(named: "WebInfoColor")
+    
     func darken(byPercentage: CGFloat) -> UIColor {
         
         var h: CGFloat = 0.0

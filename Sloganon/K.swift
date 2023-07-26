@@ -94,49 +94,39 @@ struct K {
         static let unselectedSlogan = "heart"
         static let addWebInfo       = "plus"
     }
-    
-    
-    struct Color {
-        static let sloganOfTheDay   = UIColor.checkColor(named: "SloganOfTheDayColor")
-        static let ssoa             = UIColor.checkColor(named: "SloganColor")
-        static let favorites        = UIColor.checkColor(named: "FavoritesColor")
-        
-        static let step             = UIColor.checkColor(named: "StepColor")
-        static let webinfo          = UIColor.checkColor(named: "WebInfoColor")
-    }
 
     static let sloganVCbackground   = UIColor.systemGray3
     static let stepVCBackground     = UIColor.systemGray3
     static let webInfoVCBackground  = UIColor.systemGray3
     
-    static let webInputCursorColor = Color.webinfo.darken(byPercentage: 0.50)
+    static let webInputCursorColor = UIColor.webinfo.darken(byPercentage: 0.50)
     
     struct HeaderBackgroundColor {
-        static let sloganOfTheDay   = Color.sloganOfTheDay.darken(byPercentage: 0.25)
-        static let ssoa             = Color.ssoa.darken(byPercentage: 0.25)
-        static let favorites        = Color.favorites.darken(byPercentage: 0.25)
+        static let sloganOfTheDay   = UIColor.sloganOfTheDay.darken(byPercentage: 0.25)
+        static let ssoa             = UIColor.ssoa.darken(byPercentage: 0.25)
+        static let favorites        = UIColor.favorites.darken(byPercentage: 0.25)
         
-        static let step             = Color.step.darken(byPercentage: 0.25)
+        static let step             = UIColor.step.darken(byPercentage: 0.25)
         
-        static let webinfo          = Color.webinfo.darken(byPercentage: 0.25)
+        static let webinfo          = UIColor.webinfo.darken(byPercentage: 0.25)
     }
     
     struct CellBackgroundColor {
-        static let sloganOfTheDay   = Color.sloganOfTheDay.lighten(byPercentage: 0.10)
-        static let ssoa             = Color.ssoa
-        static let favorites        = Color.favorites
+        static let sloganOfTheDay   = UIColor.sloganOfTheDay.lighten(byPercentage: 0.10)
+        static let ssoa             = UIColor.ssoa
+        static let favorites        = UIColor.favorites
         
-        static let step             = Color.step
-        static let webinfo          = Color.webinfo
+        static let step             = UIColor.step
+        static let webinfo          = UIColor.webinfo
     }
     
     struct CellContentColor {
-        static let sloganOfTheDay   = Color.sloganOfTheDay.lighten(byPercentage: 0.10)
-        static let ssoa             = Color.ssoa
-        static let favorites        = Color.favorites
+        static let sloganOfTheDay   = UIColor.sloganOfTheDay.lighten(byPercentage: 0.10)
+        static let ssoa             = UIColor.ssoa
+        static let favorites        = UIColor.favorites
         
-        static let step             = Color.step
-        static let webinfo          = Color.webinfo
+        static let step             = UIColor.step
+        static let webinfo          = UIColor.webinfo
     }
     
     static let secsInDay = 24 * 60 * 60

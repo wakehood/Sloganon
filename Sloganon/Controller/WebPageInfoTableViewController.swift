@@ -46,7 +46,7 @@ class WebPageInfoTableViewController: UITableViewController, SFSafariViewControl
             let cell = tableView.dequeueReusableCell(withIdentifier: WebPageInfoTableViewCell.identifier, for: indexPath) as! WebPageInfoTableViewCell
             
             cell.title = webPages[indexPath.row].displayName
-            cell.setColors(color: K.Color.webinfo)
+            cell.setColors(color: UIColor.webinfo)
             cell.darkenColor(byPercentage: percentageBy)
             
             return cell

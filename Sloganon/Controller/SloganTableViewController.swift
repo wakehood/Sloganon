@@ -81,7 +81,6 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, SS
         if section == K.SectionNumber.sloganOfTheDay {
             let cell = tableView.dequeueReusableCell(withIdentifier: DailySloganTableViewCell.identifier, for: indexPath) as! DailySloganTableViewCell
 
-            cell.setColors(color: K.Color.sloganOfTheDay)
             cell.title = SloganSayingOrAcronym.getSloganOfTheDay()
 
             return cell
@@ -89,7 +88,7 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, SS
             let cell  = tableView.dequeueReusableCell(withIdentifier: SloganonChoicesTableViewCell.identifier, for: indexPath) as! SloganonChoicesTableViewCell
 
             cell.title = sloganSayingsOrAcronymsSection[indexPath.row]
-            cell.setColors(color: K.Color.ssoa)
+            cell.setColors(color: UIColor.ssoa)
             cell.darkenColor(byPercentage: percentageBy)
             
             return cell
@@ -97,7 +96,7 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, SS
             let cell  = tableView.dequeueReusableCell(withIdentifier: FavoritesTableViewCell.identifier, for: indexPath) as! FavoritesTableViewCell
             
             cell.title = favorites?.count == 0 ? "You don't have any favorites yet. \n\n\u{2764} your favorite Slogans, Sayings or Acronyms!! " : favorites![indexPath.row].text
-            cell.setColors(color: K.Color.favorites)
+            cell.setColors(color: UIColor.favorites)
             cell.darkenColor(byPercentage: percentageBy)
 
             return cell

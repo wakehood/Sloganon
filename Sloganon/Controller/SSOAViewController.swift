@@ -71,7 +71,7 @@ class SSOAViewController: UIViewController , UITableViewDelegate, UITableViewDat
         let isFavorite = arrayOfSelectedType?[indexPath.row].isFavorite
         
         cell.title = itemText!
-        cell.setColors(color: K.Color.ssoa)
+        cell.setColors(color: UIColor.ssoa)
         cell.darkenColor(byPercentage: percentageBy)
         
         //set up the heart accessory view
@@ -105,14 +105,5 @@ class SSOAViewController: UIViewController , UITableViewDelegate, UITableViewDat
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -154,7 +154,7 @@ class SloganSayingOrAcronym: Object{
         //get the modulus
         let index = (days % sayingslist.count)
 
-        let slogan = sayingslist[index]
+        let slogan = "\n" + sayingslist[index] + "\n"
         
         return slogan
     }

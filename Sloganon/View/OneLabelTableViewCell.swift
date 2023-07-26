@@ -63,6 +63,7 @@ class OneLabelTableViewCell: UITableViewCell {
         self.contentView.backgroundColor = color
         self.accessoryView?.backgroundColor = color
     }
+
     
     func darkenColor(byPercentage: CGFloat){
         let currentColor = self.color
@@ -75,6 +76,10 @@ class OneLabelTableViewCell: UITableViewCell {
     
     func setAttributedText(attrString: NSMutableAttributedString) {
         self.aLabel.attributedText = attrString
+    }
+    
+    func centerText() {
+        self.aLabel.textAlignment = .center
     }
     
 }
@@ -101,9 +106,10 @@ class DailySloganTableViewCell : OneLabelTableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        self.setColors(color: K.Color.sloganOfTheDay.lighten(byPercentage: 0.10))
+        self.setColors(color: UIColor.sloganOfTheDay)
         
         self.setFont(font: UIFont.boldSystemFont(ofSize: 25))
+
         self.isUserInteractionEnabled = false
     }
     
@@ -119,7 +125,7 @@ class SloganonChoicesTableViewCell : OneLabelTableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        self.setColors(color: K.Color.ssoa)
+        self.setColors(color: UIColor.ssoa)
         
         self.setFont(font: UIFont.systemFont(ofSize: 25))
         
@@ -138,8 +144,8 @@ class FavoritesTableViewCell : OneLabelTableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.setColors(color: K.Color.favorites)
-        self.setFont(font: UIFont.systemFont(ofSize: 25))
+        self.setColors(color: UIColor.favorites)
+        self.setFont(font: UIFont.systemFont(ofSize: 20))
         self.isUserInteractionEnabled = false
     }
     
@@ -155,7 +161,7 @@ class SlogansSayingOrAcronymsTableViewCell : OneLabelTableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.setColors(color: K.Color.ssoa)
+        self.setColors(color: UIColor.ssoa)
         self.setFont(font: UIFont.systemFont(ofSize: 25))
     }
     
@@ -163,7 +169,5 @@ class SlogansSayingOrAcronymsTableViewCell : OneLabelTableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-// MARK: - The Steps Reference Cell on the Steps tab
 
 

@@ -113,7 +113,7 @@ class StepsTableViewCell : TwoLabelsTableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.setColors(color: K.Color.step)
+        self.setColors(color: UIColor.step)
         self.isUserInteractionEnabled = false
     }
     
@@ -129,7 +129,7 @@ class StepsRefTableViewCell : TwoLabelsTableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.setColors(color: K.Color.step)
+        self.setColors(color: UIColor.step)
         self.darkenColor(byPercentage: 0.55)
         self.setMainFont(font: UIFont.systemFont(ofSize: 14))
         self.setLeftFont(font: UIFont.systemFont(ofSize: 10))
