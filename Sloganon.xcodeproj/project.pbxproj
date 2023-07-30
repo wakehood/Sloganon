@@ -26,6 +26,7 @@
 		CBBC4C062976604400D9FF2B /* WebPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBC4C052976604400D9FF2B /* WebPage.swift */; };
 		CBBC4C092976622D00D9FF2B /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBBC4C082976622D00D9FF2B /* SwipeCellKit */; };
 		CBC340AA299FE93200CA6BF8 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC340A9299FE93200CA6BF8 /* URLExtension.swift */; };
+		CBC5AFDC2A75D30A00FE35C3 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5AFDB2A75D30A00FE35C3 /* UIFontExtension.swift */; };
 		CBCDE36529624F760080B182 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36429624F760080B182 /* K.swift */; };
 		CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE366296271CB0080B182 /* SloganTableViewController.swift */; };
 		CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6FD629666A020039A2F0 /* Steps.swift */; };
@@ -54,6 +55,7 @@
 		CBB94AD129A04CED00DD0713 /* TwoLabelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelsTableViewCell.swift; sourceTree = "<group>"; };
 		CBBC4C052976604400D9FF2B /* WebPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPage.swift; sourceTree = "<group>"; };
 		CBC340A9299FE93200CA6BF8 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		CBC5AFDB2A75D30A00FE35C3 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		CBCDE36429624F760080B182 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		CBCDE366296271CB0080B182 /* SloganTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganTableViewController.swift; sourceTree = "<group>"; };
 		CBCF6FD629666A020039A2F0 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */,
 				CBC340A9299FE93200CA6BF8 /* URLExtension.swift */,
 				CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */,
+				CBC5AFDB2A75D30A00FE35C3 /* UIFontExtension.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				CBBC4C062976604400D9FF2B /* WebPage.swift in Sources */,
 				CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */,
 				CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */,
+				CBC5AFDC2A75D30A00FE35C3 /* UIFontExtension.swift in Sources */,
 				CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */,
 				CB30FD2529A16C4B001A81DE /* UIViewControllerExtension.swift in Sources */,
 				CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */,
@@ -412,12 +416,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.WakeHoodAndAssociates.Sloganon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -441,12 +448,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.WakeHoodAndAssociates.Sloganon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

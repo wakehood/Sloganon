@@ -26,7 +26,7 @@ class SSOAViewController: UIViewController , UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        navigationBar.topItem?.titleView = UIView().headerViewWithLabel(title: self.selectedTitle)
+        navigationBar.topItem?.titleView = UIView().headerViewWithLabel(title: self.selectedTitle, color:K.HeaderBackgroundColor.ssoa, font: UIFont.systemFont(ofSize: 24))
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -40,7 +40,7 @@ class SSOAViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.doneButton.tintColor = K.HeaderBackgroundColor.ssoa
+        self.doneButton.tintColor = UIColor.heading
     }
     
     override func viewWillDisappear(_ animated: Bool) {

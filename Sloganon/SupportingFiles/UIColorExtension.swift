@@ -15,6 +15,7 @@ extension UIColor {
     static let favorites          = checkColor(named: "FavoritesColor")
     static let step               = checkColor(named: "StepColor")
     static let webinfo            = checkColor(named: "WebInfoColor")
+    static let heading            = checkColor(named: "HeadingColor")
     
     func darken(byPercentage: CGFloat) -> UIColor {
         

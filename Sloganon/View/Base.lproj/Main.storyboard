@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" systemColor="systemGray3Color"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="TabColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="XD9-w4-8Na" kind="relationship" relationship="viewControllers" id="nh5-KG-j5u"/>
@@ -192,29 +193,32 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="SerenityFlowchart" translatesAutoresizingMaskIntoConstraints="NO" id="QU5-gM-C1e">
-                                                                        <rect key="frame" x="10" y="50" width="354" height="400"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="400" id="RP0-Ab-Z5a"/>
-                                                                        </constraints>
-                                                                    </imageView>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MindfulColorKey" translatesAutoresizingMaskIntoConstraints="NO" id="ogV-Zg-tJx">
-                                                                        <rect key="frame" x="10" y="470" width="354" height="120"/>
-                                                                    </imageView>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SerenityPrayerWithColors" translatesAutoresizingMaskIntoConstraints="NO" id="ygR-gK-hqI">
-                                                                        <rect key="frame" x="10" y="610" width="354" height="50"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="onP-aQ-V0L"/>
-                                                                        </constraints>
-                                                                    </imageView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h3E-fg-JQJ">
+                                                                        <rect key="frame" x="0.0" y="50" width="374" height="610"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="SerenityFlowchart" translatesAutoresizingMaskIntoConstraints="NO" id="QU5-gM-C1e">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="400"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="400" id="RP0-Ab-Z5a"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MindfulColorKey" translatesAutoresizingMaskIntoConstraints="NO" id="ogV-Zg-tJx">
+                                                                                <rect key="frame" x="0.0" y="420" width="374" height="120"/>
+                                                                            </imageView>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SerenityPrayerWithColors" translatesAutoresizingMaskIntoConstraints="NO" id="ygR-gK-hqI">
+                                                                                <rect key="frame" x="0.0" y="560" width="374" height="50"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="50" id="onP-aQ-V0L"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" name="SerenityBackground"/>
+                                                                    </stackView>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="trailing" secondItem="QU5-gM-C1e" secondAttribute="trailing" constant="10" id="6iT-rH-DDT"/>
-                                                                    <constraint firstItem="ygR-gK-hqI" firstAttribute="leading" secondItem="Gp2-Ug-2qs" secondAttribute="leading" constant="10" id="FIa-KE-rfJ"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="ygR-gK-hqI" secondAttribute="trailing" constant="10" id="Pap-eQ-5sE"/>
-                                                                    <constraint firstItem="QU5-gM-C1e" firstAttribute="leading" secondItem="Gp2-Ug-2qs" secondAttribute="leading" constant="10" id="QmY-5E-O0w"/>
-                                                                    <constraint firstItem="ogV-Zg-tJx" firstAttribute="leading" secondItem="Gp2-Ug-2qs" secondAttribute="leading" constant="10" id="oD6-Gb-STz"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="ogV-Zg-tJx" secondAttribute="trailing" constant="10" id="pPk-qv-diu"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="h3E-fg-JQJ" secondAttribute="trailing" id="Bdg-Tv-12J"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="h3E-fg-JQJ" secondAttribute="bottom" id="KqM-k5-6fi"/>
+                                                                    <constraint firstItem="h3E-fg-JQJ" firstAttribute="leading" secondItem="Gp2-Ug-2qs" secondAttribute="leading" id="hQE-0h-mdA"/>
                                                                 </constraints>
                                                             </stackView>
                                                         </subviews>
@@ -411,6 +415,12 @@
         <image name="network" catalog="system" width="128" height="123"/>
         <image name="stairs" catalog="system" width="128" height="115"/>
         <image name="textformat.abc" catalog="system" width="128" height="61"/>
+        <namedColor name="SerenityBackground">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TabColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

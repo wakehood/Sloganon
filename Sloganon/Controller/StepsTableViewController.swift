@@ -78,7 +78,7 @@ class StepsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
-            let _12StepString = NSMutableAttributedString(string: "The 12 Steps ", attributes: [.font:K.HeaderFont!])
+            let _12StepString = NSMutableAttributedString(string: "The 12 Steps ", attributes: [.font: UIFont.headerFont])
             
             let fontSuper:UIFont? = UIFont(name: "Helvetica", size:10)
             let superscriptString = NSMutableAttributedString(string: K.referenceNumber, attributes: [.font:fontSuper!, .baselineOffset:10])
@@ -87,12 +87,12 @@ class StepsTableViewController: UITableViewController {
             combinedString.append(_12StepString)
             combinedString.append(superscriptString)
             
-            let headerView = UIView().headerViewWithAttributedLabel(title: combinedString, color: K.CellContentColor.step)
+            let headerView = UIView().headerViewWithAttributedLabel(title: combinedString, color: UIColor.heading)
             
             return headerView
         }
         else{
-            let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "", color: K.CellContentColor.step)
+            let headerView = UIView().headerViewWithLabel(title: self.tableView(tableView, titleForHeaderInSection: section) ?? "", color: UIColor.heading)
             return headerView
         }
     }

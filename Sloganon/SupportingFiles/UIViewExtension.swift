@@ -9,14 +9,13 @@ import Foundation
 import UIKit
 
 extension UIView {
-    func headerViewWithLabel(title: String, color: UIColor = UIColor.clear) -> UIView {
+    func headerViewWithLabel(title: String, color: UIColor = UIColor.clear, font: UIFont = UIFont.headerFont) -> UIView {
 
         let label = UILabel()
-        //label.font = UIFont.boldSystemFont(ofSize: 24)
-        label.font = K.HeaderFont
+        label.font = font
         label.text = title
         label.textAlignment = .left
-        label.textColor = UIColor.black
+        label.textColor = UIColor.heading
 
         label.minimumScaleFactor = 0.5
         label.adjustsFontSizeToFitWidth = true
@@ -33,10 +32,9 @@ extension UIView {
     func headerViewWithAttributedLabel(title: NSMutableAttributedString, color: UIColor = UIColor.clear) -> UIView {
         
         let label = UILabel()
-        //label.font = UIFont.boldSystemFont(ofSize: 24)
-       // label.text = title
+
         label.textAlignment = .left
-        label.textColor = UIColor.black
+        label.textColor = color
         label.attributedText = title
 
         label.minimumScaleFactor = 0.5

@@ -79,7 +79,6 @@ struct K {
         static let webinfo2 = "Add Your Own Website"
     }
     
-    static let HeaderFont = UIFont(name: "Rockwell", size: 24)
     static let SegueIdentifier = "goToSlogansSayingsOrAcronyms"
     static let newSegueIdentifier = "goToSSOAViewController"
     
