@@ -85,9 +85,9 @@
 				CB437DE2296B847E006C191E /* UITextViewExtension.swift */,
 				CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */,
 				CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */,
-				CBC340A9299FE93200CA6BF8 /* URLExtension.swift */,
 				CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */,
 				CBC5AFDB2A75D30A00FE35C3 /* UIFontExtension.swift */,
+				CBC340A9299FE93200CA6BF8 /* URLExtension.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -416,7 +416,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.WakeHoodAndAssociates.Sloganon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -448,7 +448,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.WakeHoodAndAssociates.Sloganon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

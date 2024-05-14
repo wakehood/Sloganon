@@ -42,12 +42,12 @@ class SloganSayingOrAcronym: Object{
     //This function should only be called the first time the app is run
     static func initalizeSlogans(){
         let realm = try! Realm()
-        
-        //ensure that realm slogan is empty
-        assert(realm.objects(SloganSayingOrAcronym.self).isEmpty, "trying to initialize when realm Slogan, Saying or Acronym is not empty")
-        
+     
         do {
             try realm.write {
+                
+                realm.delete(realm.objects(SloganSayingOrAcronym.self))
+                
                 for item in K.sloganList {
                     let slogan = SloganSayingOrAcronym(type: SayingType.slogan.description, text: item, isFavorite: false, isDeletable: false)
                     realm.add(slogan)
