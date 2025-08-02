@@ -32,11 +32,11 @@ class WebPage: Object {
     static func initializeWebPages() {
         let realm = try! Realm()
         
-        //make sure really is empty (belt and suspenders)
-        assert(realm.objects(WebPage.self).isEmpty, "realm WebPage is not empty in initialization")
-        
         do {
             try realm.write {
+                
+                realm.delete(realm.objects(WebPage.self))
+                
                 for wpInfo in K.webPages {
                     //use an assert to check for valid formatting; NB asserts are not compiled into production code
                     assert(wpInfo.count == K.elementsPerWebPageInfo, "Unexpected K.webPage formating, at least one webpage in the list does not have three elements")

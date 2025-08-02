@@ -13,29 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        //print(Realm.Configuration.defaultConfiguration.fileURL ?? "")
+       // print(Realm.Configuration.defaultConfiguration.fileURL ?? "")
         
-        do {
-            let realm = try Realm()
+        SloganSayingOrAcronym.initalizeSlogans()
             
-            //Only add default slogans if realm is empty
-            if realm.objects(SloganSayingOrAcronym.self).isEmpty
-            {
-                SloganSayingOrAcronym.initalizeSlogans()
-                
-            }
+        WebPage.initializeWebPages()
 
-            //only add default acronyms if realm is empty
-            if realm.objects(WebPage.self).isEmpty
-            {
-                WebPage.initializeWebPages()
-
-            }
-        } catch {
-            assertionFailure("Error initialising new realm, \(error)")
-        }
-        
-        
         return true
     }
 

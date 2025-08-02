@@ -42,28 +42,94 @@ class SloganSayingOrAcronym: Object{
     //This function should only be called the first time the app is run
     static func initalizeSlogans(){
         let realm = try! Realm()
-        
-        //ensure that realm slogan is empty
-        assert(realm.objects(SloganSayingOrAcronym.self).isEmpty, "trying to initialize when realm Slogan, Saying or Acronym is not empty")
-        
-        do {
-            try realm.write {
-                for item in K.sloganList {
-                    let slogan = SloganSayingOrAcronym(type: SayingType.slogan.description, text: item, isFavorite: false, isDeletable: false)
-                    realm.add(slogan)
+     
+        //If realm db has never been intitialized do it now.
+        if realm.objects(SloganSayingOrAcronym.self).isEmpty {
+            do {
+                try realm.write {
+                    
+                    for item in K.sloganList {
+                        let slogan = SloganSayingOrAcronym(type: SayingType.slogan.description, text: item, isFavorite: false, isDeletable: false)
+                        realm.add(slogan)
+                    }
+                    for item in K.sayingsList {
+                        let saying = SloganSayingOrAcronym(type: SayingType.aSaying.description, text: item, isFavorite: false, isDeletable: false)
+                        realm.add(saying)
+                    }
+                    for item in K.acronymList {
+                        let acronym = SloganSayingOrAcronym(type: SayingType.anAcronym.description, text: item, isFavorite: false, isDeletable: false)
+                        realm.add(acronym)
+                    }
                 }
-                for item in K.sayingsList {
-                    let saying = SloganSayingOrAcronym(type: SayingType.aSaying.description, text: item, isFavorite: false, isDeletable: false)
-                    realm.add(saying)
-                }
-                for item in K.acronymList {
-                    let acronym = SloganSayingOrAcronym(type: SayingType.anAcronym.description, text: item, isFavorite: false, isDeletable: false)
-                    realm.add(acronym)
+            } catch {
+                assertionFailure("Error adding slogans, sayings or acronyms \(error)")
+            }
+        } else {
+            //not empty
+            //get array of slogan strings
+            //SLOGANS
+            let slogans = sortedSloganStrings()
+            
+            //go through slogan list and add if not in DB
+            for item in K.sloganList {
+                if !slogans.contains(item) {
+                    do {
+                        try realm.write {
+                            let slogan = SloganSayingOrAcronym(type: SayingType.slogan.description, text: item, isFavorite: false, isDeletable: false)
+                            realm.add(slogan)
+                        }
+                    } catch {
+                        assertionFailure("Error adding slogans, sayings or acronyms \(error)")
+                    }
                 }
             }
-        } catch {
-            assertionFailure("Error adding slogans, sayings or acronyms \(error)")
+            
+            //SAYINGS
+            //get array of sayings strings
+            let sayings = realm.objects(SloganSayingOrAcronym.self)
+            
+            //use map function to get String array
+            let sayingArray = Array(sayings)
+                .map{$0.text}
+            
+            //go through sayings list and add if not in DB
+            for item in K.sayingsList {
+                if !sayingArray.contains(item) {
+                    do {
+                        try realm.write {
+                            let saying = SloganSayingOrAcronym(type: SayingType.aSaying.description, text: item, isFavorite: false, isDeletable: false)
+                            realm.add(saying)
+                        }
+                    } catch {
+                        assertionFailure("Error adding slogans, sayings or acronyms \(error)")
+                    }
+                }
+            }
+            
+            
+            //ACRONYMS
+            //get array of acronym strings
+            let acronyms = realm.objects(SloganSayingOrAcronym.self)
+            
+            //use map function to get String array
+            let acronymArray = Array(acronyms)
+                .map{$0.text}
+            
+            //go through sayings list and add if not in DB
+            for item in K.acronymList {
+                if !acronymArray.contains(item) {
+                    do {
+                        try realm.write {
+                            let acronym = SloganSayingOrAcronym(type: SayingType.anAcronym.description, text: item, isFavorite: false, isDeletable: false)
+                            realm.add(acronym)
+                        }
+                    } catch {
+                        assertionFailure("Error adding slogans, sayings or acronyms \(error)")
+                    }
+                }
+            }
         }
+
     }
     
     // MARK: - Helper methods

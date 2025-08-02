@@ -181,6 +181,7 @@ struct K {
         "Acceptance has to occur before change can occur ",
         "Are you seeing the disease or the person? ",
         "The elevator to recovery is broken; please use the Steps instead ",
+        "Stay in your own lane "
     ]
 
     //default list of acronyms
@@ -200,7 +201,8 @@ struct K {
         "HOW\n\tHonest\n\tOpen\n\tWilling",
         "STEPS\n\tSolutions\n\tTo\n\tEvery\n\tProblem",
         "QTIP\n\tQuit\n\tTaking\n\tIt\n\tPersonally",
-        "DENIAL\n\tDon’t\n\tEven\n\tNotice\n\tI\n\tAm \n\tLying"
+        "DENIAL\n\tDon’t\n\tEven\n\tNotice\n\tI\n\tAm \n\tLying",
+        "LOVE\n\tLet\n\tOthers\n\tVoluntarily\n\tEvolve"
     ]
     
     static let stepsReference = "\"Twelve-step program.\" Wikipedia, Wikimedia Foundation, 24 April 2023, https://en.wikipedia.org/wiki/Twelve-step_program#Twelve_Steps."

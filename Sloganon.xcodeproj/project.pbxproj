@@ -31,9 +31,24 @@
 		CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE366296271CB0080B182 /* SloganTableViewController.swift */; };
 		CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6FD629666A020039A2F0 /* Steps.swift */; };
 		CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */; };
+		CBDA3BFC2C098345001DBA3F /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = CB6DC7782973AA3C0075DEA6 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF764BD28DD60870072D01D /* StringExtensions.swift */; };
 		CBFDC9622977577300E30404 /* WebPageInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFDC9612977577300E30404 /* WebPageInfoTableViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CBDA3BFB2C094133001DBA3F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CBDA3BFC2C098345001DBA3F /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -85,9 +100,9 @@
 				CB437DE2296B847E006C191E /* UITextViewExtension.swift */,
 				CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */,
 				CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */,
-				CBC340A9299FE93200CA6BF8 /* URLExtension.swift */,
 				CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */,
 				CBC5AFDB2A75D30A00FE35C3 /* UIFontExtension.swift */,
+				CBC340A9299FE93200CA6BF8 /* URLExtension.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -167,6 +182,7 @@
 				CB6FF4FA28D5249C00DBB3AD /* Sources */,
 				CB6FF4FB28D5249C00DBB3AD /* Frameworks */,
 				CB6FF4FC28D5249C00DBB3AD /* Resources */,
+				CBDA3BFB2C094133001DBA3F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -416,7 +432,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.WakeHoodAndAssociates.Sloganon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -448,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.WakeHoodAndAssociates.Sloganon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
