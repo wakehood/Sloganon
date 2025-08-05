@@ -75,7 +75,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Slogans" id="BzS-Q6-Sex">
-                        <imageReference key="image" image="textformat.characters" catalog="system" symbolScale="large"/>
+                        <imageReference key="image" image="textformat.characters" symbolScale="large"/>
                         <color key="badgeColor" systemColor="systemRedColor"/>
                     </tabBarItem>
                     <connections>
@@ -414,7 +414,7 @@
         <image name="bird" catalog="system" width="126" height="128"/>
         <image name="network" catalog="system" width="128" height="123"/>
         <image name="stairs" catalog="system" width="128" height="115"/>
-        <image name="textformat.characters" catalog="system" width="128" height="57"/>
+        <image name="textformat.characters" width="128" height="128"/>
         <namedColor name="SerenityBackground">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

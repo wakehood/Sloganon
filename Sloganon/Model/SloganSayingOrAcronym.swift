@@ -196,6 +196,39 @@ class SloganSayingOrAcronym: Object{
         return sortedSlogansSayingsOrAcronyms
     }
     
+    static func saveFavorites(favorites: Array<SloganSayingOrAcronym>) {
+        //convert to csvText
+        var csvText = ""
+        
+        //Header Row
+        csvText += "Text,IsFavorite,IsDeletable\n"
+        
+        for item in favorites {
+            let rowText = "\(item.text),\(item.isFavorite),\(item.isDeletable)"
+            csvText += "\(rowText)\n"
+        }
+        
+        //save to File
+        let data = Data(csvText.utf8)
+        
+        let url = URL.documentsDirectory.appending(path: "savedData.txt")
+        
+        do {
+            try data.write(
+                to: url,
+                options: [.atomic, .completeFileProtection]
+            )
+            let input = try String(
+                data: Data(contentsOf: url),
+                encoding: .utf8
+            )!
+            print(input)
+        } catch {
+            print(error.localizedDescription)
+        }
+
+    }
+    
     //return a random number from 0 to size of list - 1
     static func getRandomSlogan()-> String {
         let sayingslist = sortedSloganStrings()

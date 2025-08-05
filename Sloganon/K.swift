@@ -181,7 +181,8 @@ struct K {
         "Acceptance has to occur before change can occur ",
         "Are you seeing the disease or the person? ",
         "The elevator to recovery is broken; please use the Steps instead ",
-        "Stay in your own lane "
+        "Stay in your own lane ",
+        "Let emotions subside before you decide",
     ]
 
     //default list of acronyms

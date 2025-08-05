@@ -47,6 +47,8 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, SS
         sayings = SloganSayingOrAcronym.getSayings()
         acronyms = SloganSayingOrAcronym.getAcronyms()
         favorites = SloganSayingOrAcronym.getFavorites()
+        SloganSayingOrAcronym.saveFavorites(favorites: favorites!)
+        print("save Favorites called")
         
         //we need to periodically update the slogan of the day.
         //Set a timer that reloads the tableView
@@ -175,6 +177,7 @@ class SloganTableViewController: UITableViewController,  UITextFieldDelegate, SS
         sayings = SloganSayingOrAcronym.getSayings()
         acronyms = SloganSayingOrAcronym.getAcronyms()
         favorites = SloganSayingOrAcronym.getFavorites()
+        SloganSayingOrAcronym.saveFavorites(favorites: favorites!)
         
         tableView.reloadData()
     }
