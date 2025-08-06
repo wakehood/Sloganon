@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -79,6 +79,10 @@
 		CBFDC9612977577300E30404 /* WebPageInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageInfoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CB4E33402E44205600194EA0 /* .github */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = .github; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		CB6FF4FB28D5249C00DBB3AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -110,6 +114,7 @@
 		CB6FF4F528D5249C00DBB3AD = {
 			isa = PBXGroup;
 			children = (
+				CB4E33402E44205600194EA0 /* .github */,
 				CB6FF50028D5249C00DBB3AD /* Sloganon */,
 				CB6FF4FF28D5249C00DBB3AD /* Products */,
 			);
