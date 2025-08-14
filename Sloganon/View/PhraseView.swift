@@ -62,8 +62,8 @@ struct PhraseView: View {
                 modelContext.insert(acronym)
             }
             
-        }
-        //update with stored favorites
+            
+            //update with stored favorites
             //read from file
             var phrases: [Phrase] = []
             
@@ -89,8 +89,8 @@ struct PhraseView: View {
             
             //update database with stored Favorites
             updateFavorites(importedPhrases: phrases)
-
-
+            
+        }
     }
     
     func convertCSVToSSOA(csvText: String) -> [Phrase] {
