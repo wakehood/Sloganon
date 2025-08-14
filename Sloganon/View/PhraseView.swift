@@ -62,29 +62,62 @@ struct PhraseView: View {
                 modelContext.insert(acronym)
             }
             
-            //update with stored favorites
-            //read from file
-            let url = URL.documentsDirectory.appending(path: K.savedDataTextFile)
-            
-            //check if file exists
-            let fileExists: Bool = FileManager.default.fileExists(atPath: url.path)
-            print("fileExists: \(fileExists) at path \(url.path)")
-            
-            if fileExists {
-                do {
-                    let input = try String(
-                        data: Data(contentsOf: url),
-                        encoding: .utf8
-                    )
-                    print(input ?? "")
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
 
         }
+        
+        //ToDo : move to above later
+        //update with stored favorites
+         //read from file
+         let url = URL.documentsDirectory.appending(path: K.savedDataTextFile)
+         
+         //check if file exists
+         let fileExists: Bool = FileManager.default.fileExists(atPath: url.path)
+         print("fileExists: \(fileExists) at path \(url.path)")
+         
+        if fileExists {
+            do {
+                let input = try String(
+                    data: Data(contentsOf: url),
+                    encoding: .utf8
+                )
+                print(input ?? "")
+                
+                var favorites = convertCSVToSSOA(csvText: input ?? "")
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+
+    }
+    
+    func convertCSVToSSOA(csvText: String) -> [Phrase] {
+        var slogans: [Phrase] = []
+        let rows = csvText.split(separator: "\n")
+        
+        //let headers = rows.first!
+        
+        for row in rows.dropFirst() {
+            let columns = row.split(separator: ",")
+
+            let phrase = Phrase(
+                name: columns[0].trimmingCharacters(in: .whitespacesAndNewlines),
+                sayingType: Int(columns[1].trimmingCharacters(in: .whitespacesAndNewlines)) ?? 0,
+                isFavorite: Bool(columns[2].trimmingCharacters(in: .whitespacesAndNewlines))!)
+            
+            slogans.append(phrase)
+
+        }
+        return slogans
     }
 }
+
+
+//var name: String = ""
+//var sayingType: Int = 0
+//var isFavorite: Bool = false
+//var canDelete: Bool = false
+//var isHidden: Bool = false
+//var notes: [Note]
 
 #Preview {
     PhraseView()
