@@ -82,7 +82,7 @@ struct PhraseView: View {
                 )
                 print(input ?? "")
                 
-                var favorites = convertCSVToSSOA(csvText: input ?? "")
+                _ = convertCSVToSSOA(csvText: input ?? "")
             } catch {
                 print(error.localizedDescription)
             }
@@ -95,9 +95,11 @@ struct PhraseView: View {
         let rows = csvText.split(separator: "\n")
         
         //let headers = rows.first!
-        
+        print(rows)
         for row in rows.dropFirst() {
             let columns = row.split(separator: ",")
+            
+            print(columns)
 
             let phrase = Phrase(
                 name: columns[0].trimmingCharacters(in: .whitespacesAndNewlines),
