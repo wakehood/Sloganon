@@ -7,15 +7,15 @@
 
 
 func initSlogan(slogan: String, isFavorite: Bool) -> Phrase {
-    Phrase(name: slogan, sayingType: K.sayingTypeSlogan, isFavorite: false)
+    Phrase(name: slogan, sayingType: K.sayingTypeSlogan, isFavorite: isFavorite)
 }
 
 func initSaying(saying: String, isFavorite: Bool) -> Phrase {
-    Phrase(name: saying, sayingType: K.sayingTypeSaying, isFavorite: false)
+    Phrase(name: saying, sayingType: K.sayingTypeSaying, isFavorite: isFavorite)
 }
 
 func initAcronym(acronym: String, isFavorite: Bool) -> Phrase {
-    Phrase(name: acronym, sayingType: K.sayingTypeAcronym, isFavorite: false)
+    Phrase(name: acronym, sayingType: K.sayingTypeAcronym, isFavorite: isFavorite)
 }
 
 func initSlogans(favorites: [Phrase]) -> [Phrase] {
