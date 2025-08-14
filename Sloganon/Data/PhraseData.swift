@@ -6,19 +6,19 @@
 //
 
 
-func initSlogan(slogan: String) -> Phrase {
-    Phrase(name: slogan, sayingType: K.sayingTypeSlogan)
+func initSlogan(slogan: String, isFavorite: Bool) -> Phrase {
+    Phrase(name: slogan, sayingType: K.sayingTypeSlogan, isFavorite: false)
 }
 
-func initSaying(saying: String) -> Phrase {
-    Phrase(name: saying, sayingType: K.sayingTypeSaying)
+func initSaying(saying: String, isFavorite: Bool) -> Phrase {
+    Phrase(name: saying, sayingType: K.sayingTypeSaying, isFavorite: false)
 }
 
-func initAcronym(acronym: String) -> Phrase {
-    Phrase(name: acronym, sayingType: K.sayingTypeAcronym)
+func initAcronym(acronym: String, isFavorite: Bool) -> Phrase {
+    Phrase(name: acronym, sayingType: K.sayingTypeAcronym, isFavorite: false)
 }
 
-func initSlogans() -> [Phrase] {
+func initSlogans(favorites: [Phrase]) -> [Phrase] {
     let slogans: [String] = [
         "But for the Grace of God ",
         "Easy Does It ",
@@ -33,19 +33,32 @@ func initSlogans() -> [Phrase] {
         "Listen and Learn ",
         "Live and Let Live ",
         "One Day at a Time ",
-        "Progress not Perfection",
+        "Progress not Perfection ",
         "Together We Can Make It ",
         ]
     
     var dbSlogans: [Phrase] = []
+    
     for slogan in slogans {
-        dbSlogans.append(initSlogan(slogan: slogan))
+        var isFavorite = false
+        
+        for favorite in favorites {
+            let name = favorite.name.removingAllWhitespaces().replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "")
+            
+            let sloganName = slogan.removingAllWhitespaces().replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "")
+            
+            if name == sloganName {
+                isFavorite = true
+            }
+        }
+                
+        dbSlogans.append(initSlogan(slogan: slogan, isFavorite: isFavorite))
     }
     
     return dbSlogans
 }
 
-func initSayings() -> [Phrase] {
+func initSayings(favorites: [Phrase]) -> [Phrase] {
     let sayings: [String] = [
         "Detachment not Amputation ",
         "Look back without staring ",
@@ -83,13 +96,25 @@ func initSayings() -> [Phrase] {
     
     var dbSayings: [Phrase] = []
     for saying in sayings {
-        dbSayings.append(initSaying(saying: saying))
+        var isFavorite = false
+        
+        for favorite in favorites {
+            let name = favorite.name.removingAllWhitespaces().replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "")
+            
+            let sayingName = saying.removingAllWhitespaces().replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "")
+            
+            if name == sayingName {
+                isFavorite = true
+            }
+        }
+        
+        dbSayings.append(initSaying(saying: saying, isFavorite: isFavorite))
     }
     
     return dbSayings
 }
 
-func initAcronyms() -> [Phrase] {
+func initAcronyms(favorites: [Phrase]) -> [Phrase] {
     
     let acronyms: [String] = [
         "THREE A'S\n\tAwareness\n\tAcceptance\n\tAction",
@@ -114,7 +139,19 @@ func initAcronyms() -> [Phrase] {
     var dbAcronyms: [Phrase] = []
     
     for acronym in acronyms {
-        dbAcronyms.append(initAcronym(acronym: acronym))
+        var isFavorite = false
+        
+        for favorite in favorites {
+            let name = favorite.name.removingAllWhitespaces().replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "")
+            
+            let acronymName = acronym.removingAllWhitespaces().replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "")
+            
+            if name == acronymName {
+                isFavorite = true
+            }
+        }
+        
+        dbAcronyms.append(initAcronym(acronym: acronym, isFavorite: isFavorite))
     }
     
     return dbAcronyms

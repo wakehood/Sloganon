@@ -39,6 +39,6 @@ struct PhraseDetailView: View {
 }
 
 #Preview {
-    let phrase: Phrase = initSlogan(slogan: "let Go and Let God")
+    let phrase: Phrase = initSlogan(slogan: "let Go and Let God", isFavorite: true)
     PhraseDetailView(phrase: phrase)
 }
