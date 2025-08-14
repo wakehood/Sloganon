@@ -61,7 +61,16 @@ struct PhraseView: View {
             for acronym in initAcronyms() {
                 modelContext.insert(acronym)
             }
-        } 
+            
+            //update with stored favorites
+            //read from file
+            let url = URL.documentsDirectory.appending(path: K.savedDataTextFile)
+            
+            //check if file exists
+            let fileExists: Bool = FileManager.default.fileExists(atPath: url.path)
+            print("fileExists: \(fileExists) at path \(url.path)")
+            
+        }
     }
 }
 

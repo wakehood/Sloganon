@@ -27,4 +27,6 @@ struct K {
     static let tagAcronym   = sayingTypeAcronym
     static let tagSearch    = 100
     static let tagFavorites = 200
+    
+    static let savedDataTextFile = "savedData.txt"
 }
