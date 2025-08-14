@@ -223,7 +223,9 @@ class SloganSayingOrAcronym: Object{
             default:
                 newType = 0
             }
-            let rowText = "\(item.text),\(newType),\(item.isFavorite)"
+            
+            let rowText = "\(item.text.replacingOccurrences(of: "\n", with: " ")),\(newType),\(item.isFavorite)"
+            print (rowText)
             csvText += "\(rowText)\n"
         }
         
