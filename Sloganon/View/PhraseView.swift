@@ -12,10 +12,10 @@ import SwiftData
 struct PhraseView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var ssas: [Phrase]
-   
+    
     @State private var phraseType = K.sayingTypeSlogan
     @State private var searchText = ""
-
+    
     var body: some View {
         NavigationStack {
             
@@ -43,7 +43,7 @@ struct PhraseView: View {
     private func initDB() {
         //initialize db
         // Make sure the persistent store is empty. If it's not, return the non-empty container.
-
+        
         if ssas.isEmpty {
             // This code will only run if the persistent store is empty.
             let slogans = initSlogans()
@@ -62,32 +62,34 @@ struct PhraseView: View {
                 modelContext.insert(acronym)
             }
             
-
-        }
-        
-        //ToDo : move to above later
-        //update with stored favorites
-         //read from file
-         let url = URL.documentsDirectory.appending(path: K.savedDataTextFile)
-         
-         //check if file exists
-         let fileExists: Bool = FileManager.default.fileExists(atPath: url.path)
-         print("fileExists: \(fileExists) at path \(url.path)")
-         
-        if fileExists {
-            do {
-                let input = try String(
-                    data: Data(contentsOf: url),
-                    encoding: .utf8
-                )
-                print(input ?? "")
-                
-                _ = convertCSVToSSOA(csvText: input ?? "")
-            } catch {
-                print(error.localizedDescription)
+            //update with stored favorites
+            //read from file
+            var phrases: [Phrase] = []
+            
+            let url = URL.documentsDirectory.appending(path: K.savedDataTextFile)
+            
+            //check if file exists
+            let fileExists: Bool = FileManager.default.fileExists(atPath: url.path)
+            print("fileExists: \(fileExists) at path \(url.path)")
+            
+            if fileExists {
+                do {
+                    let input = try String(
+                        data: Data(contentsOf: url),
+                        encoding: .utf8
+                    )
+                    print(input ?? "")
+                    
+                    phrases = convertCSVToSSOA(csvText: input ?? "")
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
-        }
+            
+            //update database with stored Favorites
+            updateFavorites(importedPhrases: phrases)
 
+        }
     }
     
     func convertCSVToSSOA(csvText: String) -> [Phrase] {
@@ -100,16 +102,30 @@ struct PhraseView: View {
             let columns = row.split(separator: ",")
             
             print(columns)
-
+            
             let phrase = Phrase(
                 name: columns[0].trimmingCharacters(in: .whitespacesAndNewlines),
                 sayingType: Int(columns[1].trimmingCharacters(in: .whitespacesAndNewlines)) ?? 0,
                 isFavorite: Bool(columns[2].trimmingCharacters(in: .whitespacesAndNewlines))!)
             
             slogans.append(phrase)
-
+            
         }
         return slogans
+    }
+    
+    func updateFavorites(importedPhrases: [Phrase]) {
+        //check through imported
+        for phrase in importedPhrases {
+            let name = phrase.name
+            
+            for ssa in ssas {
+                if ssa.name == name {
+                    ssa.isFavorite = phrase.isFavorite
+                }
+            }
+        }
+        
     }
 }
 
