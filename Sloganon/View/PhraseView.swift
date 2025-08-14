@@ -62,7 +62,8 @@ struct PhraseView: View {
                 modelContext.insert(acronym)
             }
             
-            //update with stored favorites
+        }
+        //update with stored favorites
             //read from file
             var phrases: [Phrase] = []
             
@@ -89,7 +90,7 @@ struct PhraseView: View {
             //update database with stored Favorites
             updateFavorites(importedPhrases: phrases)
 
-        }
+
     }
     
     func convertCSVToSSOA(csvText: String) -> [Phrase] {
@@ -117,10 +118,11 @@ struct PhraseView: View {
     func updateFavorites(importedPhrases: [Phrase]) {
         //check through imported
         for phrase in importedPhrases {
-            let name = phrase.name
-            
             for ssa in ssas {
-                if ssa.name == name {
+                let name = phrase.name.removingAllWhitespaces().replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "")
+                let ssaname = ssa.name.removingAllWhitespaces().replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "")
+                
+                if name == ssaname {
                     ssa.isFavorite = phrase.isFavorite
                 }
             }
