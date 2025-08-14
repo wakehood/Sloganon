@@ -3,15 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CB2996D72E4E41B7004DAD0A /* SloganonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2996D62E4E419F004DAD0A /* SloganonApp.swift */; };
-		CB2996DF2E4E4203004DAD0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2996DE2E4E41FB004DAD0A /* ContentView.swift */; };
-		CB30FD2529A16C4B001A81DE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */; };
 		CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50A28D524A000DBB3AD /* Assets.xcassets */; };
-		CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */; };
 		CBC340AA299FE93200CA6BF8 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC340A9299FE93200CA6BF8 /* URLExtension.swift */; };
 		CBC5AFDC2A75D30A00FE35C3 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5AFDB2A75D30A00FE35C3 /* UIFontExtension.swift */; };
 		CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF764BD28DD60870072D01D /* StringExtensions.swift */; };
@@ -32,15 +29,19 @@
 
 /* Begin PBXFileReference section */
 		CB2996D62E4E419F004DAD0A /* SloganonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganonApp.swift; sourceTree = "<group>"; };
-		CB2996DE2E4E41FB004DAD0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		CB6FF4FE28D5249C00DBB3AD /* Sloganon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sloganon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6FF50A28D524A000DBB3AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CBC340A9299FE93200CA6BF8 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		CBC5AFDB2A75D30A00FE35C3 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		CBF764BD28DD60870072D01D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CB2997042E4E4FC0004DAD0A /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
+		CB2997092E4E50A6004DAD0A /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
+		CB29970E2E4E50D4004DAD0A /* Utility */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Utility; sourceTree = "<group>"; };
+		CB2997172E4E50DF004DAD0A /* View */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = View; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CB6FF4FB28D5249C00DBB3AD /* Frameworks */ = {
@@ -58,8 +59,6 @@
 			children = (
 				CB6FF50A28D524A000DBB3AD /* Assets.xcassets */,
 				CBF764BD28DD60870072D01D /* StringExtensions.swift */,
-				CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */,
-				CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */,
 				CBC5AFDB2A75D30A00FE35C3 /* UIFontExtension.swift */,
 				CBC340A9299FE93200CA6BF8 /* URLExtension.swift */,
 			);
@@ -85,7 +84,10 @@
 		CB6FF50028D5249C00DBB3AD /* Sloganon */ = {
 			isa = PBXGroup;
 			children = (
-				CB2996DE2E4E41FB004DAD0A /* ContentView.swift */,
+				CB2997172E4E50DF004DAD0A /* View */,
+				CB29970E2E4E50D4004DAD0A /* Utility */,
+				CB2997092E4E50A6004DAD0A /* Model */,
+				CB2997042E4E4FC0004DAD0A /* Data */,
 				CB2996D62E4E419F004DAD0A /* SloganonApp.swift */,
 				CB437DE1296B8402006C191E /* SupportingFiles */,
 			);
@@ -107,6 +109,12 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CB2997042E4E4FC0004DAD0A /* Data */,
+				CB2997092E4E50A6004DAD0A /* Model */,
+				CB29970E2E4E50D4004DAD0A /* Utility */,
+				CB2997172E4E50DF004DAD0A /* View */,
 			);
 			name = Sloganon;
 			packageProductDependencies = (
@@ -166,13 +174,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB2996DF2E4E4203004DAD0A /* ContentView.swift in Sources */,
 				CBC340AA299FE93200CA6BF8 /* URLExtension.swift in Sources */,
 				CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */,
 				CB2996D72E4E41B7004DAD0A /* SloganonApp.swift in Sources */,
 				CBC5AFDC2A75D30A00FE35C3 /* UIFontExtension.swift in Sources */,
-				CB30FD2529A16C4B001A81DE /* UIViewControllerExtension.swift in Sources */,
-				CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
