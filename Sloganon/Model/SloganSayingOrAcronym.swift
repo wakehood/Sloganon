@@ -196,15 +196,34 @@ class SloganSayingOrAcronym: Object{
         return sortedSlogansSayingsOrAcronyms
     }
     
+    //We need to save the Favorites setting for upgrade to R2
     static func saveFavorites(favorites: Array<SloganSayingOrAcronym>) {
+        print("save Favorites called")
+        
         //convert to csvText
         var csvText = ""
         
         //Header Row
-        csvText += "Text,IsFavorite,IsDeletable\n"
+        csvText += "text,type,isFavorite\n"
+        
+        let sayingTypeSlogan  = 0
+        let sayingTypeSaying  = 1
+        let sayingTypeAcronym = 2
+        var newType: Int = 0
         
         for item in favorites {
-            let rowText = "\(item.text),\(item.isFavorite),\(item.isDeletable)"
+
+            switch item.type {
+            case SayingType.slogan.description:
+                newType = sayingTypeSlogan
+            case SayingType.aSaying.description:
+                newType = sayingTypeSaying
+            case SayingType.anAcronym.description:
+                newType = sayingTypeAcronym
+            default:
+                newType = 0
+            }
+            let rowText = "\(item.text),\(newType),\(item.isFavorite)"
             csvText += "\(rowText)\n"
         }
         
