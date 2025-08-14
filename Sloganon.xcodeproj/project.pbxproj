@@ -7,33 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2996D72E4E41B7004DAD0A /* SloganonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2996D62E4E419F004DAD0A /* SloganonApp.swift */; };
+		CB2996DF2E4E4203004DAD0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2996DE2E4E41FB004DAD0A /* ContentView.swift */; };
 		CB30FD2529A16C4B001A81DE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */; };
-		CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB437DE2296B847E006C191E /* UITextViewExtension.swift */; };
-		CB6DC7792973AA3C0075DEA6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CB6DC7782973AA3C0075DEA6 /* RealmSwift */; };
-		CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */; };
-		CB6FF50928D5249C00DBB3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50728D5249C00DBB3AD /* Main.storyboard */; };
 		CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50A28D524A000DBB3AD /* Assets.xcassets */; };
-		CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */; };
-		CB6FF52F28DCC82800DBB3AD /* SloganSayingOrAcronym.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF52E28DCC82800DBB3AD /* SloganSayingOrAcronym.swift */; };
-		CB75E7A429AE98F7006C58D4 /* AddWebpageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB75E7A329AE98F7006C58D4 /* AddWebpageTableViewCell.swift */; };
-		CB7E6B002A3D642300194364 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7E6AFF2A3D642300194364 /* SceneDelegate.swift */; };
-		CB94009C29A082EE006AB3AE /* SSOAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94009B29A082EE006AB3AE /* SSOAViewController.swift */; };
 		CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */; };
-		CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB229556249006C38EE /* StepsTableViewController.swift */; };
-		CBB48CB7295562FD006C38EE /* SerenityPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */; };
-		CBB94AD0299FF66C00DD0713 /* OneLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB94ACF299FF66C00DD0713 /* OneLabelTableViewCell.swift */; };
-		CBB94AD229A04CED00DD0713 /* TwoLabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB94AD129A04CED00DD0713 /* TwoLabelsTableViewCell.swift */; };
-		CBBC4C062976604400D9FF2B /* WebPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBC4C052976604400D9FF2B /* WebPage.swift */; };
-		CBBC4C092976622D00D9FF2B /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBBC4C082976622D00D9FF2B /* SwipeCellKit */; };
 		CBC340AA299FE93200CA6BF8 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC340A9299FE93200CA6BF8 /* URLExtension.swift */; };
 		CBC5AFDC2A75D30A00FE35C3 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5AFDB2A75D30A00FE35C3 /* UIFontExtension.swift */; };
-		CBCDE36529624F760080B182 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE36429624F760080B182 /* K.swift */; };
-		CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDE366296271CB0080B182 /* SloganTableViewController.swift */; };
-		CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6FD629666A020039A2F0 /* Steps.swift */; };
-		CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */; };
-		CBDA3BFC2C098345001DBA3F /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = CB6DC7782973AA3C0075DEA6 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF764BD28DD60870072D01D /* StringExtensions.swift */; };
-		CBFDC9622977577300E30404 /* WebPageInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFDC9612977577300E30404 /* WebPageInfoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,7 +24,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CBDA3BFC2C098345001DBA3F /* RealmSwift in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,32 +31,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CB2996D62E4E419F004DAD0A /* SloganonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganonApp.swift; sourceTree = "<group>"; };
+		CB2996DE2E4E41FB004DAD0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		CB437DE2296B847E006C191E /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 		CB6FF4FE28D5249C00DBB3AD /* Sloganon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sloganon.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB6FF50828D5249C00DBB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB6FF50A28D524A000DBB3AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CB6FF50D28D524A000DBB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CB6FF50F28D524A000DBB3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB6FF52E28DCC82800DBB3AD /* SloganSayingOrAcronym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganSayingOrAcronym.swift; sourceTree = "<group>"; };
-		CB75E7A329AE98F7006C58D4 /* AddWebpageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWebpageTableViewCell.swift; sourceTree = "<group>"; };
-		CB7E6AFF2A3D642300194364 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB94009B29A082EE006AB3AE /* SSOAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOAViewController.swift; sourceTree = "<group>"; };
 		CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		CBB48CB229556249006C38EE /* StepsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewController.swift; sourceTree = "<group>"; };
-		CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerenityPrayerViewController.swift; sourceTree = "<group>"; };
-		CBB94ACF299FF66C00DD0713 /* OneLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLabelTableViewCell.swift; sourceTree = "<group>"; };
-		CBB94AD129A04CED00DD0713 /* TwoLabelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelsTableViewCell.swift; sourceTree = "<group>"; };
-		CBBC4C052976604400D9FF2B /* WebPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPage.swift; sourceTree = "<group>"; };
 		CBC340A9299FE93200CA6BF8 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		CBC5AFDB2A75D30A00FE35C3 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
-		CBCDE36429624F760080B182 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
-		CBCDE366296271CB0080B182 /* SloganTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganTableViewController.swift; sourceTree = "<group>"; };
-		CBCF6FD629666A020039A2F0 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
-		CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CBF764BD28DD60870072D01D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		CBFDC9612977577300E30404 /* WebPageInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageInfoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBBC4C092976622D00D9FF2B /* SwipeCellKit in Frameworks */,
-				CB6DC7792973AA3C0075DEA6 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +58,6 @@
 			children = (
 				CB6FF50A28D524A000DBB3AD /* Assets.xcassets */,
 				CBF764BD28DD60870072D01D /* StringExtensions.swift */,
-				CB437DE2296B847E006C191E /* UITextViewExtension.swift */,
-				CBD0E3FF296B8F3300DF64D4 /* UIViewExtension.swift */,
 				CB9ED281296E2F3A008F9DC4 /* UIColorExtension.swift */,
 				CB30FD2429A16C4B001A81DE /* UIViewControllerExtension.swift */,
 				CBC5AFDB2A75D30A00FE35C3 /* UIFontExtension.swift */,
@@ -126,50 +85,11 @@
 		CB6FF50028D5249C00DBB3AD /* Sloganon */ = {
 			isa = PBXGroup;
 			children = (
-				CB7E6AFF2A3D642300194364 /* SceneDelegate.swift */,
-				CB6FF50128D5249C00DBB3AD /* AppDelegate.swift */,
-				CB6FF53028DCC83300DBB3AD /* Model */,
-				CB6FF51528D524B900DBB3AD /* View */,
-				CB6FF51628D524E300DBB3AD /* Controller */,
+				CB2996DE2E4E41FB004DAD0A /* ContentView.swift */,
+				CB2996D62E4E419F004DAD0A /* SloganonApp.swift */,
 				CB437DE1296B8402006C191E /* SupportingFiles */,
-				CB6FF50F28D524A000DBB3AD /* Info.plist */,
-				CBCDE36429624F760080B182 /* K.swift */,
 			);
 			path = Sloganon;
-			sourceTree = "<group>";
-		};
-		CB6FF51528D524B900DBB3AD /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CB75E7A329AE98F7006C58D4 /* AddWebpageTableViewCell.swift */,
-				CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */,
-				CB6FF50728D5249C00DBB3AD /* Main.storyboard */,
-				CBB94ACF299FF66C00DD0713 /* OneLabelTableViewCell.swift */,
-				CBB94AD129A04CED00DD0713 /* TwoLabelsTableViewCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CB6FF51628D524E300DBB3AD /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CBCDE366296271CB0080B182 /* SloganTableViewController.swift */,
-				CBB48CB6295562FD006C38EE /* SerenityPrayerViewController.swift */,
-				CBB48CB229556249006C38EE /* StepsTableViewController.swift */,
-				CBFDC9612977577300E30404 /* WebPageInfoTableViewController.swift */,
-				CB94009B29A082EE006AB3AE /* SSOAViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		CB6FF53028DCC83300DBB3AD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CB6FF52E28DCC82800DBB3AD /* SloganSayingOrAcronym.swift */,
-				CBCF6FD629666A020039A2F0 /* Steps.swift */,
-				CBBC4C052976604400D9FF2B /* WebPage.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +110,6 @@
 			);
 			name = Sloganon;
 			packageProductDependencies = (
-				CB6DC7782973AA3C0075DEA6 /* RealmSwift */,
-				CBBC4C082976622D00D9FF2B /* SwipeCellKit */,
 			);
 			productName = Sloganon;
 			productReference = CB6FF4FE28D5249C00DBB3AD /* Sloganon.app */;
@@ -222,8 +140,6 @@
 			);
 			mainGroup = CB6FF4F528D5249C00DBB3AD;
 			packageReferences = (
-				CB6DC7772973AA3B0075DEA6 /* XCRemoteSwiftPackageReference "realm-swift" */,
-				CBBC4C072976622D00D9FF2B /* XCRemoteSwiftPackageReference "SwipeCellKit" */,
 			);
 			productRefGroup = CB6FF4FF28D5249C00DBB3AD /* Products */;
 			projectDirPath = "";
@@ -239,9 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB6FF50E28D524A000DBB3AD /* LaunchScreen.storyboard in Resources */,
 				CB6FF50B28D524A000DBB3AD /* Assets.xcassets in Resources */,
-				CB6FF50928D5249C00DBB3AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,50 +166,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBFDC9622977577300E30404 /* WebPageInfoTableViewController.swift in Sources */,
-				CBB48CB7295562FD006C38EE /* SerenityPrayerViewController.swift in Sources */,
-				CB437DE3296B847E006C191E /* UITextViewExtension.swift in Sources */,
-				CBB94AD0299FF66C00DD0713 /* OneLabelTableViewCell.swift in Sources */,
-				CBCDE36529624F760080B182 /* K.swift in Sources */,
+				CB2996DF2E4E4203004DAD0A /* ContentView.swift in Sources */,
 				CBC340AA299FE93200CA6BF8 /* URLExtension.swift in Sources */,
 				CBF764BE28DD60870072D01D /* StringExtensions.swift in Sources */,
-				CBBC4C062976604400D9FF2B /* WebPage.swift in Sources */,
-				CBD0E400296B8F3300DF64D4 /* UIViewExtension.swift in Sources */,
-				CBCF6FD729666A020039A2F0 /* Steps.swift in Sources */,
+				CB2996D72E4E41B7004DAD0A /* SloganonApp.swift in Sources */,
 				CBC5AFDC2A75D30A00FE35C3 /* UIFontExtension.swift in Sources */,
-				CBCDE367296271CB0080B182 /* SloganTableViewController.swift in Sources */,
 				CB30FD2529A16C4B001A81DE /* UIViewControllerExtension.swift in Sources */,
-				CB6FF50228D5249C00DBB3AD /* AppDelegate.swift in Sources */,
-				CB94009C29A082EE006AB3AE /* SSOAViewController.swift in Sources */,
-				CB6FF52F28DCC82800DBB3AD /* SloganSayingOrAcronym.swift in Sources */,
-				CB7E6B002A3D642300194364 /* SceneDelegate.swift in Sources */,
-				CBB48CB329556249006C38EE /* StepsTableViewController.swift in Sources */,
 				CB9ED282296E2F3A008F9DC4 /* UIColorExtension.swift in Sources */,
-				CBB94AD229A04CED00DD0713 /* TwoLabelsTableViewCell.swift in Sources */,
-				CB75E7A429AE98F7006C58D4 /* AddWebpageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CB6FF50728D5249C00DBB3AD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB6FF50828D5249C00DBB3AD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CB6FF50C28D524A000DBB3AD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB6FF50D28D524A000DBB3AD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CB6FF51028D524A000DBB3AD /* Debug */ = {
@@ -426,12 +307,12 @@
 				DEVELOPMENT_TEAM = 8JF9FYJ59K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sloganon/Info.plist;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,6 +323,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -458,12 +340,12 @@
 				DEVELOPMENT_TEAM = 8JF9FYJ59K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sloganon/Info.plist;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,6 +356,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -502,38 +385,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CB6DC7772973AA3B0075DEA6 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		CBBC4C072976622D00D9FF2B /* XCRemoteSwiftPackageReference "SwipeCellKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwipeCellKit/SwipeCellKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CB6DC7782973AA3C0075DEA6 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CB6DC7772973AA3B0075DEA6 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-		CBBC4C082976622D00D9FF2B /* SwipeCellKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CBBC4C072976622D00D9FF2B /* XCRemoteSwiftPackageReference "SwipeCellKit" */;
-			productName = SwipeCellKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB6FF4F628D5249C00DBB3AD /* Project object */;
 }
