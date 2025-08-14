@@ -70,6 +70,18 @@ struct PhraseView: View {
             let fileExists: Bool = FileManager.default.fileExists(atPath: url.path)
             print("fileExists: \(fileExists) at path \(url.path)")
             
+            if fileExists {
+                do {
+                    let input = try String(
+                        data: Data(contentsOf: url),
+                        encoding: .utf8
+                    )
+                    print(input ?? "")
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+
         }
     }
 }
