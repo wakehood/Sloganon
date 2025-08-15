@@ -225,7 +225,6 @@ class SloganSayingOrAcronym: Object{
             }
             
             let rowText = "\(item.text.replacingOccurrences(of: "\n", with: " ")),\(newType),\(item.isFavorite)"
-            print (rowText)
             csvText += "\(rowText)\n"
         }
         
@@ -243,7 +242,6 @@ class SloganSayingOrAcronym: Object{
                 data: Data(contentsOf: url),
                 encoding: .utf8
             )!
-            print(input)
         } catch {
             print(error.localizedDescription)
         }
