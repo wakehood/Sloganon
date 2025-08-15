@@ -45,54 +45,18 @@ struct PhraseView: View {
         // Make sure the persistent store is empty. If it's not, return the non-empty container.
         
         if ssas.isEmpty {
-            //get stored favorites
-            let importedFavorites: [Phrase] = storedFavorites()
-            
             // This code will only run if the persistent store is empty.}
-            let slogans = initSlogans(favorites: importedFavorites)
-            
-            for slogan in slogans {
+            for slogan in initSlogans(favorites: storedFavorites()) {
                 modelContext.insert(slogan)
             }
             
-            let sayings = initSayings(favorites: importedFavorites)
-            
-            for saying in sayings {
+            for saying in initSayings(favorites: storedFavorites()) {
                 modelContext.insert(saying)
             }
             
-            for acronym in initAcronyms(favorites: importedFavorites) {
+            for acronym in initAcronyms(favorites: storedFavorites()) {
                 modelContext.insert(acronym)
             }
-            
-            
-//            //update with stored favorites
-//            //read from file
-//            var phrases: [Phrase] = []
-//            
-//            let url = URL.documentsDirectory.appending(path: K.savedDataTextFile)
-//            
-//            //check if file exists
-//            let fileExists: Bool = FileManager.default.fileExists(atPath: url.path)
-//            print("fileExists: \(fileExists) at path \(url.path)")
-//            
-//            if fileExists {
-//                do {
-//                    let input = try String(
-//                        data: Data(contentsOf: url),
-//                        encoding: .utf8
-//                    )
-//                    print(input ?? "")
-//                    
-//                    phrases = convertCSVToSSOA(csvText: input ?? "")
-//                } catch {
-//                    print(error.localizedDescription)
-//                }
-//            }
-            
-            //update database with stored Favorites
-         //   updateFavorites(importedPhrases: phrases)
-            
         }
     }
     
@@ -104,7 +68,7 @@ struct PhraseView: View {
         
         //check if file exists
         let fileExists: Bool = FileManager.default.fileExists(atPath: url.path)
-        print("fileExists: \(fileExists) at path \(url.path)")
+        //printprint("fileExists: \(fileExists) at path \(url.path)")
         
         if fileExists {
             do {
@@ -112,7 +76,7 @@ struct PhraseView: View {
                     data: Data(contentsOf: url),
                     encoding: .utf8
                 )
-                print(input ?? "")
+                //print(input ?? "")
                 
                 phrases = convertCSVToSSOA(csvText: input ?? "")
             } catch {
@@ -128,11 +92,8 @@ struct PhraseView: View {
         let rows = csvText.split(separator: "\n")
         
         //let headers = rows.first!
-        print(rows)
         for row in rows.dropFirst() {
             let columns = row.split(separator: ",")
-            
-            print(columns)
             
             let phrase = Phrase(
                 name: columns[0].trimmingCharacters(in: .whitespacesAndNewlines),
@@ -144,33 +105,10 @@ struct PhraseView: View {
         }
         return slogans
     }
-    
-//    func updateFavorites(importedPhrases: [Phrase]) {
-//        //check through imported
-//        for phrase in importedPhrases {
-//            for ssa in ssas {
-//                let name = phrase.name.removingAllWhitespaces().replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "")
-//                let ssaname = ssa.name.removingAllWhitespaces().replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "")
-//                
-//                if name == ssaname {
-//                    ssa.isFavorite = phrase.isFavorite
-//                }
-//            }
-//        }
-//        
-//    }
 }
 
-
-//var name: String = ""
-//var sayingType: Int = 0
-//var isFavorite: Bool = false
-//var canDelete: Bool = false
-//var isHidden: Bool = false
-//var notes: [Note]
 
 #Preview {
     PhraseView()
         .modelContainer(for: Phrase.self, inMemory: true)
-    
 }
