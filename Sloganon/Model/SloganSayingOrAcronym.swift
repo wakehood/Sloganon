@@ -238,10 +238,6 @@ class SloganSayingOrAcronym: Object{
                 to: url,
                 options: [.atomic, .completeFileProtection]
             )
-            let input = try String(
-                data: Data(contentsOf: url),
-                encoding: .utf8
-            )!
         } catch {
             print(error.localizedDescription)
         }
