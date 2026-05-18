@@ -17,7 +17,7 @@ struct PhraseListView: View {
     var  filterTag: Int = K.tagSlogan
     
     @State private var showingSheet: Bool = false
-       
+    
     var body: some View {
         List {
             ForEach(ssa) { saying in
@@ -37,7 +37,7 @@ struct PhraseListView: View {
                 } else {
                     HStack {
                         Button(action: {
-                                saying.isFavorite.toggle()
+                            saying.isFavorite.toggle()
                         }) {
                             Image(systemName: saying.isFavorite ? "heart.fill" : "heart")
                         }
@@ -62,8 +62,8 @@ struct PhraseListView: View {
                     ssa.sayingType == filterTag
                 }, sort: [SortDescriptor(\Phrase.name)])
                 
-
-
+                
+                
             case 200:
                 _ssa = Query(filter: #Predicate<Phrase> { ssa in
                     ssa.isFavorite == true
@@ -76,7 +76,7 @@ struct PhraseListView: View {
                 ssa.name.localizedStandardContains(searchString)
             }, sort: [SortDescriptor(\Phrase.name)])
         }
-
+        
     }
     
 }

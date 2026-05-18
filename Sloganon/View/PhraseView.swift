@@ -20,9 +20,9 @@ struct PhraseView: View {
         NavigationStack {
             
             PhraseListView(filterTag: phraseType, searchString: searchText)
-                .navigationTitle("Phrases")
+                .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItem(placement: .principal) {
                         Picker("Phrase Type", selection: $phraseType) {
                             Text("Slogans").tag(K.tagSlogan)
                             Text("Sayings").tag(K.tagSaying)
@@ -30,7 +30,7 @@ struct PhraseView: View {
                             Text("Favorites").tag(K.tagFavorites)
                         }
                         .pickerStyle(.segmented)
-                        .padding()
+                       // .padding()
                         
                     }
                 }

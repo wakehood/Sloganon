@@ -18,27 +18,30 @@ struct PhraseDetailView: View {
     
         
         VStack {
+            Spacer()
+            
             Button(
                 action: {
                     self.phrase.isFavorite.toggle()
                 }, label: {
                     Image(systemName: self.phrase.isFavorite ? "heart.fill" : "heart")
                 })
-            .frame(width: 25, height: 25)
+            .frame(width: 50, height: 50)
             
             Text("\(phrase.name)")
 
-            
+            Spacer()
         }
         
         
-        Spacer()
+
     }
     
     
 }
 
+
 #Preview {
-    let phrase: Phrase = initSlogan(slogan: "let Go and Let God", isFavorite: true)
+    let phrase: Phrase = initSlogan(slogan: "Let Go and Let God", isFavorite: true)
     PhraseDetailView(phrase: phrase)
 }
