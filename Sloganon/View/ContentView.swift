@@ -12,14 +12,17 @@ struct ContentView: View {
     }
     var body: some View {
         TabView {
+            DailyView()
+                .tabItem {  Label("Daily", systemImage: "calendar.badge") }
+            
             PhraseView()
                 .tabItem {  Label("Phrases", systemImage: "textformat.abc") }
             
             StepView()
                 .tabItem {  Label("Steps", systemImage: "stairs") }
             
-//            SerenityPrayerView()
-//                .tabItem {  Label("SerenityPrayer", systemImage: "bird") }
+            SerenityPrayerView()
+                .tabItem {  Label("SerenityPrayer", systemImage: "bird") }
 //            
 //            WebPageInfoView()
 //                .tabItem {  Label("Info", systemImage: "network") }
