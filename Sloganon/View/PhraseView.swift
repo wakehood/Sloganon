@@ -35,57 +35,57 @@ struct PhraseView: View {
                     }
                 }
                 .searchable(text: $searchText)
-                .onAppear(perform: initDB)
+//                .onAppear(perform: initDB)
         }
     }
     
     
-    private func initDB() {
-        //initialize db
-        // Make sure the persistent store is empty. If it's not, return the non-empty container.
-        
-        if ssas.isEmpty {
-            // This code will only run if the persistent store is empty.}
-            for slogan in initSlogans(favorites: storedFavorites()) {
-                modelContext.insert(slogan)
-            }
-            
-            for saying in initSayings(favorites: storedFavorites()) {
-                modelContext.insert(saying)
-            }
-            
-            for acronym in initAcronyms(favorites: storedFavorites()) {
-                modelContext.insert(acronym)
-            }
-        }
-    }
+//    private func initDB() {
+//        //initialize db
+//        // Make sure the persistent store is empty. If it's not, return the non-empty container.
+//        
+//        if ssas.isEmpty {
+//            // This code will only run if the persistent store is empty.}
+//            for slogan in initSlogans(favorites: storedFavorites()) {
+//                modelContext.insert(slogan)
+//            }
+//            
+//            for saying in initSayings(favorites: storedFavorites()) {
+//                modelContext.insert(saying)
+//            }
+//            
+//            for acronym in initAcronyms(favorites: storedFavorites()) {
+//                modelContext.insert(acronym)
+//            }
+//        }
+//    }
     
-    func storedFavorites() -> [Phrase] {
-        //read from file
-        var phrases: [Phrase] = []
-        
-        let url = URL.documentsDirectory.appending(path: K.savedDataTextFile)
-        
-        //check if file exists
-        let fileExists: Bool = FileManager.default.fileExists(atPath: url.path)
-        //printprint("fileExists: \(fileExists) at path \(url.path)")
-        
-        if fileExists {
-            do {
-                let input = try String(
-                    data: Data(contentsOf: url),
-                    encoding: .utf8
-                )
-                //print(input ?? "")
-                
-                phrases = convertCSVToSSOA(csvText: input ?? "")
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        
-        return phrases
-    }
+//    func storedFavorites() -> [Phrase] {
+//        //read from file
+//        var phrases: [Phrase] = []
+//        
+//        let url = URL.documentsDirectory.appending(path: K.savedDataTextFile)
+//        
+//        //check if file exists
+//        let fileExists: Bool = FileManager.default.fileExists(atPath: url.path)
+//        //printprint("fileExists: \(fileExists) at path \(url.path)")
+//        
+//        if fileExists {
+//            do {
+//                let input = try String(
+//                    data: Data(contentsOf: url),
+//                    encoding: .utf8
+//                )
+//                //print(input ?? "")
+//                
+//                phrases = convertCSVToSSOA(csvText: input ?? "")
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        }
+//        
+//        return phrases
+//    }
     
     func convertCSVToSSOA(csvText: String) -> [Phrase] {
         var slogans: [Phrase] = []

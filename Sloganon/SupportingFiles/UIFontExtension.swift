@@ -13,7 +13,8 @@ extension UIFont {
     
     //Function to check if asset "named" font is valid
     //returns system font if not
-    static func checkFont(named: String, size: CGFloat) -> UIFont {
+    static func checkFont
+    (named: String, size: CGFloat) -> UIFont {
         if let font = UIFont(name: named, size: size) {
             return font
         } else {

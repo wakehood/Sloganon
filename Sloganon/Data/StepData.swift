@@ -7,8 +7,9 @@
 
 import Foundation
 
+
 func initStep(stepText: String, stepNumber: Int) -> Step {
-    Step(stepText: stepText, stepNumber: stepNumber)
+    Step(stepText: stepText, stepNumber: stepNumber, alternateStepText: stepText)
 }
 
 struct StepInfo {
@@ -21,7 +22,7 @@ func initSteps() -> [Step] {
     
     steps.append(StepInfo(number: 1, step: "We admitted we were powerless over alcohol - that our lives had become unmanageable."))
     steps.append(StepInfo(number: 2, step: "Came to believe that a Power greater than ourselves could restore us to sanity."))
-    steps.append(StepInfo(number: 3, step: "Made a decision to turn our will and our lives over to the care of God as we understood Him."))
+    steps.append(StepInfo(number: 3, step: "Made a decision to turn our will and our lives over to the care of God as we *understood* Him."))
     steps.append(StepInfo(number: 4, step: "Made a searching and fearless moral inventory of ourselves."))
     steps.append(StepInfo(number: 5, step: "Admitted to God, to ourselves, and to another human being the exact nature of our wrongs."))
     steps.append(StepInfo(number: 6, step: "Were entirely ready to have God remove all these defects of character."))
